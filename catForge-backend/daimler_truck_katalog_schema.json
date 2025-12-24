@@ -1,0 +1,459 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://daimler-truck.com/schemas/katalog/v1.0",
+  "title": "Daimler Truck Produktkatalog Schema",
+  "description": "JSON-Schema für den Daimler Truck Produktkatalog mit vollständiger Definition aller Fahrzeugdaten",
+  "type": "object",
+  "required": ["katalog", "metadaten"],
+  
+  "properties": {
+    "katalog": {
+      "type": "object",
+      "description": "Hauptcontainer für den Produktkatalog",
+      "required": ["titel", "unternehmen", "version", "trucks"],
+      "properties": {
+        "titel": {
+          "type": "string",
+          "description": "Titel des Katalogs",
+          "example": "Daimler Truck Produktkatalog 2025"
+        },
+        "unternehmen": {
+          "type": "string",
+          "description": "Name des Unternehmens",
+          "example": "Daimler Truck AG"
+        },
+        "version": {
+          "type": "string",
+          "description": "Versionsnummer des Katalogs",
+          "pattern": "^\\d+\\.\\d+$",
+          "example": "1.0"
+        },
+        "erstellungsdatum": {
+          "type": "string",
+          "format": "date",
+          "description": "Erstellungsdatum des Katalogs (YYYY-MM-DD)",
+          "example": "2025-01-15"
+        },
+        "sprache": {
+          "type": "string",
+          "description": "Sprache des Katalogs (BCP 47 Format)",
+          "pattern": "^[a-z]{2}-[A-Z]{2}$",
+          "example": "de-DE"
+        },
+        "trucks": {
+          "type": "array",
+          "description": "Array aller Fahrzeuge im Katalog",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/truck"
+          }
+        }
+      }
+    },
+    
+    "metadaten": {
+      "type": "object",
+      "description": "Metadaten und Zusatzinformationen zum Katalog",
+      "properties": {
+        "anzahl_fahrzeuge": {
+          "type": "integer",
+          "description": "Gesamtanzahl der Fahrzeuge im Katalog",
+          "minimum": 0
+        },
+        "kategorien": {
+          "type": "array",
+          "description": "Liste aller verwendeten Fahrzeugkategorien",
+          "items": { "type": "string" }
+        },
+        "baureihen": {
+          "type": "array",
+          "description": "Liste aller enthaltenen Baureihen",
+          "items": { "type": "string" }
+        },
+        "hinweis": {
+          "type": "string",
+          "description": "Allgemeiner Hinweis zum Katalog"
+        },
+        "bildhinweis": {
+          "type": "string",
+          "description": "Hinweis zu den verwendeten Bildern"
+        },
+        "copyright": {
+          "type": "string",
+          "description": "Copyright-Vermerk"
+        }
+      }
+    }
+  },
+  
+  "definitions": {
+    "truck": {
+      "type": "object",
+      "description": "Vollständige Definition eines Fahrzeugs",
+      "required": [
+        "id",
+        "modell",
+        "baureihe",
+        "kategorie",
+        "bild_url",
+        "kurzbeschreibung",
+        "technische_daten",
+        "ausstattung_highlights",
+        "marketing_text_lang",
+        "marketing_text_mittel",
+        "preis_ab_eur"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "description": "Eindeutige ID des Fahrzeugs",
+          "minimum": 1,
+          "example": 1
+        },
+        "modell": {
+          "type": "string",
+          "description": "Vollständige Modellbezeichnung",
+          "example": "Mercedes-Benz Actros L 1853 LS ProCabin"
+        },
+        "baureihe": {
+          "type": "string",
+          "description": "Baureihe des Fahrzeugs",
+          "enum": [
+            "Actros L",
+            "Actros F",
+            "eActros",
+            "Arocs",
+            "eArocs",
+            "Atego",
+            "Econic",
+            "eEconic",
+            "Unimog",
+            "Zetros",
+            "Actros SLT",
+            "Arocs SLT"
+          ],
+          "example": "Actros L"
+        },
+        "kategorie": {
+          "type": "string",
+          "description": "Einsatzkategorie des Fahrzeugs",
+          "example": "Fernverkehr"
+        },
+        "bild_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL zum Produktbild",
+          "example": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&h=600&fit=crop"
+        },
+        "kurzbeschreibung": {
+          "type": "string",
+          "description": "Kurze Beschreibung des Fahrzeugs (1-2 Sätze)",
+          "maxLength": 200,
+          "example": "Das Flaggschiff im Fernverkehr – maximale Effizienz trifft auf Premium-Komfort."
+        },
+        "technische_daten": {
+          "$ref": "#/definitions/technische_daten"
+        },
+        "ausstattung_highlights": {
+          "type": "array",
+          "description": "Liste der wichtigsten Ausstattungsmerkmale",
+          "minItems": 1,
+          "items": { "type": "string" },
+          "example": ["Multimedia Cockpit Interactive 2", "Active Brake Assist 6"]
+        },
+        "marketing_text_lang": {
+          "type": "string",
+          "description": "Langer Marketingtext (300+ Wörter)",
+          "minLength": 500
+        },
+        "marketing_text_mittel": {
+          "type": "string",
+          "description": "Mittlerer Marketingtext (ca. 150 Wörter)",
+          "minLength": 200,
+          "maxLength": 1500
+        },
+        "preis_ab_eur": {
+          "type": "integer",
+          "description": "Einstiegspreis in Euro",
+          "minimum": 0,
+          "example": 189500
+        }
+      }
+    },
+    
+    "technische_daten": {
+      "type": "object",
+      "description": "Technische Spezifikationen des Fahrzeugs. Nicht alle Felder sind für jeden Fahrzeugtyp relevant.",
+      "properties": {
+        
+        "_comment_motor": "=== MOTOR & ANTRIEB (Diesel/Gas) ===",
+        "motor": {
+          "type": "string",
+          "description": "Motorbezeichnung mit Abgasnorm",
+          "example": "OM 471 Euro VI-E"
+        },
+        "hubraum_l": {
+          "type": "number",
+          "description": "Hubraum in Litern",
+          "minimum": 0,
+          "example": 12.8
+        },
+        "leistung_ps": {
+          "type": "integer",
+          "description": "Motorleistung in PS",
+          "minimum": 0,
+          "example": 530
+        },
+        "leistung_kw": {
+          "type": "integer",
+          "description": "Motorleistung in kW",
+          "minimum": 0,
+          "example": 390
+        },
+        "drehmoment_nm": {
+          "type": "integer",
+          "description": "Maximales Drehmoment in Nm",
+          "minimum": 0,
+          "example": 2600
+        },
+        "abgasnorm": {
+          "type": "string",
+          "description": "Erfüllte Abgasnorm",
+          "enum": ["Euro VI-E", "Euro VI-D", "Euro VI", "Euro III"],
+          "example": "Euro VI-E"
+        },
+        
+        "_comment_elektro": "=== ELEKTRO-ANTRIEB ===",
+        "antrieb": {
+          "type": "string",
+          "description": "Art des Antriebs bei E-Fahrzeugen",
+          "example": "Elektrisch (2 Elektromotoren)"
+        },
+        "dauerleistung_kw": {
+          "type": "integer",
+          "description": "Dauerleistung bei E-Antrieb in kW",
+          "minimum": 0,
+          "example": 400
+        },
+        "spitzenleistung_kw": {
+          "type": "integer",
+          "description": "Spitzenleistung bei E-Antrieb in kW",
+          "minimum": 0,
+          "example": 600
+        },
+        "spitzenleistung_ps": {
+          "type": "integer",
+          "description": "Spitzenleistung bei E-Antrieb in PS",
+          "minimum": 0,
+          "example": 816
+        },
+        "batteriekapazitaet_kwh": {
+          "type": "integer",
+          "description": "Batteriekapazität in kWh",
+          "minimum": 0,
+          "example": 621
+        },
+        "batterietyp": {
+          "type": "string",
+          "description": "Technologie der Batterie",
+          "enum": ["LFP (Lithium-Eisenphosphat)", "LFP", "NMC"],
+          "example": "LFP (Lithium-Eisenphosphat)"
+        },
+        "reichweite_km": {
+          "type": "integer",
+          "description": "Elektrische Reichweite in km",
+          "minimum": 0,
+          "example": 500
+        },
+        "ladeleistung_max_kw": {
+          "type": "integer",
+          "description": "Maximale Ladeleistung in kW",
+          "minimum": 0,
+          "example": 400
+        },
+        "bordspannung_v": {
+          "type": "integer",
+          "description": "Bordspannung bei E-Fahrzeugen in Volt",
+          "enum": [400, 800],
+          "example": 800
+        },
+        
+        "_comment_alternative": "=== ALTERNATIVE KRAFTSTOFFE ===",
+        "kraftstoff": {
+          "type": "string",
+          "description": "Kraftstoffart bei alternativen Antrieben",
+          "enum": ["CNG (Compressed Natural Gas)", "LNG (Liquefied Natural Gas)"],
+          "example": "LNG (Liquefied Natural Gas)"
+        },
+        "tankvolumen_kg": {
+          "type": "integer",
+          "description": "Tankvolumen in kg (bei Gasantrieb)",
+          "minimum": 0,
+          "example": 80
+        },
+        
+        "_comment_getriebe": "=== GETRIEBE & FAHRWERK ===",
+        "getriebe": {
+          "type": "string",
+          "description": "Getriebetyp und Ganganzahl",
+          "example": "Mercedes PowerShift 3 (12-Gang)"
+        },
+        "antriebsformel": {
+          "type": "string",
+          "description": "Achskonfiguration (Antriebsformel)",
+          "pattern": "^\\d+x\\d+( permanent)?$",
+          "example": "4x2"
+        },
+        
+        "_comment_masse": "=== MASSE & GEWICHTE ===",
+        "gesamtgewicht_t": {
+          "type": "integer",
+          "description": "Zulässiges Gesamtgewicht in Tonnen",
+          "minimum": 0,
+          "example": 40
+        },
+        "zuggesamtgewicht_t": {
+          "type": "integer",
+          "description": "Zulässiges Zuggesamtgewicht in Tonnen",
+          "minimum": 0,
+          "example": 250
+        },
+        "nutzlast_t": {
+          "type": "integer",
+          "description": "Nutzlast in Tonnen",
+          "minimum": 0,
+          "example": 22
+        },
+        "hinterachse_t": {
+          "type": "integer",
+          "description": "Hinterachslast in Tonnen",
+          "minimum": 0,
+          "example": 10
+        },
+        "leergewicht_reduzierung_kg": {
+          "type": "integer",
+          "description": "Leergewichtsreduzierung bei Leichtbau-Varianten in kg",
+          "minimum": 0,
+          "example": 350
+        },
+        
+        "_comment_abmessungen": "=== ABMESSUNGEN ===",
+        "radstand_mm": {
+          "type": "integer",
+          "description": "Radstand in mm",
+          "minimum": 0,
+          "example": 3700
+        },
+        "bodenfreiheit_mm": {
+          "type": "integer",
+          "description": "Bodenfreiheit in mm",
+          "minimum": 0,
+          "example": 400
+        },
+        "wattiefe_mm": {
+          "type": "integer",
+          "description": "Wattiefe in mm",
+          "minimum": 0,
+          "example": 800
+        },
+        "einstiegshoehe_mm": {
+          "type": "integer",
+          "description": "Einstiegshöhe ins Fahrerhaus in mm",
+          "minimum": 0,
+          "example": 380
+        },
+        "sattelhoehe_mm": {
+          "type": "integer",
+          "description": "Sattelhöhe bei Sattelzugmaschinen in mm",
+          "minimum": 0,
+          "example": 950
+        },
+        "lichte_hoehe_m": {
+          "type": "number",
+          "description": "Lichte Ladehöhe in m",
+          "minimum": 0,
+          "example": 3.0
+        },
+        "ladeflaeche_m": {
+          "type": "number",
+          "description": "Länge der Ladefläche in m",
+          "minimum": 0,
+          "example": 7.2
+        },
+        "kipper_volumen_m3": {
+          "type": "integer",
+          "description": "Kippervolumen in m³",
+          "minimum": 0,
+          "example": 5
+        },
+        
+        "_comment_fahrerhaus": "=== FAHRERHAUS ===",
+        "fahrerhaustyp": {
+          "type": "string",
+          "description": "Typ des Fahrerhauses",
+          "enum": [
+            "GigaSpace ProCabin",
+            "GigaSpace",
+            "GigaSpace Edition",
+            "BigSpace",
+            "BigSpace Loader",
+            "StreamSpace",
+            "StreamSpace Volumer",
+            "ClassicSpace",
+            "CompactSpace",
+            "M-Fahrerhaus",
+            "S-Fahrerhaus",
+            "S-Fahrerhaus kurz"
+          ],
+          "example": "GigaSpace ProCabin"
+        },
+        
+        "_comment_verbrauch": "=== VERBRAUCH & TANK ===",
+        "tankvolumen_l": {
+          "type": "integer",
+          "description": "Tankvolumen in Litern",
+          "minimum": 0,
+          "example": 900
+        },
+        "verbrauch_l_100km": {
+          "type": "number",
+          "description": "Durchschnittsverbrauch in l/100km",
+          "minimum": 0,
+          "example": 24.5
+        },
+        "hoechstgeschwindigkeit_kmh": {
+          "type": "integer",
+          "description": "Höchstgeschwindigkeit in km/h",
+          "minimum": 0,
+          "example": 89
+        },
+        
+        "_comment_gelaende": "=== GELÄNDE-EIGENSCHAFTEN ===",
+        "steigfaehigkeit_prozent": {
+          "type": "integer",
+          "description": "Maximale Steigfähigkeit in Prozent",
+          "minimum": 0,
+          "maximum": 100,
+          "example": 100
+        },
+        "kriechgang": {
+          "type": "string",
+          "description": "Minimale Kriechgeschwindigkeit",
+          "example": "0.04 km/h"
+        },
+        
+        "_comment_sonstiges": "=== SONSTIGES ===",
+        "nebenantrieb": {
+          "type": "boolean",
+          "description": "Nebenantrieb vorhanden (für Aufbauten)",
+          "example": true
+        },
+        "bereifung": {
+          "type": "string",
+          "description": "Bereifungsart",
+          "example": "Singlebereifung hinten"
+        }
+      }
+    }
+  }
+}
