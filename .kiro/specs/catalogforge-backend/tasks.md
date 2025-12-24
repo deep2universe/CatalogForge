@@ -312,20 +312,20 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
 - [x] 17. Checkpoint - Agent Framework
   - Ensure all tests pass.
 
-- [ ] 18. Layout Service und Controller
-  - [ ] 18.1 LayoutGenerationService implementieren
+- [x] 18. Layout Service und Controller
+  - [x] 18.1 LayoutGenerationService implementieren
     - generateFromText() und generateFromImage()
     - Delegiert an AgentOrchestrator
     - Layout-Lifecycle (CRUD) in Memory-Store
     - UUID-Generierung für Layouts
     - _Requirements: 2.1, 3.1, 9.1, 9.2, 9.4, 9.5, 9.6_
-  - [ ] 18.2 Property-Test für Layout Response Completeness
+  - [x] 18.2 Property-Test für Layout Response Completeness
     - **Property 5: Layout Response Completeness**
     - **Validates: Requirements 2.1, 2.7**
-  - [ ] 18.3 Property-Test für Layout Lifecycle Round-Trip
+  - [x] 18.3 Property-Test für Layout Lifecycle Round-Trip
     - **Property 13: Layout Lifecycle Round-Trip**
     - **Validates: Requirements 9.1, 9.2, 9.4, 9.5**
-  - [ ] 18.4 LayoutController implementieren
+  - [x] 18.4 LayoutController implementieren
     - POST /api/v1/layouts/generate/text
     - POST /api/v1/layouts/generate/image
     - GET /api/v1/layouts/{id}
@@ -333,12 +333,12 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
     - DELETE /api/v1/layouts/{id}
     - GET /api/v1/layouts/{id}/variants
     - _Requirements: 2.1, 2.2, 3.1, 9.2, 9.3, 9.4, 9.5, 9.6_
-  - [ ] 18.5 Integration-Test für LayoutController
+  - [x] 18.5 Integration-Test für LayoutController
     - Text-to-Layout mit gemocktem GeminiClient
     - Image-to-Layout mit gemocktem GeminiClient
     - Layout CRUD Lifecycle
     - _Requirements: 2.1, 3.1, 9.2, 9.4, 9.5_
-  - [ ] 18.6 Git commit
+  - [x] 18.6 Git commit
     - `feat: implement LayoutService and LayoutController`
 
 - [ ] 19. Image Upload Service
