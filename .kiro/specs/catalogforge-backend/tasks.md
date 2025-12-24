@@ -382,16 +382,16 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 21.5 Git commit
     - `feat: implement PDF generation with PuppeteerBridge`
 
-- [ ] 22. Puppeteer Node.js Script
-  - [ ] 22.1 pdf-generator.js implementieren
+- [x] 22. Puppeteer Node.js Script
+  - [x] 22.1 pdf-generator.js implementieren
     - stdin JSON lesen
     - Puppeteer/Headless Chrome PDF-Generierung
     - stdout JSON + PDF-Pfad zurückgeben
     - _Requirements: 11.3_
-  - [ ] 22.2 print-presets.js implementieren
+  - [x] 22.2 print-presets.js implementieren
     - Preset-Konfigurationen
     - _Requirements: 11.2_
-  - [ ] 22.3 Git commit
+  - [x] 22.3 Git commit
     - `feat: add Puppeteer PDF generator script`
 
 - [ ] 23. Skills Content erstellen

@@ -1,0 +1,15 @@
+{
+  "name": "catalogforge-pdf-generator",
+  "version": "1.0.0",
+  "description": "PDF generator for CatalogForge using Puppeteer",
+  "main": "pdf-generator.js",
+  "scripts": {
+    "generate": "node pdf-generator.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
