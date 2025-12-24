@@ -341,25 +341,25 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 18.6 Git commit
     - `feat: implement LayoutService and LayoutController`
 
-- [ ] 19. Image Upload Service
-  - [ ] 19.1 ImageService implementieren
+- [x] 19. Image Upload Service
+  - [x] 19.1 ImageService implementieren
     - upload() mit Validierung (JPEG, PNG, WebP, max 10MB)
     - Temporäre Speicherung mit UUID
     - URL-Generierung (24h gültig)
     - getImage() für Abruf
     - cleanup() Scheduled Job
     - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5, 4.7_
-  - [ ] 19.2 Property-Test für Image Upload Round-Trip
+  - [x] 19.2 Property-Test für Image Upload Round-Trip
     - **Property 10: Image Upload Round-Trip**
     - **Validates: Requirements 4.1, 4.2, 4.5, 4.6**
-  - [ ] 19.3 ImageController implementieren
+  - [x] 19.3 ImageController implementieren
     - POST /api/v1/images/upload
     - GET /api/v1/images/{imageId} (für interne URL)
     - _Requirements: 4.1, 4.5, 4.6_
-  - [ ] 19.4 Git commit
+  - [x] 19.4 Git commit
     - `feat: implement ImageService with upload and cleanup`
 
-- [ ] 20. Checkpoint - Layout und Image Services
+- [x] 20. Checkpoint - Layout und Image Services
   - Ensure all tests pass.
 
 - [ ] 21. PDF Generation

@@ -3,10 +3,11 @@ package com.catalogforge.model.response;
 import java.time.Instant;
 
 /**
- * Response for image upload requests.
+ * Response for image upload.
  */
 public record ImageUploadResponse(
     String imageId,
-    String imageUrl,
+    String url,
+    String mimeType,
     Instant expiresAt
 ) {}
