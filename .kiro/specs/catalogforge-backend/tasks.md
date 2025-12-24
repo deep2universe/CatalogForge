@@ -58,23 +58,23 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 2.4 Git commit
     - `feat: add domain models and DTOs`
 
-- [ ] 3. Exception Handling
-  - [ ] 3.1 Exception-Hierarchie implementieren
+- [x] 3. Exception Handling
+  - [x] 3.1 Exception-Hierarchie implementieren
     - CatalogForgeException (abstract base)
     - LayoutGenerationException, PdfGenerationException
     - SkillLoadException, ImageAnalysisException
     - ImageUrlNotReachableException, ImageUploadException
     - ResourceNotFoundException
     - _Requirements: 14.1, 14.2, 14.3, 14.4_
-  - [ ] 3.2 GlobalExceptionHandler implementieren
+  - [x] 3.2 GlobalExceptionHandler implementieren
     - Handler für Validation, NotFound, TooLarge, GeminiError, Generic
     - ErrorResponse-Mapping mit timestamp, status, error, message, path
     - Server-seitiges Logging aller Exceptions
     - _Requirements: 14.1, 14.2, 14.3, 14.4, 14.5, 14.6_
-  - [ ] 3.3 Property-Test für Error Response Structure
+  - [x] 3.3 Property-Test für Error Response Structure
     - **Property 19: Error Response Structure**
     - **Validates: Requirements 14.6**
-  - [ ] 3.4 Git commit
+  - [x] 3.4 Git commit
     - `feat: add exception hierarchy and global error handling`
 
 - [ ] 4. Utility-Klassen
