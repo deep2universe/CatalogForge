@@ -362,24 +362,24 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
 - [x] 20. Checkpoint - Layout und Image Services
   - Ensure all tests pass.
 
-- [ ] 21. PDF Generation
-  - [ ] 21.1 PuppeteerBridge implementieren
+- [x] 21. PDF Generation
+  - [x] 21.1 PuppeteerBridge implementieren
     - Kommunikation via stdin/stdout JSON
     - PrintPreset-Unterstützung
     - _Requirements: 11.1, 11.2, 11.3_
-  - [ ] 21.2 PrintPreset und PdfOptions Records
+  - [x] 21.2 PrintPreset und PdfOptions Records
     - screen, print-standard, print-professional, print-premium
     - DPI, Bleed, Schnittmarken Konfiguration
     - _Requirements: 11.2_
-  - [ ] 21.3 PdfGenerationService implementieren
+  - [x] 21.3 PdfGenerationService implementieren
     - generate() mit layoutId und preset
     - PDF-Speicherung und ID-Generierung
     - _Requirements: 11.1, 11.4_
-  - [ ] 21.4 PdfController implementieren
+  - [x] 21.4 PdfController implementieren
     - POST /api/v1/pdf/generate
     - GET /api/v1/pdf/{id}/download
     - _Requirements: 11.1, 11.4, 11.5, 11.6_
-  - [ ] 21.5 Git commit
+  - [x] 21.5 Git commit
     - `feat: implement PDF generation with PuppeteerBridge`
 
 - [ ] 22. Puppeteer Node.js Script
