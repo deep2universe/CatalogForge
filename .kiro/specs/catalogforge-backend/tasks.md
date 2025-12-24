@@ -274,25 +274,25 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 14.5 Git commit
     - `feat: implement Agent framework core with LinearPipeline`
 
-- [ ] 15. Agent Framework - Advanced Pipelines
-  - [ ] 15.1 IterativePipeline implementieren
+- [x] 15. Agent Framework - Advanced Pipelines
+  - [x] 15.1 IterativePipeline implementieren
     - Validation → Correction Loop
     - maxRetries (default 3)
     - FallbackStep bei Überschreitung
     - _Requirements: 7.2, 7.7, 7.8_
-  - [ ] 15.2 ParallelPipeline implementieren
+  - [x] 15.2 ParallelPipeline implementieren
     - N parallele LayoutGenerationSteps
     - Aggregation der Ergebnisse
     - _Requirements: 7.3, 7.9_
-  - [ ] 15.3 ImageAnalysisStep implementieren
+  - [x] 15.3 ImageAnalysisStep implementieren
     - Integration mit GeminiVisionAnalyzer
     - Placeholder-Modus bei unreachable URL
     - _Requirements: 3.1, 3.3, 7.4_
-  - [ ] 15.4 CorrectionStep und FallbackStep implementieren
+  - [x] 15.4 CorrectionStep und FallbackStep implementieren
     - Korrektur-Prompt bei Validierungsfehlern
     - Fallback-Layout bei wiederholtem Fehlschlag
     - _Requirements: 7.7, 7.8_
-  - [ ] 15.5 Git commit
+  - [x] 15.5 Git commit
     - `feat: add IterativePipeline and ParallelPipeline`
 
 - [ ] 16. AgentOrchestrator
