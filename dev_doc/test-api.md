@@ -1,10 +1,6 @@
-# Dev Documentation
+# test-api.sh
 
-Entwickler-Tools und Dokumentation für CatalogForge.
-
-## API Test Script
-
-Das `test-api.sh` Script testet alle REST-Endpunkte des Backends.
+Bash-Script zum Testen aller REST-Endpunkte des CatalogForge Backends.
 
 ### Voraussetzungen
 
