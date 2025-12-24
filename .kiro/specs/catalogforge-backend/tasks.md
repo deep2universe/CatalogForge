@@ -77,37 +77,37 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 3.4 Git commit
     - `feat: add exception hierarchy and global error handling`
 
-- [ ] 4. Utility-Klassen
-  - [ ] 4.1 HtmlSanitizer implementieren
+- [x] 4. Utility-Klassen
+  - [x] 4.1 HtmlSanitizer implementieren
     - Script-Tags entfernen
     - Event-Handler-Attribute entfernen
     - Strukturelle Elemente und CSS-Klassen erhalten
     - _Requirements: 12.1, 12.2, 12.3_
-  - [ ] 4.2 Property-Test für HTML Sanitization
+  - [x] 4.2 Property-Test für HTML Sanitization
     - **Property 16: HTML Sanitization**
     - **Validates: Requirements 12.1, 12.2, 12.3**
-  - [ ] 4.3 CssValidator implementieren
+  - [x] 4.3 CssValidator implementieren
     - Syntax-Validierung (balanced brackets)
     - Print-Units akzeptieren (mm, cm, pt)
     - _Requirements: 12.4, 12.5_
-  - [ ] 4.4 Property-Test für CSS Validation
+  - [x] 4.4 Property-Test für CSS Validation
     - **Property 17: CSS Validation**
     - **Validates: Requirements 12.4, 12.5**
-  - [ ] 4.5 ColorUtils implementieren
+  - [x] 4.5 ColorUtils implementieren
     - Hex-Code-Validierung (#RGB, #RRGGBB)
     - WCAG-Kontrast-Berechnung
     - _Requirements: 12.6, 12.7_
-  - [ ] 4.6 Property-Test für Color Validation
+  - [x] 4.6 Property-Test für Color Validation
     - **Property 18: Color Validation and Contrast**
     - **Validates: Requirements 12.6, 12.7**
-  - [ ] 4.7 JsonUtils und FileUtils implementieren
+  - [x] 4.7 JsonUtils und FileUtils implementieren
     - JSON-Serialisierung/Deserialisierung Helpers
     - File-Reading Utilities
-  - [ ] 4.8 Git commit
+  - [x] 4.8 Git commit
     - `feat: add utility classes with property tests`
 
-- [ ] 5. Checkpoint - Basis-Infrastruktur
-  - Ensure all tests pass.
+- [x] 5. Checkpoint - Basis-Infrastruktur
+  - All tests pass (23 tests)
 
 - [ ] 6. Product Service
   - [ ] 6.1 ProductService implementieren
