@@ -1,0 +1,102 @@
+/**
+ * Product Card Component
+ */
+
+.product-card {
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-normal);
+}
+
+.product-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.product-card__image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    background: var(--color-gray-100);
+}
+
+.product-card__content {
+    padding: var(--space-4);
+}
+
+.product-card__category {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    margin-bottom: var(--space-1);
+}
+
+.product-card__title {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-900);
+    margin-bottom: var(--space-2);
+    line-height: var(--line-height-tight);
+}
+
+.product-card__description {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-600);
+    line-height: var(--line-height-normal);
+    margin-bottom: var(--space-3);
+}
+
+.product-card__price {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-gray-900);
+}
+
+.product-card__price-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+    font-weight: var(--font-weight-normal);
+}
+
+/* Compact Variant */
+.product-card--compact .product-card__content {
+    padding: var(--space-3);
+}
+
+.product-card--compact .product-card__title {
+    font-size: var(--font-size-base);
+}
+
+/* Horizontal Variant */
+.product-card--horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-card--horizontal .product-card__image {
+    width: 40%;
+    aspect-ratio: 1/1;
+}
+
+.product-card--horizontal .product-card__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Print Styles */
+@media print {
+    .product-card {
+        box-shadow: none;
+        border: 1px solid var(--color-gray-200);
+        page-break-inside: avoid;
+    }
+    
+    .product-card__content {
+        padding: 4mm;
+    }
+}

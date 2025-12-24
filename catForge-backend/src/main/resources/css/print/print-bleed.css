@@ -1,0 +1,106 @@
+/**
+ * Print Bleed Styles for Professional Printing
+ */
+
+@media print {
+    /* Bleed Area Setup */
+    .bleed-container {
+        position: relative;
+        overflow: visible;
+    }
+    
+    /* 3mm Bleed */
+    .bleed-3mm {
+        margin: -3mm;
+        padding: 3mm;
+    }
+    
+    /* 5mm Bleed */
+    .bleed-5mm {
+        margin: -5mm;
+        padding: 5mm;
+    }
+    
+    /* Bleed Background - Extends to bleed edge */
+    .bleed-bg {
+        position: absolute;
+        top: -3mm;
+        left: -3mm;
+        right: -3mm;
+        bottom: -3mm;
+    }
+    
+    .bleed-bg-5mm {
+        top: -5mm;
+        left: -5mm;
+        right: -5mm;
+        bottom: -5mm;
+    }
+    
+    /* Safe Area - Content should stay within */
+    .safe-area {
+        margin: 5mm;
+    }
+    
+    .safe-area-3mm {
+        margin: 3mm;
+    }
+    
+    /* Full Bleed Image */
+    .img-bleed {
+        position: absolute;
+        top: -3mm;
+        left: -3mm;
+        width: calc(100% + 6mm);
+        height: calc(100% + 6mm);
+        object-fit: cover;
+    }
+    
+    .img-bleed-5mm {
+        top: -5mm;
+        left: -5mm;
+        width: calc(100% + 10mm);
+        height: calc(100% + 10mm);
+    }
+    
+    /* Page with Bleed */
+    .page-bleed {
+        position: relative;
+        box-sizing: border-box;
+    }
+    
+    .page-bleed::before {
+        content: "";
+        position: absolute;
+        top: -3mm;
+        left: -3mm;
+        right: -3mm;
+        bottom: -3mm;
+        background: inherit;
+        z-index: -1;
+    }
+}
+
+/* A4 with 3mm Bleed */
+@page bleed-a4 {
+    size: 216mm 303mm; /* A4 + 6mm */
+    margin: 0;
+}
+
+/* A4 with 5mm Bleed */
+@page bleed-a4-5mm {
+    size: 220mm 307mm; /* A4 + 10mm */
+    margin: 0;
+}
+
+/* A5 with 3mm Bleed */
+@page bleed-a5 {
+    size: 154mm 216mm; /* A5 + 6mm */
+    margin: 0;
+}
+
+/* DL with 3mm Bleed */
+@page bleed-dl {
+    size: 105mm 216mm; /* DL + 6mm */
+    margin: 0;
+}

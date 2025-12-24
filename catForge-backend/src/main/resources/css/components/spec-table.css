@@ -1,0 +1,84 @@
+/**
+ * Specification Table Component
+ */
+
+.spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-sm);
+}
+
+.spec-table th,
+.spec-table td {
+    padding: var(--space-3) var(--space-4);
+    text-align: left;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.spec-table th {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-700);
+    background: var(--color-gray-50);
+}
+
+.spec-table td {
+    color: var(--color-gray-900);
+}
+
+.spec-table tr:last-child td {
+    border-bottom: none;
+}
+
+.spec-table tr:hover td {
+    background: var(--color-gray-50);
+}
+
+/* Striped Variant */
+.spec-table--striped tr:nth-child(even) td {
+    background: var(--color-gray-50);
+}
+
+/* Compact Variant */
+.spec-table--compact th,
+.spec-table--compact td {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-xs);
+}
+
+/* Bordered Variant */
+.spec-table--bordered {
+    border: 1px solid var(--color-gray-200);
+}
+
+.spec-table--bordered th,
+.spec-table--bordered td {
+    border: 1px solid var(--color-gray-200);
+}
+
+/* Key-Value Layout */
+.spec-table--kv th {
+    width: 40%;
+    background: transparent;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-gray-500);
+}
+
+.spec-table--kv td {
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Print Styles */
+@media print {
+    .spec-table {
+        font-size: 9pt;
+    }
+    
+    .spec-table th,
+    .spec-table td {
+        padding: 2mm 3mm;
+    }
+    
+    .spec-table tr {
+        page-break-inside: avoid;
+    }
+}

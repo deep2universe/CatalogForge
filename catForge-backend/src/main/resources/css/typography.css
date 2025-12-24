@@ -1,0 +1,143 @@
+/**
+ * Typography Styles for CatalogForge Layouts
+ */
+
+/* Headings */
+.h1, h1 {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--space-4);
+}
+
+.h2, h2 {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--space-3);
+}
+
+.h3, h3 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+    margin-bottom: var(--space-2);
+}
+
+.h4, h4 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-normal);
+    margin-bottom: var(--space-2);
+}
+
+.h5, h5 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-normal);
+    margin-bottom: var(--space-2);
+}
+
+.h6, h6 {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-normal);
+    margin-bottom: var(--space-1);
+}
+
+/* Body Text */
+.body-lg {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+}
+
+.body-base {
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+}
+
+.body-sm {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-normal);
+}
+
+.body-xs {
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-normal);
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: var(--space-4);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/* Lead Text */
+.lead {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-light);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-gray-600);
+}
+
+/* Caption */
+.caption {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+    line-height: var(--line-height-normal);
+}
+
+/* Overline */
+.overline {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-gray-500);
+}
+
+/* Text Utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+.text-uppercase { text-transform: uppercase; }
+.text-lowercase { text-transform: lowercase; }
+.text-capitalize { text-transform: capitalize; }
+
+.font-light { font-weight: var(--font-weight-light); }
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+
+/* Lists */
+.list-disc {
+    list-style-type: disc;
+    padding-left: var(--space-6);
+}
+
+.list-decimal {
+    list-style-type: decimal;
+    padding-left: var(--space-6);
+}
+
+.list-disc li,
+.list-decimal li {
+    margin-bottom: var(--space-2);
+}
+
+/* Print Typography */
+@media print {
+    .h1, h1 { font-size: 28pt; }
+    .h2, h2 { font-size: 22pt; }
+    .h3, h3 { font-size: 18pt; }
+    .h4, h4 { font-size: 14pt; }
+    .body-base { font-size: 11pt; }
+    .body-sm { font-size: 9pt; }
+    .caption { font-size: 8pt; }
+}

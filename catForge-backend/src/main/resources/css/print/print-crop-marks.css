@@ -1,0 +1,123 @@
+/**
+ * Crop Marks for Professional Printing
+ */
+
+@media print {
+    /* Crop Mark Container */
+    .crop-marks {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+    }
+    
+    /* Individual Crop Mark */
+    .crop-mark {
+        position: absolute;
+        background: #000;
+    }
+    
+    /* Horizontal Marks */
+    .crop-mark--h {
+        width: 8mm;
+        height: 0.25pt;
+    }
+    
+    /* Vertical Marks */
+    .crop-mark--v {
+        width: 0.25pt;
+        height: 8mm;
+    }
+    
+    /* Top-Left Corner */
+    .crop-mark--tl-h {
+        top: 3mm;
+        left: -10mm;
+    }
+    
+    .crop-mark--tl-v {
+        top: -10mm;
+        left: 3mm;
+    }
+    
+    /* Top-Right Corner */
+    .crop-mark--tr-h {
+        top: 3mm;
+        right: -10mm;
+    }
+    
+    .crop-mark--tr-v {
+        top: -10mm;
+        right: 3mm;
+    }
+    
+    /* Bottom-Left Corner */
+    .crop-mark--bl-h {
+        bottom: 3mm;
+        left: -10mm;
+    }
+    
+    .crop-mark--bl-v {
+        bottom: -10mm;
+        left: 3mm;
+    }
+    
+    /* Bottom-Right Corner */
+    .crop-mark--br-h {
+        bottom: 3mm;
+        right: -10mm;
+    }
+    
+    .crop-mark--br-v {
+        bottom: -10mm;
+        right: 3mm;
+    }
+    
+    /* Registration Marks */
+    .registration-mark {
+        position: absolute;
+        width: 5mm;
+        height: 5mm;
+    }
+    
+    .registration-mark::before,
+    .registration-mark::after {
+        content: "";
+        position: absolute;
+        background: #000;
+    }
+    
+    .registration-mark::before {
+        width: 100%;
+        height: 0.25pt;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .registration-mark::after {
+        width: 0.25pt;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* Color Bars (simplified) */
+    .color-bar {
+        position: absolute;
+        display: flex;
+        gap: 1mm;
+    }
+    
+    .color-bar__swatch {
+        width: 4mm;
+        height: 4mm;
+    }
+    
+    .color-bar__cyan { background: cyan; }
+    .color-bar__magenta { background: magenta; }
+    .color-bar__yellow { background: yellow; }
+    .color-bar__black { background: black; }
+}

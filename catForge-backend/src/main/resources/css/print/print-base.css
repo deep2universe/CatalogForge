@@ -1,0 +1,117 @@
+/**
+ * Print Base Styles for CatalogForge
+ */
+
+@media print {
+    /* Page Setup */
+    @page {
+        margin: 10mm;
+    }
+    
+    @page :first {
+        margin-top: 0;
+    }
+    
+    /* Reset for Print */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+    
+    html, body {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        font-size: 11pt;
+        line-height: 1.4;
+        background: white !important;
+    }
+    
+    /* Typography for Print */
+    h1 { font-size: 24pt; margin-bottom: 4mm; }
+    h2 { font-size: 18pt; margin-bottom: 3mm; }
+    h3 { font-size: 14pt; margin-bottom: 2mm; }
+    h4 { font-size: 12pt; margin-bottom: 2mm; }
+    p { margin-bottom: 3mm; }
+    
+    /* Links */
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
+        color: #666;
+    }
+    
+    /* Images */
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+    
+    /* Tables */
+    table {
+        page-break-inside: auto;
+    }
+    
+    tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+    
+    thead {
+        display: table-header-group;
+    }
+    
+    /* Page Breaks */
+    .page-break {
+        page-break-after: always;
+    }
+    
+    .page-break-before {
+        page-break-before: always;
+    }
+    
+    .avoid-break {
+        page-break-inside: avoid;
+    }
+    
+    /* Hide Screen-Only Elements */
+    .no-print,
+    .screen-only,
+    nav,
+    .navigation,
+    button,
+    .btn,
+    video,
+    audio,
+    iframe {
+        display: none !important;
+    }
+    
+    /* Show Print-Only Elements */
+    .print-only {
+        display: block !important;
+    }
+    
+    /* Backgrounds */
+    .bg-print-white {
+        background: white !important;
+    }
+    
+    /* Shadows - Remove for Print */
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    /* Borders - Simplify */
+    .border-print-simple {
+        border: 0.5pt solid #ccc !important;
+    }
+}

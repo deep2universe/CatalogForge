@@ -416,16 +416,16 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 23.7 Git commit
     - `feat: add skill markdown files for prompt engineering`
 
-- [ ] 24. CSS Templates erstellen
-  - [ ] 24.1 Base CSS erstellen
+- [x] 24. CSS Templates erstellen
+  - [x] 24.1 Base CSS erstellen
     - reset.css, variables.css, typography.css, utilities.css
-  - [ ] 24.2 Component CSS erstellen
+  - [x] 24.2 Component CSS erstellen
     - product-card.css, spec-table.css, feature-list.css, hero-image.css, etc.
-  - [ ] 24.3 Layout CSS erstellen
+  - [x] 24.3 Layout CSS erstellen
     - grid-12col.css, grid-modular.css, layout-product-hero.css, etc.
-  - [ ] 24.4 Print CSS erstellen
+  - [x] 24.4 Print CSS erstellen
     - print-base.css, print-bleed.css, print-cmyk-hints.css, print-crop-marks.css
-  - [ ] 24.5 Git commit
+  - [x] 24.5 Git commit
     - `feat: add CSS templates for layout generation`
 
 - [ ] 25. Sample Data und Prompts
