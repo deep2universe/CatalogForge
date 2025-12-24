@@ -107,7 +107,7 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
     - `feat: add utility classes with property tests`
 
 - [ ] 5. Checkpoint - Basis-Infrastruktur
-  - Ensure all tests pass, ask the user if questions arise.
+  - Ensure all tests pass.
 
 - [ ] 6. Product Service
   - [ ] 6.1 ProductService implementieren
@@ -188,7 +188,7 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
     - `feat: add SkillsController REST endpoints`
 
 - [ ] 10. Checkpoint - Product und Skills
-  - Ensure all tests pass, ask the user if questions arise.
+  - Ensure all tests pass.
 
 - [ ] 11. Gemini Integration
   - [ ] 11.1 GeminiClient implementieren
@@ -251,7 +251,7 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
     - `feat: implement LLM logging system with JSONL writer`
 
 - [ ] 13. Checkpoint - Gemini und Logging
-  - Ensure all tests pass, ask the user if questions arise.
+  - Ensure all tests pass.
 
 - [ ] 14. Agent Framework - Core
   - [ ] 14.1 AgentContext Record implementieren
@@ -310,7 +310,7 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
     - `feat: implement AgentOrchestrator with pipeline strategies`
 
 - [ ] 17. Checkpoint - Agent Framework
-  - Ensure all tests pass, ask the user if questions arise.
+  - Ensure all tests pass.
 
 - [ ] 18. Layout Service und Controller
   - [ ] 18.1 LayoutGenerationService implementieren
@@ -360,7 +360,7 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
     - `feat: implement ImageService with upload and cleanup`
 
 - [ ] 20. Checkpoint - Layout und Image Services
-  - Ensure all tests pass, ask the user if questions arise.
+  - Ensure all tests pass.
 
 - [ ] 21. PDF Generation
   - [ ] 21.1 PuppeteerBridge implementieren
@@ -443,7 +443,7 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
     - `feat: add sample data and test fixtures`
 
 - [ ] 26. Final Checkpoint
-  - Ensure all tests pass, ask the user if questions arise.
+  - Ensure all tests pass.
   - Verify 70% overall test coverage
   - Run full integration test suite
   - [ ] 26.1 Git commit
