@@ -132,19 +132,19 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 6.6 Git commit
     - `feat: implement ProductService with filtering and search`
 
-- [ ] 7. ProductController
-  - [ ] 7.1 ProductController implementieren
+- [x] 7. ProductController
+  - [x] 7.1 ProductController implementieren
     - GET /api/v1/products (paginiert, filterbar)
     - GET /api/v1/products/{id}
     - GET /api/v1/products/categories
     - GET /api/v1/products/series
     - GET /api/v1/products/search?q={query}
     - _Requirements: 1.2, 1.3, 1.4, 1.5, 1.6, 1.7_
-  - [ ] 7.2 Integration-Test für ProductController
+  - [x] 7.2 Integration-Test für ProductController
     - Echte products.json
     - Pagination, Filter, Search testen
     - _Requirements: 1.2, 1.3, 1.4, 1.5_
-  - [ ] 7.3 Git commit
+  - [x] 7.3 Git commit
     - `feat: add ProductController REST endpoints`
 
 - [ ] 8. Skills System
