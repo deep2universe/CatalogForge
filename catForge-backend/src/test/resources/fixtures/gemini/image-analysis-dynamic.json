@@ -1,0 +1,22 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"colorPalette\":{\"primary\":\"#E63946\",\"secondary\":\"#1A1A2E\",\"accent\":\"#FFD60A\",\"neutralLight\":\"#F5F5F5\",\"neutralDark\":\"#0D0D0D\"},\"moodAnalysis\":{\"type\":\"dynamic\",\"confidence\":0.88,\"keywords\":[\"bold\",\"energetic\",\"powerful\",\"action\",\"modern\"]},\"layoutHints\":{\"gridType\":\"diagonal\",\"density\":\"high\",\"focusArea\":\"top-right\",\"suggestedColumns\":3}}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 2500,
+    "candidatesTokenCount": 175,
+    "totalTokenCount": 2675
+  },
+  "modelVersion": "gemini-2.0-flash"
+}

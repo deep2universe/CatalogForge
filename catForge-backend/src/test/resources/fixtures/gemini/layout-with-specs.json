@@ -1,0 +1,22 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"html\":\"<div class=\\\"product-page technical\\\"><header class=\\\"page-header\\\"><div class=\\\"brand\\\">Mercedes-Benz Trucks</div><h1>Actros L 1853 LS ProCabin</h1><p class=\\\"tagline\\\">Fernverkehr auf höchstem Niveau</p></header><main class=\\\"content\\\"><div class=\\\"layout-grid\\\"><section class=\\\"product-image\\\"><img src=\\\"actros-l.jpg\\\" alt=\\\"Actros L ProCabin\\\" class=\\\"main-image\\\"/></section><section class=\\\"product-info\\\"><h2>Überblick</h2><p class=\\\"description\\\">Der Actros L mit ProCabin setzt neue Maßstäbe im Fernverkehr. Maximaler Komfort für lange Strecken kombiniert mit modernster Technologie.</p><div class=\\\"highlights-grid\\\"><div class=\\\"highlight\\\"><span class=\\\"value\\\">530</span><span class=\\\"unit\\\">PS</span><span class=\\\"label\\\">Leistung</span></div><div class=\\\"highlight\\\"><span class=\\\"value\\\">2.600</span><span class=\\\"unit\\\">Nm</span><span class=\\\"label\\\">Drehmoment</span></div><div class=\\\"highlight\\\"><span class=\\\"value\\\">12.8</span><span class=\\\"unit\\\">L</span><span class=\\\"label\\\">Hubraum</span></div></div></section></div><section class=\\\"specifications\\\"><h2>Technische Daten</h2><div class=\\\"spec-categories\\\"><div class=\\\"spec-category\\\"><h3>Motor</h3><table class=\\\"spec-table\\\"><tr><th>Typ</th><td>OM 471</td></tr><tr><th>Hubraum</th><td>12.809 cm³</td></tr><tr><th>Leistung</th><td>390 kW (530 PS)</td></tr><tr><th>Drehmoment</th><td>2.600 Nm</td></tr><tr><th>Abgasnorm</th><td>Euro VI-E</td></tr></table></div><div class=\\\"spec-category\\\"><h3>Getriebe</h3><table class=\\\"spec-table\\\"><tr><th>Typ</th><td>Mercedes PowerShift 3</td></tr><tr><th>Gänge</th><td>12</td></tr><tr><th>Schaltung</th><td>Automatisiert</td></tr></table></div><div class=\\\"spec-category\\\"><h3>Abmessungen</h3><table class=\\\"spec-table\\\"><tr><th>Radstand</th><td>3.700 mm</td></tr><tr><th>Gesamtlänge</th><td>6.500 mm</td></tr><tr><th>Gesamthöhe</th><td>3.950 mm</td></tr></table></div></div></section></main><footer class=\\\"page-footer\\\"><p>Technische Änderungen vorbehalten. Stand: 2024</p></footer></div>\",\"css\":\".product-page.technical{font-family:'Inter',sans-serif;max-width:210mm;margin:0 auto;padding:12mm;background:#fff;color:#333}.page-header{margin-bottom:1.5rem}.brand{font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:#666;margin-bottom:0.5rem}.page-header h1{font-size:2rem;font-weight:700;color:#1a1a1a;margin-bottom:0.25rem}.tagline{color:#0066cc;font-size:1rem}.layout-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:2rem}.main-image{width:100%;height:auto;border-radius:4px}.product-info h2{font-size:1.25rem;margin-bottom:0.75rem;color:#333}.description{color:#666;line-height:1.6;margin-bottom:1.5rem}.highlights-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}.highlight{text-align:center;padding:1rem;background:#f8f9fa;border-radius:4px}.highlight .value{display:block;font-size:1.75rem;font-weight:700;color:#0066cc}.highlight .unit{font-size:0.875rem;color:#666}.highlight .label{display:block;font-size:0.75rem;color:#999;margin-top:0.25rem}.specifications h2{font-size:1.25rem;margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:2px solid #0066cc}.spec-categories{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}.spec-category h3{font-size:0.875rem;text-transform:uppercase;letter-spacing:0.05em;color:#666;margin-bottom:0.75rem}.spec-table{width:100%;font-size:0.875rem}.spec-table th,.spec-table td{padding:0.5rem 0;border-bottom:1px solid #eee}.spec-table th{text-align:left;color:#666;font-weight:500;width:40%}.spec-table td{color:#1a1a1a}.page-footer{margin-top:2rem;padding-top:1rem;border-top:1px solid #eee;text-align:center;font-size:0.75rem;color:#999}\",\"title\":\"Actros L 1853 LS ProCabin - Technisches Datenblatt\"}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 1850,
+    "candidatesTokenCount": 1450,
+    "totalTokenCount": 3300
+  },
+  "modelVersion": "gemini-2.0-flash"
+}

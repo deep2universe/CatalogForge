@@ -1,0 +1,18 @@
+{
+  "error": {
+    "code": 429,
+    "message": "Resource has been exhausted (e.g. check quota).",
+    "status": "RESOURCE_EXHAUSTED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "RATE_LIMIT_EXCEEDED",
+        "domain": "googleapis.com",
+        "metadata": {
+          "quota_metric": "generativelanguage.googleapis.com/generate_content_requests",
+          "quota_limit": "GenerateContentRequestsPerMinutePerProject"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "examples": [
+    {
+      "id": "product-page-simple",
+      "name": "Einfache Produktseite",
+      "description": "Erstellt eine übersichtliche Produktseite mit Bild und Spezifikationen",
+      "prompt": "Erstelle eine professionelle Produktseite für den eActros 600. Zeige das Hauptbild prominent, liste die wichtigsten technischen Daten übersichtlich auf und hebe die Umweltvorteile hervor.",
+      "options": {
+        "pageFormat": "A4",
+        "style": "modern",
+        "variantCount": 1,
+        "includeSpecs": true
+      }
+    },
+    {
+      "id": "product-comparison",
+      "name": "Produktvergleich",
+      "description": "Vergleicht mehrere Produkte nebeneinander",
+      "prompt": "Erstelle eine Vergleichsübersicht für die Actros-Baureihe. Zeige die Modelle nebeneinander mit ihren wichtigsten Unterschieden in Leistung, Verbrauch und Ausstattung.",
+      "options": {
+        "pageFormat": "A4",
+        "style": "technical",
+        "variantCount": 1,
+        "includeSpecs": true
+      }
+    },
+    {
+      "id": "flyer-eco",
+      "name": "Umwelt-Flyer",
+      "description": "Kompakter Flyer mit Fokus auf Nachhaltigkeit",
+      "prompt": "Gestalte einen kompakten Flyer für den eActros 600 mit Fokus auf Nachhaltigkeit und CO2-Einsparung. Verwende grüne Akzente und zeige die Umweltvorteile prominent.",
+      "options": {
+        "pageFormat": "DL",
+        "style": "eco",
+        "variantCount": 1,
+        "includeSpecs": false
+      }
+    },
+    {
+      "id": "premium-brochure",
+      "name": "Premium-Broschüre",
+      "description": "Hochwertige Broschüre für Premiumfahrzeuge",
+      "prompt": "Erstelle eine elegante Broschürenseite für den Actros L mit ProCabin. Betone den Komfort und die Premium-Ausstattung. Verwende großzügige Weißräume und hochwertige Typografie.",
+      "options": {
+        "pageFormat": "A4",
+        "style": "premium",
+        "variantCount": 2,
+        "includeSpecs": true
+      }
+    },
+    {
+      "id": "technical-datasheet",
+      "name": "Technisches Datenblatt",
+      "description": "Detailliertes technisches Datenblatt",
+      "prompt": "Erstelle ein technisches Datenblatt mit allen Spezifikationen. Strukturiere die Daten in übersichtliche Kategorien: Motor, Fahrwerk, Abmessungen, Gewichte. Verwende Tabellen für bessere Lesbarkeit.",
+      "options": {
+        "pageFormat": "A4",
+        "style": "technical",
+        "variantCount": 1,
+        "includeSpecs": true,
+        "complexStrategy": true
+      }
+    },
+    {
+      "id": "overview-grid",
+      "name": "Produktübersicht Grid",
+      "description": "Übersicht mehrerer Produkte im Grid-Layout",
+      "prompt": "Erstelle eine Übersichtsseite mit allen Elektro-LKW im Grid-Layout. Zeige für jedes Fahrzeug ein Bild, den Namen und die wichtigsten Eckdaten (Reichweite, Nutzlast).",
+      "options": {
+        "pageFormat": "A4",
+        "style": "modern",
+        "variantCount": 1,
+        "includeSpecs": false
+      }
+    },
+    {
+      "id": "dynamic-action",
+      "name": "Dynamische Aktionsseite",
+      "description": "Energiegeladene Seite für Baufahrzeuge",
+      "prompt": "Gestalte eine dynamische Seite für den Arocs Kipper. Verwende kräftige Farben und diagonale Elemente. Betone Kraft und Zuverlässigkeit für den Baustelleneinsatz.",
+      "options": {
+        "pageFormat": "A4",
+        "style": "dynamic",
+        "variantCount": 2,
+        "includeSpecs": true
+      }
+    },
+    {
+      "id": "postcard-promo",
+      "name": "Werbe-Postkarte",
+      "description": "Kompakte Werbepostkarte",
+      "prompt": "Erstelle eine Werbepostkarte für den Atego. Fokussiere auf ein starkes Bild und einen prägnanten Slogan. Minimaler Text, maximale Wirkung.",
+      "options": {
+        "pageFormat": "A6",
+        "style": "modern",
+        "variantCount": 3,
+        "includeSpecs": false
+      }
+    },
+    {
+      "id": "square-social",
+      "name": "Social Media Format",
+      "description": "Quadratisches Format für Social Media Print",
+      "prompt": "Erstelle ein quadratisches Layout für den Econic. Modern und auffällig, geeignet für Social Media und Print. Zeige das Fahrzeug im urbanen Einsatz.",
+      "options": {
+        "pageFormat": "square",
+        "style": "modern",
+        "variantCount": 2,
+        "includeSpecs": false
+      }
+    },
+    {
+      "id": "multi-variant-test",
+      "name": "Multi-Varianten Test",
+      "description": "Generiert mehrere Designvarianten zum Vergleich",
+      "prompt": "Erstelle verschiedene Designvarianten für eine Produktseite des Actros. Experimentiere mit unterschiedlichen Layouts, Farbschemata und Bildplatzierungen.",
+      "options": {
+        "pageFormat": "A4",
+        "style": "modern",
+        "variantCount": 4,
+        "includeSpecs": true,
+        "complexStrategy": true
+      }
+    }
+  ]
+}

@@ -428,18 +428,18 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 24.5 Git commit
     - `feat: add CSS templates for layout generation`
 
-- [ ] 25. Sample Data und Prompts
-  - [ ] 25.1 products.json erstellen
+- [x] 25. Sample Data und Prompts
+  - [x] 25.1 products.json erstellen
     - Beispiel-Produktdaten (Mercedes-Benz Trucks)
     - _Requirements: 1.1_
-  - [ ] 25.2 example-prompts.json erstellen
+  - [x] 25.2 example-prompts.json erstellen
     - 10 Beispiel-Prompts für verschiedene Use Cases
     - _Requirements: 5.8_
-  - [ ] 25.3 Gemini Response Fixtures erstellen
+  - [x] 25.3 Gemini Response Fixtures erstellen
     - layout-simple.json, layout-with-specs.json, layout-eco-style.json
     - image-analysis-premium.json, image-analysis-dynamic.json
     - error-response.json
-  - [ ] 25.4 Git commit
+  - [x] 25.4 Git commit
     - `feat: add sample data and test fixtures`
 
 - [ ] 26. Final Checkpoint
