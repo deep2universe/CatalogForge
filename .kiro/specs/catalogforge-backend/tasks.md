@@ -174,17 +174,17 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 8.6 Git commit
     - `feat: implement Skills system with loader and assembler`
 
-- [ ] 9. SkillsController
-  - [ ] 9.1 SkillsController implementieren
+- [x] 9. SkillsController
+  - [x] 9.1 SkillsController implementieren
     - GET /api/v1/skills
     - GET /api/v1/skills/{category}
     - GET /api/v1/skills/prompts/examples
     - _Requirements: 5.5, 5.6, 5.7, 5.8_
-  - [ ] 9.2 Integration-Test für SkillsController
+  - [x] 9.2 Integration-Test für SkillsController
     - Echte Skills laden
     - Kategorien testen
     - _Requirements: 5.5, 5.6, 5.7_
-  - [ ] 9.3 Git commit
+  - [x] 9.3 Git commit
     - `feat: add SkillsController REST endpoints`
 
 - [ ] 10. Checkpoint - Product und Skills
