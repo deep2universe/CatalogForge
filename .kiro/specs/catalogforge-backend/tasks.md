@@ -442,11 +442,11 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 25.4 Git commit
     - `feat: add sample data and test fixtures`
 
-- [ ] 26. Final Checkpoint
+- [x] 26. Final Checkpoint
   - Ensure all tests pass.
   - Verify 70% overall test coverage
   - Run full integration test suite
-  - [ ] 26.1 Git commit
+  - [x] 26.1 Git commit
     - `chore: finalize implementation with full test coverage`
 
 ## Notes
