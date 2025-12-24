@@ -394,26 +394,26 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 22.3 Git commit
     - `feat: add Puppeteer PDF generator script`
 
-- [ ] 23. Skills Content erstellen
-  - [ ] 23.1 MASTER_SKILL.md erstellen
+- [x] 23. Skills Content erstellen
+  - [x] 23.1 MASTER_SKILL.md erstellen
     - Basis-Anweisungen für alle Generierungen
     - _Requirements: 6.1_
-  - [ ] 23.2 Core Skills erstellen
+  - [x] 23.2 Core Skills erstellen
     - LAYOUT_PRINCIPLES.md, TYPOGRAPHY.md, COLOR_THEORY.md, GRID_SYSTEMS.md, SPACING.md
     - _Requirements: 5.1_
-  - [ ] 23.3 Page-Type Skills erstellen
+  - [x] 23.3 Page-Type Skills erstellen
     - PRODUCT_PAGE.md, OVERVIEW_PAGE.md, COVER_PAGE.md, FLYER_PAGE.md, etc.
     - _Requirements: 5.1_
-  - [ ] 23.4 Style Skills erstellen
+  - [x] 23.4 Style Skills erstellen
     - STYLE_MODERN.md, STYLE_TECHNICAL.md, STYLE_PREMIUM.md, STYLE_ECO.md, STYLE_DYNAMIC.md
     - _Requirements: 5.1, 6.5_
-  - [ ] 23.5 Format Skills erstellen
+  - [x] 23.5 Format Skills erstellen
     - FORMAT_A4.md, FORMAT_A5.md, FORMAT_DL.md, FORMAT_A6.md, FORMAT_SQUARE.md
     - _Requirements: 5.1, 6.6_
-  - [ ] 23.6 Image-Analysis Skills erstellen
+  - [x] 23.6 Image-Analysis Skills erstellen
     - COLOR_EXTRACTION.md, MOOD_ANALYSIS.md, LAYOUT_INSPIRATION.md, PLACEHOLDER_RULES.md
     - _Requirements: 5.1, 6.7_
-  - [ ] 23.7 Git commit
+  - [x] 23.7 Git commit
     - `feat: add skill markdown files for prompt engineering`
 
 - [ ] 24. CSS Templates erstellen
