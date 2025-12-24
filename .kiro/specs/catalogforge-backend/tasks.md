@@ -40,22 +40,22 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 1.3 Git commit
     - `chore: initialize Spring Boot project with base configuration`
 
-- [ ] 2. Data Models und DTOs
-  - [ ] 2.1 Core Domain Models implementieren
+- [x] 2. Data Models und DTOs
+  - [x] 2.1 Core Domain Models implementieren
     - Product, TechnicalData Records
     - Layout, LayoutVariant, LayoutMetadata Records
     - PageFormat Record
     - _Requirements: 1.3, 9.1_
-  - [ ] 2.2 Image Analysis Models implementieren
+  - [x] 2.2 Image Analysis Models implementieren
     - ColorPalette, MoodAnalysis, LayoutHints Records
     - ImageAnalysisResult Record
     - _Requirements: 3.2, 3.4, 3.5, 3.6_
-  - [ ] 2.3 Request/Response DTOs implementieren
+  - [x] 2.3 Request/Response DTOs implementieren
     - TextToLayoutRequest, ImageToLayoutRequest
     - LayoutOptions, ImageLayoutOptions
     - LayoutResponse, ImageUploadResponse, ErrorResponse
     - _Requirements: 2.1, 3.1, 4.5, 14.6_
-  - [ ] 2.4 Git commit
+  - [x] 2.4 Git commit
     - `feat: add domain models and DTOs`
 
 - [ ] 3. Exception Handling
