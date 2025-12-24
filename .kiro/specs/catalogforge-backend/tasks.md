@@ -147,31 +147,31 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 7.3 Git commit
     - `feat: add ProductController REST endpoints`
 
-- [ ] 8. Skills System
-  - [ ] 8.1 Skill Record und SkillLoader implementieren
+- [x] 8. Skills System
+  - [x] 8.1 Skill Record und SkillLoader implementieren
     - Rekursives Scannen von resources/skills/
     - Name aus Dateiname extrahieren
     - Category aus Verzeichnispfad
     - Metadata-Header parsen (dependencies, priority)
     - _Requirements: 5.1, 5.2, 5.3, 5.4_
-  - [ ] 8.2 SkillAssembler implementieren
+  - [x] 8.2 SkillAssembler implementieren
     - MASTER_SKILL immer zuerst
     - Dependencies rekursiv auflösen
     - Nach Priority sortieren
     - Contents zusammenführen
     - Style/Format-Skills basierend auf Options
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7_
-  - [ ] 8.3 Property-Test für Skill Assembly Ordering
+  - [x] 8.3 Property-Test für Skill Assembly Ordering
     - **Property 7: Skill Assembly Ordering**
     - **Validates: Requirements 6.1, 6.2, 6.3, 6.4**
-  - [ ] 8.4 Property-Test für Style/Format Skill Inclusion
+  - [x] 8.4 Property-Test für Style/Format Skill Inclusion
     - **Property 8: Style and Format Skill Inclusion**
     - **Validates: Requirements 2.3, 2.4, 6.5, 6.6**
-  - [ ] 8.5 SkillsService implementieren
+  - [x] 8.5 SkillsService implementieren
     - Delegiert an SkillLoader und SkillAssembler
     - Skill-Caching
     - _Requirements: 5.5, 5.6, 5.8_
-  - [ ] 8.6 Git commit
+  - [x] 8.6 Git commit
     - `feat: implement Skills system with loader and assembler`
 
 - [ ] 9. SkillsController
