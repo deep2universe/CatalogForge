@@ -1,10 +1,14 @@
 package com.catalogforge.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Utility for JSON serialization and deserialization.
@@ -60,6 +64,24 @@ public final class JsonUtils {
     public static <T> T fromJson(String json, Class<T> clazz) {
         try {
             return MAPPER.readValue(json, clazz);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException("Failed to deserialize from JSON", e);
+        }
+    }
+
+    /**
+     * Deserialize JSON from InputStream using TypeReference for generic types.
+     */
+    public static <T> T fromJson(InputStream is, TypeReference<T> typeRef) throws IOException {
+        return MAPPER.readValue(is, typeRef);
+    }
+
+    /**
+     * Deserialize JSON string using TypeReference for generic types.
+     */
+    public static <T> T fromJson(String json, TypeReference<T> typeRef) {
+        try {
+            return MAPPER.readValue(json, typeRef);
         } catch (JsonProcessingException e) {
             throw new RuntimeException("Failed to deserialize from JSON", e);
         }

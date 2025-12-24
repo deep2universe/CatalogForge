@@ -109,27 +109,27 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
 - [x] 5. Checkpoint - Basis-Infrastruktur
   - All tests pass (23 tests)
 
-- [ ] 6. Product Service
-  - [ ] 6.1 ProductService implementieren
+- [x] 6. Product Service
+  - [x] 6.1 ProductService implementieren
     - products.json beim Start laden
     - In-Memory-Cache
     - Filter nach category, series
     - Case-insensitive Volltextsuche
     - getAllCategories, getAllSeries (unique, sorted)
     - _Requirements: 1.1, 1.2, 1.5, 1.6, 1.7_
-  - [ ] 6.2 Property-Test für Product Data Integrity
+  - [x] 6.2 Property-Test für Product Data Integrity
     - **Property 1: Product Data Integrity**
     - **Validates: Requirements 1.1, 1.3**
-  - [ ] 6.3 Property-Test für Product Filtering
+  - [x] 6.3 Property-Test für Product Filtering
     - **Property 2: Product Filtering Correctness**
     - **Validates: Requirements 1.2**
-  - [ ] 6.4 Property-Test für Search Relevance
+  - [x] 6.4 Property-Test für Search Relevance
     - **Property 3: Search Result Relevance**
     - **Validates: Requirements 1.5**
-  - [ ] 6.5 Property-Test für Categories/Series Uniqueness
+  - [x] 6.5 Property-Test für Categories/Series Uniqueness
     - **Property 4: Categories and Series Uniqueness**
     - **Validates: Requirements 1.6, 1.7**
-  - [ ] 6.6 Git commit
+  - [x] 6.6 Git commit
     - `feat: implement ProductService with filtering and search`
 
 - [ ] 7. ProductController

@@ -1,0 +1,908 @@
+[
+  {
+    "id": 1,
+    "name": "Mercedes-Benz Actros L 1853 LS ProCabin",
+    "shortDescription": "Das Flaggschiff im Fernverkehr – maximale Effizienz trifft auf Premium-Komfort mit der revolutionären ProCabin-Kabine.",
+    "description": "Der Mercedes-Benz Actros L 1853 LS ProCabin definiert den modernen Fernverkehr neu. Mit der aerodynamisch optimierten ProCabin-Kabine erreicht er Kraftstoffeinsparungen von bis zu drei Prozent. Der 530 PS starke OM 471 Motor liefert beeindruckende 2.600 Nm Drehmoment und überzeugt durch vorbildliche Effizienz.\n\nDas Sicherheitspaket mit Active Brake Assist 6 und Active Sideguard Assist 2 übertrifft alle gesetzlichen Anforderungen. Das Multimedia Cockpit Interactive 2 mit Sprachsteuerung und der Active Drive Assist 3 für teilautomatisiertes Fahren entlasten den Fahrer erheblich. Die GigaSpace ProCabin bietet mit über zwei Metern Stehöhe und durchdachtem Raumkonzept höchsten Wohnkomfort für lange Touren. Ein echtes Premium-Flaggschiff für anspruchsvolle Flottenmanager.",
+    "longDescription": "Der Mercedes-Benz Actros L 1853 LS ProCabin repräsentiert die absolute Spitze dessen, was moderner Fernverkehr zu bieten hat. Mit der vollständig neu gestalteten ProCabin setzt dieses Fahrzeug neue Maßstäbe in Sachen Aerodynamik, Effizienz und Fahrerkomfort. Die um 80 Millimeter verlängerte Fahrzeugfront ist das Ergebnis intensiver Windkanalforschung und führt zu einer Kraftstoffeinsparung von bis zu drei Prozent gegenüber dem Vorgängermodell.\n\nDas Herzstück des Actros L 1853 ist der bewährte OM 471 Motor der dritten Generation mit 12,8 Litern Hubraum. Mit seinen 530 PS und einem maximalen Drehmoment von 2.600 Nm meistert er selbst anspruchsvollste Streckenprofile mühelos. In Kombination mit dem Mercedes PowerShift 3 Getriebe und der intelligenten Predictive Powertrain Control erreicht der Actros L Verbrauchswerte, die in dieser Leistungsklasse ihresgleichen suchen.\n\nBesonders beeindruckend ist das neue Sicherheitskonzept: Der Active Brake Assist 6 erkennt nicht nur vorausfahrende Fahrzeuge, sondern auch Fußgänger und Radfahrer – und kann im Notfall eine Vollbremsung einleiten. Der Active Sideguard Assist 2 warnt beim Abbiegen vor Objekten im toten Winkel und greift bei Gefahr aktiv in die Bremsung ein. Diese Systeme übertreffen die strengen Anforderungen der EU General Safety Regulation deutlich.\n\nDas Interieur der GigaSpace ProCabin ist ein rollendes Zuhause. Die Stehöhe von über zwei Metern, das durchdachte Stauraumkonzept und die ergonomisch optimierten Bedienelemente machen lange Touren zum Komforterlebnis. Das 12-Zoll-Instrumentendisplay und der verbesserte Touchscreen des Multimedia Cockpit Interactive 2 lassen sich intuitiv bedienen – viele Funktionen sind per Sprachsteuerung erreichbar. Der Active Drive Assist 3 ermöglicht teilautomatisiertes Fahren auf Level 2 und entlastet den Fahrer auf langen Autobahnabschnitten spürbar.\n\nMit dem Actros L 1853 LS ProCabin entscheiden Sie sich für ein Fahrzeug, das Wirtschaftlichkeit und Nachhaltigkeit mit höchstem Fahrerkomfort vereint – ein echtes Premiumprodukt für anspruchsvolle Transportunternehmen.",
+    "category": "Fernverkehr",
+    "series": "Actros L",
+    "imageUrl": "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&h=600&fit=crop",
+    "highlights": [
+      "Multimedia Cockpit Interactive 2",
+      "Active Brake Assist 6",
+      "Active Sideguard Assist 2",
+      "Predictive Powertrain Control",
+      "Active Drive Assist 3 (Level 2)",
+      "LED Matrix-Scheinwerfer",
+      "Klimaautomatik mit Standheizung",
+      "Kühlschrank 40L"
+    ],
+    "priceEur": 189500,
+    "specs": {
+      "motor": "OM 471 Euro VI-E",
+      "hubraum_l": "12.8",
+      "leistung_ps": "530",
+      "leistung_kw": "390",
+      "drehmoment_nm": "2600",
+      "antriebsformel": "4x2",
+      "getriebe": "Mercedes PowerShift 3 (12-Gang)",
+      "gesamtgewicht_t": "40",
+      "radstand_mm": "3700",
+      "fahrerhaustyp": "GigaSpace ProCabin",
+      "tankvolumen_l": "900",
+      "verbrauch_l_100km": "24.5",
+      "abgasnorm": "Euro VI-E",
+      "hoechstgeschwindigkeit_kmh": "89"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Mercedes-Benz Actros L 1848 LS",
+    "shortDescription": "Der vielseitige Allrounder im Fernverkehr – optimale Balance zwischen Leistung und Wirtschaftlichkeit.",
+    "description": "Der Mercedes-Benz Actros L 1848 LS vereint Wirtschaftlichkeit und Zuverlässigkeit auf höchstem Niveau. Mit 480 PS und dem kraftstoffoptimierten OM 471 Motor bietet er die ideale Balance für den täglichen Fernverkehr. Die Predictive Powertrain Control sorgt automatisch für effizientes Fahren.\n\nDie komfortable BigSpace-Kabine mit knapp zwei Metern Innenhöhe macht mehrtägige Touren zum Vergnügen. Das Multimedia Cockpit Interactive 2 bietet intuitive Bedienung per Touch oder Sprache. Sicherheitssysteme wie der Active Brake Assist 5 und der Spurhalteassistent schützen Fahrer und andere Verkehrsteilnehmer. Ein ausgewogenes Gesamtpaket für anspruchsvolle Flottenbetreiber.",
+    "longDescription": "Der Mercedes-Benz Actros L 1848 LS ist die perfekte Wahl für Transportunternehmen, die einen zuverlässigen und wirtschaftlichen Partner für den Fernverkehr suchen. Mit 480 PS bietet er ausreichend Kraftreserven für alle gängigen Transportaufgaben in Europa, während sein optimierter Verbrauch die Betriebskosten im Rahmen hält.\n\nDer OM 471 Motor der dritten Generation ist speziell auf kraftstoffsparendes Fahren ausgelegt. In Verbindung mit dem Mercedes PowerShift 3 Getriebe und der Predictive Powertrain Control passt sich der Antriebsstrang automatisch an das Streckenprofil an. Das System nutzt GPS-Daten und Topographieinformationen, um Schaltvorgänge und Geschwindigkeit vorausschauend zu optimieren – für maximale Effizienz auf jeder Route.\n\nDie BigSpace-Kabine bietet dem Fahrer einen komfortablen Arbeits- und Lebensraum. Mit einer Innenhöhe von 1,98 Metern und einem durchdachten Stauraumkonzept ist sie ideal für mehrtägige Touren geeignet. Das Multimedia Cockpit Interactive 2 fungiert als zentrale Kommandozentrale und ermöglicht die Steuerung aller wichtigen Funktionen per Touchscreen oder Sprachbefehl.\n\nBei der Sicherheit setzt der Actros L 1848 auf bewährte Mercedes-Benz Technologie: Der Active Brake Assist 5 erkennt vorausfahrende Fahrzeuge und kann bei Gefahr automatisch bremsen. Der Spurhalteassistent warnt bei unbeabsichtigtem Verlassen der Fahrspur und korrigiert sanft die Lenkung. Müdigkeitswarnsysteme überwachen das Fahrerverhalten und empfehlen rechtzeitig Pausen.\n\nDer Actros L 1848 LS ist das ideale Fahrzeug für Flottenbetreiber, die Zuverlässigkeit, moderate Anschaffungskosten und niedrige Betriebskosten in einem bewährten Premiumfahrzeug vereint wissen wollen. Mit seinem ausgewogenen Gesamtpaket ist er ein echter Kilometerfresser, der Tag für Tag zuverlässig seine Arbeit verrichtet.",
+    "category": "Fernverkehr",
+    "series": "Actros L",
+    "imageUrl": "https://images.unsplash.com/photo-1586191582066-71c6bb4e6ec6?w=800&h=600&fit=crop",
+    "highlights": [
+      "Multimedia Cockpit Interactive 2",
+      "Active Brake Assist 5",
+      "Spurhalteassistent",
+      "Predictive Powertrain Control",
+      "LED-Hauptscheinwerfer",
+      "Tempomat mit Limiter",
+      "Klimaanlage",
+      "Standheizung"
+    ],
+    "priceEur": 159800,
+    "specs": {
+      "motor": "OM 471 Euro VI-E",
+      "hubraum_l": "12.8",
+      "leistung_ps": "480",
+      "leistung_kw": "353",
+      "drehmoment_nm": "2400",
+      "antriebsformel": "4x2",
+      "getriebe": "Mercedes PowerShift 3 (12-Gang)",
+      "gesamtgewicht_t": "40",
+      "radstand_mm": "3700",
+      "fahrerhaustyp": "BigSpace",
+      "tankvolumen_l": "800",
+      "verbrauch_l_100km": "25.2",
+      "abgasnorm": "Euro VI-E",
+      "hoechstgeschwindigkeit_kmh": "89"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Mercedes-Benz Actros L 1863 LS",
+    "shortDescription": "Die Kraft der Superlative – unser leistungsstärkstes Fernverkehrsfahrzeug für maximale Performance.",
+    "description": "Der Mercedes-Benz Actros L 1863 LS ist unser leistungsstärkstes Fernverkehrsfahrzeug. Mit 625 PS und 3.000 Nm Drehmoment aus dem OM 473 Motor meistert er selbst extreme Steigungen mühelos. Die Turbo-Retarder-Kupplung und High Performance Engine Brake liefern bis zu 750 kW Bremsleistung.\n\nDie GigaSpace-Kabine mit Premium-Fahrersitz und Massagefunktion bietet höchsten Komfort. Der Active Drive Assist 3 ermöglicht teilautomatisiertes Fahren. Die Vollluftfederung sorgt für überlegenen Fahrkomfort bei jeder Beladung. Das ideale Fahrzeug für Alpentransit und anspruchsvolle internationale Routen.",
+    "longDescription": "Der Mercedes-Benz Actros L 1863 LS ist das Kraftpaket für besondere Herausforderungen. Mit seinem monumentalen OM 473 Motor und 625 PS Leistung bewältigt er selbst die anspruchsvollsten Streckenprofile souverän. Das gewaltige Drehmoment von 3.000 Nm steht bereits bei niedrigen Drehzahlen zur Verfügung und garantiert mühelose Bergfahrten mit voller Beladung.\n\nBesonders bei Fahrten über die Alpen oder durch skandinavische Gebirgslandschaften zeigt der 1863 seine wahren Stärken. Die Turbo-Retarder-Kupplung kombiniert eine verschleißfreie Anfahrkupplung mit einem integrierten Retarder. Zusammen mit der High Performance Engine Brake erreicht das System eine Bremsleistung von bis zu 750 kW – genug, um selbst bei voller Beladung lange Gefällestrecken ohne Betriebsbremse zu bewältigen.\n\nDie GigaSpace-Kabine bietet dem Fahrer eines Hochleistungsfahrzeugs den Komfort, den er verdient. Der Premium-Fahrersitz mit Massagefunktion und individuell einstellbarer Klimatisierung macht auch anstrengende Etappen erträglich. Das durchdachte Belüftungssystem mit Klimaautomatik sorgt für optimales Raumklima bei jeder Außentemperatur.\n\nDer Active Drive Assist 3 ermöglicht teilautomatisiertes Fahren und hält das Fahrzeug in der Spur, während er automatisch Abstand zum Vordermann hält. In Kombination mit dem Active Brake Assist 6 und dem Active Sideguard Assist 2 entsteht ein umfassendes Sicherheitsnetz, das den Fahrer bei seiner anspruchsvollen Aufgabe optimal unterstützt.\n\nDie Luftfederung an Vorder- und Hinterachse sorgt für überlegenen Fahrkomfort und schont gleichzeitig die Ladung. Das adaptive Dämpfungssystem passt die Fahrwerkcharakteristik automatisch an die aktuelle Straßensituation an. Für Transportunternehmen mit besonders anspruchsvollen Routen ist der Actros L 1863 LS die erste Wahl.",
+    "category": "Fernverkehr/Schwerlast",
+    "series": "Actros L",
+    "imageUrl": "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=800&h=600&fit=crop",
+    "highlights": [
+      "Turbo-Retarder-Kupplung",
+      "High Performance Engine Brake",
+      "Multimedia Cockpit Interactive 2",
+      "Active Brake Assist 6",
+      "Active Drive Assist 3",
+      "Luftfederung vorne und hinten",
+      "Premium-Fahrersitz mit Massage",
+      "Freisprechanlage mit Bluetooth"
+    ],
+    "priceEur": 218900,
+    "specs": {
+      "motor": "OM 473 Euro VI-E",
+      "hubraum_l": "15.6",
+      "leistung_ps": "625",
+      "leistung_kw": "460",
+      "drehmoment_nm": "3000",
+      "antriebsformel": "4x2",
+      "getriebe": "Mercedes PowerShift 3 (12-Gang)",
+      "gesamtgewicht_t": "44",
+      "radstand_mm": "3700",
+      "fahrerhaustyp": "GigaSpace",
+      "tankvolumen_l": "1000",
+      "verbrauch_l_100km": "28.5",
+      "abgasnorm": "Euro VI-E",
+      "hoechstgeschwindigkeit_kmh": "89"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Mercedes-Benz Actros L Edition 3",
+    "shortDescription": "Streng limitiert auf 400 Exemplare – das exklusivste Fahrerlebnis im Fernverkehr mit einzigartigen Design-Features.",
+    "description": "Der Mercedes-Benz Actros L Edition 3 ist ein echtes Sammlerstück – streng limitiert auf 400 Exemplare weltweit. Die exklusive Außenlackierung in Weißaluminium Metallic, der Mercedes-Stern in Dark-Chrome und die LED-Bars in der Sonnenblende setzen unverwechselbare Akzente.\n\nDas Leder-Interieur mit Edition-Stickerei und Aluminium-Pedalen bietet höchsten Luxus. Technisch basiert die Edition 3 auf dem bewährten Actros L 1853 mit 530 PS und allen Premium-Sicherheitssystemen. Jedes Fahrzeug trägt ein individuelles Nummerierungsschild. Für Fahrer, die mehr als nur ein Arbeitsmittel suchen.",
+    "longDescription": "Der Mercedes-Benz Actros L Edition 3 ist weit mehr als ein Lkw – er ist ein Statement. Streng limitiert auf nur 400 Exemplare weltweit, vereint dieses Sondermodell das Beste aus drei erfolgreichen Vorgänger-Editionen mit völlig neuen, exklusiven Designelementen. Jedes Fahrzeug trägt ein individuelles Nummerierungsschild, das seinen einzigartigen Status dokumentiert.\n\nSchon aus der Ferne fällt die markante Erscheinung auf: Die Außenlackierung in edlem Weißaluminium Metallic erstreckt sich über eine perfekt verarbeitete Karosserie. Die Fahrzeugfront mit den Edelstahl-Zierelementen und dem Mercedes-Stern in exklusivem Dark-Chrome zieht alle Blicke auf sich. Die in die Sonnenblende integrierten LED-Bars setzen auch bei Nacht ein unverwechselbares Zeichen.\n\nDas Interieur der Edition 3 ist ein Fest für die Sinne. Hochwertiges Leder mit präziser Edition-Stickerei kleidet Sitze und Verkleidungen aus. Die Materialauswahl und Verarbeitungsqualität orientieren sich an den strengsten Standards der Automobilindustrie. Jedes Detail wurde mit höchster Sorgfalt ausgewählt – von den Aluminium-Pedalen bis zu den beleuchteten Einstiegsleisten mit Edition-3-Schriftzug.\n\nTechnisch steht die Edition 3 auf dem Fundament des bewährten Actros L 1853. Der effiziente OM 471 Motor mit 530 PS und die Predictive Powertrain Control sorgen für vorbildliche Wirtschaftlichkeit. Alle Premium-Sicherheitssysteme wie Active Brake Assist 6, Active Sideguard Assist 2 und Active Drive Assist 3 sind serienmäßig an Bord.\n\nDie Edition 3 richtet sich an Fahrer und Unternehmer, für die ein Lkw mehr ist als nur ein Arbeitsmittel. Sie verkörpert die Leidenschaft für das Fahren und den Stolz auf einen der schönsten Arbeitsplätze der Welt. Ein echtes Sammlerstück für Kenner.",
+    "category": "Fernverkehr/Sondermodell",
+    "series": "Actros L",
+    "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+    "highlights": [
+      "Exklusive Außenlackierung Weißaluminium Metallic",
+      "Mercedes-Stern in Dark-Chrome",
+      "LED-Bars in Sonnenblende",
+      "Edelstahl-Zierteile",
+      "Leder-Interieur mit Edition-Stickerei",
+      "Exklusives Nummerierungsschild"
+    ],
+    "priceEur": 245000,
+    "specs": {
+      "motor": "OM 471 Euro VI-E",
+      "hubraum_l": "12.8",
+      "leistung_ps": "530",
+      "leistung_kw": "390",
+      "drehmoment_nm": "2600",
+      "antriebsformel": "4x2",
+      "getriebe": "Mercedes PowerShift 3 (12-Gang)",
+      "gesamtgewicht_t": "40",
+      "fahrerhaustyp": "GigaSpace Edition",
+      "tankvolumen_l": "900"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Mercedes-Benz Actros F 1845",
+    "shortDescription": "Der funktionale Einstieg in die Actros-Welt – bewährte Technik zum attraktiven Preis.",
+    "description": "Der Mercedes-Benz Actros F 1845 ist der funktionale Einstieg in die Actros-Familie. Mit 449 PS und dem bewährten OM 471 Motor bietet er solide Leistung für den europäischen Fernverkehr. Das StreamSpace-Fahrerhaus mit Classic Cockpit konzentriert sich auf das Wesentliche.\n\nDie klassischen Außenspiegel sind robust und servicefreundlich. Der Active Brake Assist 5 sorgt für hohe Sicherheit. Die elektronische Luftfederung hinten passt sich automatisch der Beladung an. Ideal für preisbewusste Unternehmer, die auf bewährte Mercedes-Qualität nicht verzichten möchten.",
+    "longDescription": "Der Mercedes-Benz Actros F 1845 macht den Einstieg in die Welt des Actros so zugänglich wie nie zuvor. Als funktionsorientiertes Modell konzentriert er sich auf das Wesentliche: bewährte Mercedes-Benz Technik, solide Verarbeitung und ein überzeugendes Preis-Leistungs-Verhältnis. Für Unternehmer, die auf das typische Actros-Erlebnis nicht verzichten möchten, aber nicht jede Innovation der neuesten Generation benötigen.\n\nDer OM 471 Motor mit 449 PS bietet ausreichend Leistungsreserven für den Standard-Fernverkehr in Europa. Die Kombination mit dem Mercedes PowerShift 3 Getriebe sorgt für komfortables und effizientes Fahren. Das Fahrzeug ist auf zuverlässigen Dauereinsatz ausgelegt und profitiert von der jahrzehntelangen Erfahrung von Mercedes-Benz im Nutzfahrzeugbau.\n\nDas StreamSpace-Fahrerhaus bietet einen funktionalen Arbeitsplatz mit ausreichend Platz für längere Touren. Das Classic Cockpit mit analogen Rundinstrumenten ist übersichtlich gestaltet und leicht zu bedienen. Die klassischen Außenspiegel bieten exzellente Sicht und sind im Service einfach zu ersetzen – ein Kostenvorteil im täglichen Betrieb.\n\nBei der Sicherheit macht der Actros F keine Kompromisse: Der Active Brake Assist 5 ist serienmäßig an Bord und erkennt vorausfahrende Fahrzeuge zuverlässig. Spurhaltewarner und Müdigkeitserkennung unterstützen den Fahrer zusätzlich.\n\nMit dem Actros F 1845 bietet Mercedes-Benz eine ehrliche Alternative für preisbewusste Unternehmer, die auf Mercedes-Qualität vertrauen.",
+    "category": "Fernverkehr/Einstieg",
+    "series": "Actros F",
+    "imageUrl": "https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=800&h=600&fit=crop",
+    "highlights": [
+      "Classic Cockpit",
+      "Active Brake Assist 5",
+      "Klassische Außenspiegel",
+      "Klimaanlage",
+      "Standheizung",
+      "Radio mit Bluetooth"
+    ],
+    "priceEur": 134500,
+    "specs": {
+      "motor": "OM 471 Euro VI-E",
+      "hubraum_l": "12.8",
+      "leistung_ps": "449",
+      "leistung_kw": "330",
+      "drehmoment_nm": "2200",
+      "antriebsformel": "4x2",
+      "getriebe": "Mercedes PowerShift 3 (12-Gang)",
+      "gesamtgewicht_t": "40",
+      "fahrerhaustyp": "StreamSpace",
+      "tankvolumen_l": "700"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Mercedes-Benz eActros 600",
+    "shortDescription": "Die Zukunft des Fernverkehrs ist elektrisch – 500 km Reichweite und 600 kW Spitzenleistung für emissionsfreien Gütertransport.",
+    "description": "Der Mercedes-Benz eActros 600 ist der erste batterieelektrische Fernverkehrs-Lkw von Mercedes-Benz. Mit 500 km Reichweite, 621 kWh LFP-Batteriekapazität und 600 kW Spitzenleistung ist er für den harten Logistikalltag konzipiert. CCS2-Laden mit bis zu 400 kW ermöglicht schnelles Nachladen während der Lenkpausen.\n\nDie selbst entwickelte 800V-E-Antriebsachse garantiert souveräne Leistung bis 44 Tonnen Gesamtgewicht. Fünf Rekuperationsstufen maximieren die Energierückgewinnung. Die aerodynamische ProCabin reduziert den Luftwiderstand um neun Prozent. Der eActros 600 macht emissionsfreien Fernverkehr wirtschaftlich.",
+    "longDescription": "Der Mercedes-Benz eActros 600 markiert den Beginn einer neuen Ära im schweren Güterverkehr. Als erster batterieelektrischer Fernverkehrs-Lkw mit Stern ist er für Zuggewichte bis 44 Tonnen und Tagesfahrleistungen von über 1.000 Kilometern konzipiert. Mit einer Reichweite von 500 Kilometern ohne Zwischenladung und blitzschnellem CCS2-Laden mit bis zu 400 kW macht er den Umstieg auf emissionsfreien Transport wirtschaftlich attraktiv.\n\nDas technische Herzstück ist die selbst entwickelte 800-Volt-E-Antriebsachse mit zwei integrierten Elektromotoren. Die Dauerleistung von 400 kW und eine Spitzenleistung von beeindruckenden 600 kW (816 PS) garantieren souveränes Fortkommen auch bei voller Beladung und in anspruchsvollem Gelände. Das speziell entwickelte 4-Gang-Elektrogetriebe optimiert die Effizienz über den gesamten Geschwindigkeitsbereich.\n\nDrei Batteriepakete mit LFP-Technologie (Lithium-Eisenphosphat) und einer Gesamtkapazität von 621 kWh speichern die Energie für lange Etappen. Die LFP-Chemie zeichnet sich durch hohe Langlebigkeit aus – nach zehn Jahren und 1,2 Millionen Kilometern soll der Batteriezustand noch über 80 Prozent betragen.\n\nDie fünf Rekuperationsstufen ermöglichen die Anpassung der Energierückgewinnung an Fahrweise und Streckenprofil. Die puristische ProCabin wurde aerodynamisch optimiert und verleiht dem eActros 600 sein unverwechselbares Erscheinungsbild. Mit dem eActros 600 beginnt die elektrische Transformation des Fernverkehrs.",
+    "category": "Fernverkehr/Elektro",
+    "series": "eActros",
+    "imageUrl": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&h=600&fit=crop",
+    "highlights": [
+      "800V E-Antriebsachse",
+      "Drei LFP-Batteriepakete à 207 kWh",
+      "CCS2-Schnellladen bis 400 kW",
+      "MCS-Vorbereitung für 1 MW Laden",
+      "ProCabin Fahrerhaus",
+      "Active Brake Assist 6",
+      "Fünf Rekuperationsstufen"
+    ],
+    "priceEur": 286300,
+    "specs": {
+      "antrieb": "Elektrisch (2 Elektromotoren)",
+      "dauerleistung_kw": "400",
+      "spitzenleistung_kw": "600",
+      "spitzenleistung_ps": "816",
+      "drehmoment_nm": "2100",
+      "batteriekapazitaet_kwh": "621",
+      "batterietyp": "LFP (Lithium-Eisenphosphat)",
+      "reichweite_km": "500",
+      "ladeleistung_max_kw": "400",
+      "antriebsformel": "4x2",
+      "getriebe": "4-Gang Elektrogetriebe",
+      "gesamtgewicht_t": "44",
+      "nutzlast_t": "22",
+      "bordspannung_v": "800"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Mercedes-Benz eActros 400",
+    "shortDescription": "Elektrischer Verteilerverkehr auf höchstem Niveau – leise, sauber und effizient in urbanen Gebieten.",
+    "description": "Der Mercedes-Benz eActros 400 definiert elektrischen Verteilerverkehr neu. Mit 400 km Reichweite und 420 kWh Batteriekapazität meistert er den urbanen Lieferalltag souverän. Die 400 kW Spitzenleistung garantiert auch bei voller Beladung zügiges Vorankommen.\n\nDC-Schnellladen mit bis zu 160 kW ermöglicht kurze Ladezeiten. Das kompakte M-Fahrerhaus ist ideal für Stop-and-Go. Die Wärmepumpen-Klimatisierung schont die Reichweite bei kalten Temperaturen. Ideal für nachhaltige City-Logistik.",
+    "longDescription": "Der Mercedes-Benz eActros 400 ist die Speerspitze des elektrischen Verteilerverkehrs. Mit einer Reichweite von 400 Kilometern und einem zulässigen Gesamtgewicht von 27 Tonnen deckt er ein breites Spektrum von Anwendungen ab – von der Belieferung innerstädtischer Geschäfte bis zum regionalen Warenumschlag. Dabei fährt er lokal emissionsfrei und nahezu geräuschlos durch urbane Gebiete.\n\nVier Batteriepakete mit NMC-Technologie und einer Gesamtkapazität von 420 kWh versorgen den Elektromotor mit Energie. Die Dauerleistung von 330 kW reicht für alle typischen Verteileraufgaben mehr als aus, während die Spitzenleistung von 400 kW auch bei voller Beladung zügiges Vorankommen garantiert.\n\nDas Laden ist flexibel gestaltet: Über Nacht kann der eActros 400 an der Depot-Wechselstromstation geladen werden, unterwegs ermöglichen DC-Schnellladesäulen das schnelle Nachladen. Mit maximal 160 kW Ladeleistung ist die Batterie in überschaubarer Zeit wieder einsatzbereit.\n\nDas kompakte M-Fahrerhaus ist ideal für den Stop-and-Go-Betrieb im Verteilerverkehr. Der Active Brake Assist 5 und der Abbiege-Assistent sorgen für maximale Sicherheit im komplexen Stadtverkehr.",
+    "category": "Verteilerverkehr/Elektro",
+    "series": "eActros",
+    "imageUrl": "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=800&h=600&fit=crop",
+    "highlights": [
+      "Vier NMC-Batteriepakete",
+      "AC- und DC-Laden",
+      "Kabinenheizung elektrisch",
+      "Active Brake Assist 5",
+      "Rekuperationsbremse",
+      "Wärmepumpe"
+    ],
+    "priceEur": 242000,
+    "specs": {
+      "antrieb": "Elektrisch",
+      "dauerleistung_kw": "330",
+      "spitzenleistung_kw": "400",
+      "batteriekapazitaet_kwh": "420",
+      "reichweite_km": "400",
+      "ladeleistung_max_kw": "160",
+      "gesamtgewicht_t": "27",
+      "fahrerhaustyp": "M-Fahrerhaus"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Mercedes-Benz Arocs 3251 K 8x4",
+    "shortDescription": "Der robuste Kraftprotz für schwere Baustelleneinsätze – maximale Tragfähigkeit und unerschütterliche Zuverlässigkeit.",
+    "description": "Der Mercedes-Benz Arocs 3251 K 8x4 ist für extremste Baustellenbedingungen konzipiert. Mit 510 PS, 8x4-Antrieb und dem verstärkten Grounder-Fahrwerk meistert er auch anspruchsvollstes Gelände. Die Turbo-Retarder-Kupplung ermöglicht präzises Manövrieren bei extremen Steigungen.\n\nDifferentialsperren an beiden Achsen garantieren Traktion auf jedem Untergrund. Das Multimedia Cockpit und der Nebenantrieb für Kipperaufbauten machen ihn zum vielseitigen Baustellen-Partner.",
+    "longDescription": "Der Mercedes-Benz Arocs 3251 K 8x4 ist der unerschütterliche Partner für schwere Baustelleneinsätze. Mit seiner 8x4-Konfiguration und dem Grounder-Fahrwerk meistert er auch extremste Bedingungen – sei es auf aufgeweichten Böden, in steilem Gelände oder unter maximaler Beladung. Wo andere Fahrzeuge an ihre Grenzen stoßen, fängt der Arocs erst richtig an.\n\nDer OM 471 Motor mit 510 PS und 2.500 Nm Drehmoment liefert die Kraft, die auf der Baustelle gebraucht wird. Die Turbo-Retarder-Kupplung ermöglicht präzises Manövrieren auch bei extremen Steigungen und schwerem Kipperaufbau. Das Grounder-Fahrwerk mit Stahlfederung ist für die härtesten Einsatzbedingungen konzipiert.\n\nDas ClassicSpace-Fahrerhaus bietet dem Fahrer einen funktionalen Arbeitsplatz mit hervorragender Rundumsicht. Der Nebenantrieb ermöglicht den Betrieb von Kippern, Betonmischern und anderen Aufbauten. Der Active Brake Assist 5 und die Berganfahrhilfe sorgen für Sicherheit auf der Baustelle.",
+    "category": "Baustellenverkehr",
+    "series": "Arocs",
+    "imageUrl": "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&h=600&fit=crop",
+    "highlights": [
+      "Turbo-Retarder-Kupplung",
+      "Stahlfederung Grounder",
+      "Hydraulische Abstützung",
+      "Active Brake Assist 5",
+      "Differentialsperre vorne/hinten",
+      "Robuste Stoßfänger in Stahl"
+    ],
+    "priceEur": 197500,
+    "specs": {
+      "motor": "OM 471 Euro VI-E",
+      "hubraum_l": "12.8",
+      "leistung_ps": "510",
+      "leistung_kw": "375",
+      "drehmoment_nm": "2500",
+      "antriebsformel": "8x4",
+      "getriebe": "Mercedes PowerShift 3 (12-Gang)",
+      "gesamtgewicht_t": "41",
+      "fahrerhaustyp": "ClassicSpace",
+      "nebenantrieb": "True"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Mercedes-Benz Arocs 2653 L 6x4",
+    "shortDescription": "Kraftvolle Performance für anspruchsvolle Baustellenlogistik – ideal für Betonmischer und Kipperanwendungen.",
+    "description": "Der Mercedes-Benz Arocs 2653 L 6x4 ist für schwere Baustellenarbeit konzipiert. Der 530 PS starke OM 473 mit 15,6 Litern Hubraum liefert souveräne Kraft für Betonmischer und Kipper. Die Flüssigkeitskupplung ermöglicht verschleißfreies Anfahren auch auf extremen Steigungen.\n\nDas 6x4-Fahrwerk verkraftet höchste Lasten. Hydraulikanschlüsse versorgen alle gängigen Aufbauten. Der Abbiege-Assistent und Active Brake Assist 5 sorgen für Sicherheit auf der Baustelle.",
+    "longDescription": "Der Mercedes-Benz Arocs 2653 L 6x4 ist das Arbeitstier für anspruchsvolle Baustofflogistik. Mit seinem mächtigen OM 473 Motor und 530 PS bewegt er schwere Betonmischer und Kipperaufbauten mühelos durch den Baustellenalltag. Der große Hubraum von 15,6 Litern garantiert souveräne Kraftentfaltung bei jeder Drehzahl.\n\nDie Flüssigkeitskupplung ermöglicht butterweiche Anfahrvorgänge auch bei voller Beladung und auf extremen Steigungen – ideal für Betonmischer. Das 6x4-Fahrwerk mit Stahlfederung ist auf maximale Belastbarkeit ausgelegt. Der Hydraulikanschluss für Aufbauten liefert Energie für Kipper, Betonmischer und Ladekrane.\n\nMit dem Abbiege-Assistenten und dem Active Brake Assist 5 setzt der Arocs 2653 auf modernste Sicherheitstechnik. Der Arocs 2653 L 6x4 ist die richtige Wahl für Unternehmen, die maximale Produktivität auf der Baustelle fordern.",
+    "category": "Baustellenverkehr",
+    "series": "Arocs",
+    "imageUrl": "https://images.unsplash.com/photo-1504270232528-89ca5a53e0bd?w=800&h=600&fit=crop",
+    "highlights": [
+      "OM 473 Großmotor",
+      "Flüssigkeitskupplung",
+      "Stahlfederung",
+      "Hydraulik für Aufbauten",
+      "Active Brake Assist 5",
+      "Abbiege-Assistent"
+    ],
+    "priceEur": 178900,
+    "specs": {
+      "motor": "OM 473 Euro VI-E",
+      "hubraum_l": "15.6",
+      "leistung_ps": "530",
+      "leistung_kw": "390",
+      "drehmoment_nm": "2600",
+      "antriebsformel": "6x4",
+      "gesamtgewicht_t": "33",
+      "fahrerhaustyp": "CompactSpace"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Mercedes-Benz Arocs Extent 3253 K",
+    "shortDescription": "Streng limitiert auf 100 Exemplare – der exklusivste Arocs aller Zeiten mit einzigartigen Design-Elementen.",
+    "description": "Der Mercedes-Benz Arocs Extent ist streng auf 100 Exemplare limitiert – das exklusivste Baustellenfahrzeug von Mercedes-Benz. Der Dark-Chrome Arocs-Schriftzug, die schwarze Blende hinter dem Stern und die LED-Zusatzleuchten machen ihn unverwechselbar.\n\nTechnisch basiert er auf dem Arocs 3253 K mit 530 PS und 8x4-Antrieb. Leder-Lenkrad und Carbon-Optik Elemente werten das Interieur auf. Jedes Fahrzeug trägt eine Nummerierungsplakette. Für Profis mit Stil.",
+    "longDescription": "Der Mercedes-Benz Arocs Extent ist das exklusivste Baustellenfahrzeug, das jemals einen Mercedes-Stern getragen hat. Streng limitiert auf nur 100 Exemplare weltweit, vereint dieses Sondermodell die unverwüstliche Robustheit des Arocs mit einzigartigen Design-Elementen.\n\nSchon aus der Ferne fällt das markante Design auf: Die schwarze Blende hinter dem Mercedes-Stern und der exklusive Arocs-Schriftzug in Dark-Chrome setzen kraftvolle Akzente. Die LED-Scheinwerfer werden von zusätzlichen LED-Leuchten in der Sonnenblende ergänzt. Die Carbon-Optik Zierelemente und die premium Edelstahl-Achskappen unterstreichen den exklusiven Charakter.\n\nTechnisch basiert der Extent auf dem bewährten Arocs 3253 K. Der OM 473 Motor mit 530 PS liefert die Kraft für schwerste Einsätze. Das Leder-Lenkrad liegt perfekt in der Hand. Jedes Fahrzeug trägt eine individuelle Nummerierungsplakette am Exterieur.",
+    "category": "Baustellenverkehr/Sondermodell",
+    "series": "Arocs",
+    "imageUrl": "https://images.unsplash.com/photo-1609143739217-01b60dad1c67?w=800&h=600&fit=crop",
+    "highlights": [
+      "Exklusives Arocs-Schriftzug in Dark-Chrome",
+      "Schwarze Blende hinter Mercedes-Stern",
+      "LED-Scheinwerfer mit LED-Zusatzleuchten",
+      "Carbon-Optik Zierelemente",
+      "Edelstahl-Achskappen",
+      "Leder-Lenkrad",
+      "Nummerierungsplakette"
+    ],
+    "priceEur": 235000,
+    "specs": {
+      "motor": "OM 473 Euro VI-E",
+      "hubraum_l": "15.6",
+      "leistung_ps": "530",
+      "leistung_kw": "390",
+      "antriebsformel": "8x4",
+      "gesamtgewicht_t": "41",
+      "fahrerhaustyp": "BigSpace"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Mercedes-Benz Arocs 4145 K 8x8",
+    "shortDescription": "Kompromisslose Geländefähigkeit mit Vierradantrieb – für extremste Bedingungen abseits befestigter Straßen.",
+    "description": "Der Mercedes-Benz Arocs 4145 K 8x8 ist für extremstes Gelände konzipiert. Der permanente 8x8-Allradantrieb mit drei schaltbaren Differentialsperren garantiert Traktion unter allen Bedingungen. 400 mm Bodenfreiheit und 800 mm Wattiefe ermöglichen Durchfahrten durch jedes Hindernis.\n\nDer 449 PS Motor mit Off-Road-Getriebeabstimmung bietet perfekte Kontrolle. Ideal für Steinbrüche, Kieswerke und Waldwirtschaft.",
+    "longDescription": "Der Mercedes-Benz Arocs 4145 K 8x8 ist für Einsätze konzipiert, bei denen herkömmliche Baustellenfahrzeuge kapitulieren. Mit seinem permanenten Allradantrieb an allen vier Achsen und drei schaltbaren Differentialsperren meistert er auch extremstes Gelände – tiefe Schlammlöcher, steile Abraumhalden oder aufgeweichte Waldwege.\n\nDer OM 470 Motor mit 449 PS ist auf den Geländeeinsatz abgestimmt. Das Mercedes PowerShift 3 Off-Road Getriebe verfügt über spezielle Abstufungen für Langsamfahrt. Das Grounder Plus Fahrwerk kombiniert maximale Robustheit mit beeindruckender Geländegängigkeit. Die erhöhte Bodenfreiheit von 400 Millimetern und eine Wattiefe von 800 Millimetern ermöglichen Durchfahrten durch tiefe Pfützen.\n\nDie drei schaltbaren Differentialsperren lassen sich einzeln oder gemeinsam aktivieren. Die Bergabfahrhilfe hält das Fahrzeug bei Gefällestrecken automatisch auf konstantem Tempo.",
+    "category": "Baustellenverkehr/Allrad",
+    "series": "Arocs",
+    "imageUrl": "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&h=600&fit=crop",
+    "highlights": [
+      "Permanenter Allradantrieb 8x8",
+      "Drei schaltbare Differentialsperren",
+      "Off-Road Getriebeabstimmung",
+      "Erhöhte Bodenfreiheit 400mm",
+      "Wattiefe 800mm",
+      "Unterfahrschutz Stahl"
+    ],
+    "priceEur": 215000,
+    "specs": {
+      "motor": "OM 470 Euro VI-E",
+      "hubraum_l": "10.7",
+      "leistung_ps": "449",
+      "antriebsformel": "8x8",
+      "gesamtgewicht_t": "41",
+      "bodenfreiheit_mm": "400",
+      "wattiefe_mm": "800"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Mercedes-Benz Atego 1224 L",
+    "shortDescription": "Der wendige Allrounder für den leichten Verteilerverkehr – perfekt für Innenstädte und enge Zufahrten.",
+    "description": "Der Mercedes-Benz Atego 1224 L ist der Spezialist für den leichten Verteilerverkehr. Mit 238 PS und kompaktem Wendekreis meistert er enge Innenstädte mühelos. Das neue 10,25-Zoll LCD-Display ersetzt die analogen Instrumente.\n\nDer Active Brake Assist 6 und Active Sideguard Assist 2 setzen auf modernste Sensorfusion für maximale Sicherheit. Die niedrige Einstiegshöhe und die Rückfahrkamera erleichtern den Stop-and-Go-Alltag. Der zuverlässige Partner für urbane Logistik.",
+    "longDescription": "Der Mercedes-Benz Atego 1224 L ist seit 25 Jahren das Maß aller Dinge im leichten Verteilerverkehr. Mit der neuesten Modellgeneration setzt er diese Erfolgsgeschichte fort und kombiniert bewährte Tugenden mit modernster Technik. Das kompakte Format und der enge Wendekreis machen ihn zum idealen Partner für Lieferungen in Innenstädten.\n\nDer OM 936 Motor mit 238 PS bietet reichlich Leistung für den urbanen Einsatz. Das vollständig überarbeitete Cockpit präsentiert sich mit einem hochauflösenden 10,25-Zoll LCD-Display. Der Active Brake Assist 6 und der Active Sideguard Assist 2 entsprechen dem neuesten Stand der Technik.\n\nDas S-Fahrerhaus mit niedriger Einstiegshöhe erleichtert das häufige Ein- und Aussteigen erheblich. Die Rückfahrkamera unterstützt bei Rangiermanövern. Der Atego 1224 L ist das zuverlässige Arbeitstier für den städtischen Verteilerverkehr.",
+    "category": "Verteilerverkehr",
+    "series": "Atego",
+    "imageUrl": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop",
+    "highlights": [
+      "10,25-Zoll LCD-Instrumentendisplay",
+      "Active Brake Assist 6",
+      "Active Sideguard Assist 2",
+      "Niedrige Einstiegshöhe",
+      "Kompakter Wendekreis",
+      "Rückfahrkamera"
+    ],
+    "priceEur": 78500,
+    "specs": {
+      "motor": "OM 936 Euro VI-E",
+      "hubraum_l": "7.7",
+      "leistung_ps": "238",
+      "antriebsformel": "4x2",
+      "gesamtgewicht_t": "12",
+      "fahrerhaustyp": "S-Fahrerhaus"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Mercedes-Benz Atego 1530 L",
+    "shortDescription": "Die leistungsstarke Variante für mittelschweren Verteilerverkehr – ideal für größere Ladevolumen.",
+    "description": "Der Mercedes-Benz Atego 1530 L bietet 299 PS für mittelschwere Transportaufgaben. Das 8-Gang PowerShift Getriebe und die Luftfederung an der Hinterachse sorgen für effizientes Fahren. Der längere Radstand ermöglicht bis zu 7,2 Meter Aufbaulänge.\n\nDas verlängerte S-Fahrerhaus eignet sich für längere Touren. Die Ladebordwand-Vorbereitung ist serienmäßig. Der Active Brake Assist 6 bietet umfassende Sicherheit. Die perfekte Wahl für anspruchsvollen Verteilerverkehr.",
+    "longDescription": "Der Mercedes-Benz Atego 1530 L schließt die Lücke zwischen leichtem Verteilerverkehr und schwerem Nutzfahrzeug. Mit 299 PS und 15 Tonnen zulässigem Gesamtgewicht bietet er die richtige Kombination aus Leistung und Wirtschaftlichkeit. Der längere Radstand ermöglicht Aufbaulängen bis 7,2 Meter.\n\nDas 8-Gang PowerShift Getriebe sorgt für enge Gangabstufungen. Die Luftfederung an der Hinterachse passt die Fahrzeughöhe automatisch an die Beladung an. Das verlängerte S-Fahrerhaus bietet mehr Stauraum. Die Ladebordwand-Vorbereitung ist serienmäßig verbaut.\n\nMit dem Active Brake Assist 6 und dem Spurhalteassistent verfügt der Atego 1530 über ein umfassendes Sicherheitspaket. Der ideale Partner für mittelschweren Verteilerverkehr.",
+    "category": "Verteilerverkehr",
+    "series": "Atego",
+    "imageUrl": "https://images.unsplash.com/photo-1570793005386-838e52f1f284?w=800&h=600&fit=crop",
+    "highlights": [
+      "8-Gang PowerShift Getriebe",
+      "Verlängertes S-Fahrerhaus",
+      "Active Brake Assist 6",
+      "Luftfederung Hinterachse",
+      "Ladebordwand-Vorbereitung",
+      "Navigationssystem"
+    ],
+    "priceEur": 98500,
+    "specs": {
+      "motor": "OM 936 Euro VI-E",
+      "hubraum_l": "7.7",
+      "leistung_ps": "299",
+      "antriebsformel": "4x2",
+      "getriebe": "PowerShift 3 (8-Gang)",
+      "gesamtgewicht_t": "15",
+      "ladeflaeche_m": "7.2"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Mercedes-Benz Atego 1630 AF",
+    "shortDescription": "Der robuste Allrounder für Bau und Rettungsdienst – mit verstärkter Hinterachse für erhöhte Tragfähigkeit.",
+    "description": "Der Mercedes-Benz Atego 1630 AF bietet eine verstärkte 10-Tonnen Hinterachse mit Singlebereifung für maximale Aufbau-Flexibilität. Mit 299 PS und robustem Nebenantrieb ist er ideal für Feuerwehr- und Baustellenaufbauten.\n\nDie erhöhte Bodenfreiheit und der optionale Allradantrieb ermöglichen Einsätze in schwierigem Gelände. Die Feuerwehr-Vorbereitung ist verfügbar. Die perfekte Basis für Spezialfahrzeuge.",
+    "longDescription": "Der Mercedes-Benz Atego 1630 AF ist für Spezialanwendungen in Bau und Rettungswesen konzipiert. Mit seiner verstärkten 10-Tonnen Hinterachse und der Singlebereifung bietet er maximale Flexibilität bei der Gewichtsverteilung von Aufbauten. Die erhöhte Achslast ermöglicht schwerere Aggregate.\n\nDer OM 936 Motor mit 299 PS liefert die Kraft für anspruchsvolle Einsätze. Der Nebenantrieb stellt Hydraulikleistung für Feuerwehrpumpen, Ladekrane oder andere Aufbauten zur Verfügung. Die optionale Feuerwehr-Vorbereitung umfasst spezielle Elektrik und verstärkte Lichtmaschine.\n\nMit dem Active Brake Assist 6 verfügt auch dieses Spezialfahrzeug über modernste Sicherheitstechnik. Die robuste Basis für anspruchsvolle Spezialaufbauten.",
+    "category": "Bauverkehr/Feuerwehr",
+    "series": "Atego",
+    "imageUrl": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=800&h=600&fit=crop",
+    "highlights": [
+      "10-Tonnen Hinterachse",
+      "Singlebereifung für Flexibilität",
+      "Nebenantrieb für Aufbauten",
+      "Active Brake Assist 6",
+      "Robuste Stoßfänger",
+      "Feuerwehr-Vorbereitung"
+    ],
+    "priceEur": 112000,
+    "specs": {
+      "motor": "OM 936 Euro VI-E",
+      "leistung_ps": "299",
+      "antriebsformel": "4x2",
+      "gesamtgewicht_t": "16",
+      "hinterachse_t": "10",
+      "bereifung": "Singlebereifung hinten"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Mercedes-Benz Econic 2630 L 6x2",
+    "shortDescription": "Das Low-Entry-Konzept für den urbanen Kommunaleinsatz – nur zwei Schritte bis ins Fahrerhaus.",
+    "description": "Der Mercedes-Benz Econic 2630 L setzt Maßstäbe im Kommunalbereich. Mit nur 380 mm Einstiegshöhe und dem Low-Entry-Konzept sind nur zwei Schritte bis ins Fahrerhaus nötig. Die Panorama-Windschutzscheibe und niedrige Sitzposition ermöglichen beste Rundumsicht.\n\nDas Allison Automatikgetriebe ist perfekt auf Stop-and-Go abgestimmt. Der Active Sideguard Assist 2 mit 360-Grad Kameras schützt Fußgänger und Radfahrer. Das ergonomischste Kommunalfahrzeug seiner Klasse.",
+    "longDescription": "Der Mercedes-Benz Econic 2630 L ist das Ergebnis konsequenten Designs für den urbanen Kommunaleinsatz. Das revolutionäre Low-Entry-Konzept ermöglicht einen Einstieg in nur zwei Schritten – die Einstiegshöhe von nur 380 Millimetern schont die Gelenke der Müllwerker bei hunderten Ein- und Ausstiegen pro Schicht.\n\nDie niedrige Fahrerposition und die Panorama-Windschutzscheibe bieten eine einzigartige Rundumsicht. Der Fahrer sitzt auf Augenhöhe mit Radfahrern und Fußgängern. Das Allison Automatikgetriebe ist speziell auf den Stop-and-Go-Betrieb abgestimmt.\n\nDer Active Sideguard Assist 2 mit 360-Grad Kamerasystem schafft ein umfassendes Sicherheitsnetz. Das Fahrerhaus bietet volle Stehöhe und beidseitige Einstiegstüren. Der Econic 2630 L ist die Referenz für ergonomisches Arbeiten im Kommunalbereich.",
+    "category": "Kommunalverkehr",
+    "series": "Econic",
+    "imageUrl": "https://images.unsplash.com/photo-1558905586-526e4a45a526?w=800&h=600&fit=crop",
+    "highlights": [
+      "Einstiegshöhe nur 380mm",
+      "Panorama-Windschutzscheibe",
+      "Niedrige Fahrerhausposition",
+      "Allison Automatikgetriebe",
+      "Active Sideguard Assist 2",
+      "360-Grad Kamerasystem",
+      "Beidseitige Einstiegstüren"
+    ],
+    "priceEur": 165000,
+    "specs": {
+      "motor": "OM 936 Euro VI-E",
+      "leistung_ps": "299",
+      "antriebsformel": "6x2",
+      "getriebe": "Allison Automatik (6-Gang)",
+      "gesamtgewicht_t": "26",
+      "einstiegshoehe_mm": "380"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Mercedes-Benz eEconic",
+    "shortDescription": "Elektrischer Kommunaldienst – lokal emissionsfrei und nahezu geräuschlos durch die Stadt.",
+    "description": "Der Mercedes-Benz eEconic bringt elektrische Mobilität in den Kommunalbereich. Mit 420 kWh Batteriekapazität und 300 km Reichweite meistert er auch lange Sammeltouren. Der nahezu geräuschlose Betrieb ermöglicht frühmorgendliche Einsätze ohne Lärmbelästigung.\n\nDas Low-Entry-Konzept mit 380 mm Einstiegshöhe bleibt erhalten. Die Wärmepumpen-Klimatisierung schont die Reichweite. Die umweltfreundliche Müllabfuhr der Zukunft – heute schon verfügbar.",
+    "longDescription": "Der Mercedes-Benz eEconic ist die elektrische Evolution des bewährten Econic-Konzepts. Er kombiniert das einzigartige Low-Entry-Design mit lokal emissionsfreiem Antrieb und macht die Müllabfuhr der Zukunft zur Realität von heute. In Wohngebieten fällt vor allem seine Lautlosigkeit auf – die frühmorgendliche Müllabfuhr stört nicht mehr den Schlaf.\n\nVier Batteriepakete mit einer Gesamtkapazität von 420 kWh liefern eine Reichweite von rund 300 Kilometern. Die Rekuperationsbremse gewinnt bei den zahlreichen Bremsvorgängen Energie zurück. Das Low-Entry-Fahrerhaus mit 380 Millimetern Einstiegshöhe bleibt erhalten.\n\nDie Wärmepumpen-Klimatisierung arbeitet hocheffizient. Das 360-Grad Kamerasystem und der Active Sideguard Assist bieten ein umfassendes Sicherheitspaket. Mit dem eEconic können Kommunen ihre Klimaziele konkret umsetzen.",
+    "category": "Kommunalverkehr/Elektro",
+    "series": "eEconic",
+    "imageUrl": "https://images.unsplash.com/photo-1617886903355-9354bb57751f?w=800&h=600&fit=crop",
+    "highlights": [
+      "Low-Entry Konzept",
+      "Vier NMC-Batteriepakete",
+      "Nahezu geräuschlos im Betrieb",
+      "Rekuperationsbremse",
+      "Panorama-Windschutzscheibe",
+      "360-Grad Kamerasystem",
+      "Wärmepumpen-Klimatisierung"
+    ],
+    "priceEur": 325000,
+    "specs": {
+      "antrieb": "Elektrisch",
+      "dauerleistung_kw": "330",
+      "spitzenleistung_kw": "400",
+      "batteriekapazitaet_kwh": "420",
+      "reichweite_km": "300",
+      "antriebsformel": "6x2",
+      "gesamtgewicht_t": "27",
+      "einstiegshoehe_mm": "380"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Mercedes-Benz Econic 1830 L NGT",
+    "shortDescription": "Sauberer Antrieb mit Erdgas – reduzierte Emissionen bei bewährter Zuverlässigkeit.",
+    "description": "Der Mercedes-Benz Econic 1830 L NGT verbindet Erdgas-Antrieb mit dem Low-Entry-Konzept. Der M 936 G Motor mit 302 PS läuft besonders ruhig und emissionsarm. Mit Bio-CNG wird ein nahezu klimaneutraler Betrieb möglich.\n\nDie Gastanks sind platzsparend auf dem Rahmen montiert. Die niedrige Einstiegshöhe und Panorama-Windschutzscheibe bleiben erhalten. Die saubere Alternative im Kommunalbereich.",
+    "longDescription": "Der Mercedes-Benz Econic 1830 L NGT bietet eine umweltfreundliche Alternative zum Dieselantrieb. Der Erdgas-Motor M 936 G liefert 302 PS und vereint kraftvolle Leistung mit deutlich reduzierten Emissionen. Bei Nutzung von Bio-CNG kann die CO2-Bilanz nahezu klimaneutral ausfallen.\n\nDer Erdgas-Antrieb zeichnet sich durch besonders ruhigen Lauf aus. Die Gastanks sind platzsparend auf dem Rahmen montiert. Das bewährte Low-Entry-Konzept bleibt vollständig erhalten. Die Panorama-Windschutzscheibe macht den Arbeitsalltag sicherer.\n\nDie Reichweite mit 80 Kilogramm CNG ist für kommunale Anwendungen mehr als ausreichend. Die Betankung dauert nur wenige Minuten. Die saubere Alternative im Kommunalbereich.",
+    "category": "Kommunalverkehr/Erdgas",
+    "series": "Econic",
+    "imageUrl": "https://images.unsplash.com/photo-1558906096-f6ec15e85c3f?w=800&h=600&fit=crop",
+    "highlights": [
+      "CNG-Gastanks auf dem Rahmen",
+      "Low-Entry Konzept",
+      "Allison Automatikgetriebe",
+      "Panorama-Windschutzscheibe",
+      "Active Sideguard Assist",
+      "Niedrige Geräuschemissionen",
+      "Bio-CNG kompatibel"
+    ],
+    "priceEur": 185000,
+    "specs": {
+      "motor": "M 936 G NGT Euro VI",
+      "leistung_ps": "302",
+      "kraftstoff": "CNG (Compressed Natural Gas)",
+      "tankvolumen_kg": "80",
+      "antriebsformel": "4x2",
+      "gesamtgewicht_t": "18",
+      "einstiegshoehe_mm": "380"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Mercedes-Benz Unimog U 430",
+    "shortDescription": "Der legendäre Geräteträger – universelles Multitalent für Kommunal, Agrar und Spezialanwendungen.",
+    "description": "Der Mercedes-Benz Unimog U 430 ist das universelle Multitalent. Mit 299 PS, permanentem 4x4-Antrieb und drei Anbauräumen kann er hunderte Geräte tragen. Der Kriechgang bis 0,04 km/h ermöglicht präziseste Arbeiten.\n\nDas VarioPilot-System erlaubt wechselseitiges Fahren für mehr Sicherheit. Zapfwellen vorne und hinten versorgen alle gängigen Anbaugeräte. Der Unimog – seit 70 Jahren die Referenz für Vielseitigkeit.",
+    "longDescription": "Der Mercedes-Benz Unimog U 430 ist weit mehr als ein Fahrzeug – er ist ein Konzept. Seit über 70 Jahren verkörpert der Unimog die Idee des universellen Geräteträgers. Der U 430 setzt diese Tradition fort und kombiniert legendäre Unimog-Tugenden mit modernster Technik.\n\nDer OM 936 Motor mit 299 PS liefert die Kraft für anspruchsvollste Arbeitseinsätze. Das einzigartige UG 100/8 Getriebe ermöglicht Kriechgeschwindigkeiten bis 0,04 km/h. Die drei Anbauräume ermöglichen die gleichzeitige Montage mehrerer Geräte. Die Zapfwellen an Front und Heck treiben Mähwerke, Streuer und Kehrmaschinen an.\n\nDas VarioPilot-System ermöglicht wechselseitiges Fahren: Der Bedienerplatz kann vom Fahrer zur Beifahrerseite gewechselt werden – ohne Umbau, während der Fahrt. Die legendären Portalachsen sorgen für die typische Bodenfreiheit des Unimog.",
+    "category": "Geräteträger/Kommunal",
+    "series": "Unimog",
+    "imageUrl": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=600&fit=crop",
+    "highlights": [
+      "Permanenter Allradantrieb",
+      "VarioPilot wechselseitiges Fahren",
+      "Drei Anbauräume vorne/hinten/seitlich",
+      "Zapfwellen vorne und hinten",
+      "EasyDrive Automatikfunktion",
+      "Portalachsen für Bodenfreiheit",
+      "Arbeitshydraulik bis 200 l/min"
+    ],
+    "priceEur": 198000,
+    "specs": {
+      "motor": "OM 936 Euro VI-E",
+      "leistung_ps": "299",
+      "antriebsformel": "4x4 permanent",
+      "getriebe": "UG 100/8 (8-Gang)",
+      "gesamtgewicht_t": "14.5",
+      "radstand_mm": "3600",
+      "kriechgang": "0.04 km/h"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Mercedes-Benz Unimog U 5023",
+    "shortDescription": "Extrem geländegängig – für Einsätze dort, wo andere nicht mehr weiterkommen.",
+    "description": "Der Mercedes-Benz Unimog U 5023 ist für extremstes Gelände konzipiert. Mit 570 mm Bodenfreiheit, 1.200 mm Wattiefe und 100% Steigfähigkeit überwindet er jedes Hindernis. Die Portalachsen und Differentialsperren garantieren legendäre Geländegängigkeit.\n\nDer 231 PS Motor mit Kriechgängen ermöglicht präzise Kontrolle. Die Reifendruckanlage passt den Druck während der Fahrt an. Für Expeditionen, Bergrettung und Forstwirtschaft.",
+    "longDescription": "Der Mercedes-Benz Unimog U 5023 ist die ultimative Antwort auf extremste Geländeherausforderungen. Mit einer Bodenfreiheit von 570 Millimetern, einer Wattiefe von 1.200 Millimetern und einer Steigfähigkeit von 100 Prozent überwindet er Hindernisse, an denen jedes andere Fahrzeug scheitert.\n\nDer OM 934 Motor mit 231 PS ist auf Geländetauglichkeit optimiert. Die legendären Portalachsen sind das Geheimnis der extremen Bodenfreiheit. Die Differentialsperren an Vorder- und Hinterachse garantieren Traktion. Die optionale Reifendruckanlage ermöglicht die Anpassung während der Fahrt.\n\nDer U 5023 ist die bevorzugte Basis für Expeditionsfahrzeuge und Spezialanwendungen in Bergrettung, Forstwirtschaft und Energiewirtschaft. Ein Fahrzeug für Menschen, die das Abenteuer suchen.",
+    "category": "Hochgeländegängig",
+    "series": "Unimog",
+    "imageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&h=600&fit=crop",
+    "highlights": [
+      "570mm Bodenfreiheit",
+      "1200mm Wattiefe",
+      "100% Steigfähigkeit",
+      "Reifendruckanlage",
+      "Differentialsperren vorne/hinten",
+      "Portalachsen",
+      "Seilwinde optional",
+      "Expeditionsvorbereitung"
+    ],
+    "priceEur": 235000,
+    "specs": {
+      "motor": "OM 934 Euro VI-E",
+      "leistung_ps": "231",
+      "antriebsformel": "4x4 permanent",
+      "gesamtgewicht_t": "14.5",
+      "bodenfreiheit_mm": "570",
+      "wattiefe_mm": "1200",
+      "steigfaehigkeit_prozent": "100"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Mercedes-Benz Zetros 3343 A 6x6",
+    "shortDescription": "Das Extrem-Schwerlastfahrzeug für härteste Bedingungen – unaufhaltsam im Gelände.",
+    "description": "Der Mercedes-Benz Zetros 3343 A 6x6 ist für extremste Einsätze konzipiert. Mit permanentem 6x6-Antrieb, drei Differentialsperren und 428 PS bewältigt er Wüste, Bergbau und Katastrophengebiete. 400 mm Bodenfreiheit und 1.000 mm Wattiefe machen ihn unaufhaltsam.\n\nDas robuste Fahrwerk verkraftet schwerste Belastungen. Mit 120 t Zuggesamtgewicht ist er auch als Schwerlastzugmaschine einsetzbar. Das kompromisslose Werkzeug für härteste Bedingungen.",
+    "longDescription": "Der Mercedes-Benz Zetros 3343 A 6x6 ist für die extremsten Einsatzszenarien konzipiert. Ob Wüsteneinsatz, Bergbau oder Katastrophenhilfe – der Zetros meistert Bedingungen, unter denen herkömmliche Fahrzeuge längst kapituliert hätten. Mit seinem permanenten 6x6-Allradantrieb und drei schaltbaren Differentialsperren ist er praktisch unaufhaltsam.\n\nDer OM 460 Motor mit 428 PS liefert brachiale Kraft bei jeder Drehzahl. Das massive Drehmoment von 2.100 Nm steht bei niedrigen Drehzahlen zur Verfügung. Das robuste G 330-12 Getriebe mit Untersetzungsgruppe verdoppelt die Ganganzahl für extreme Situationen.\n\nDas Fahrwerk ist auf maximale Belastbarkeit ausgelegt. Die Klimaanlage arbeitet zuverlässig bei -30 bis +50 Grad Celsius. Mit 120 Tonnen Zuggesamtgewicht eignet sich der Zetros auch als Zugmaschine für schwerste Lasten.",
+    "category": "Schwerlast/Offroad",
+    "series": "Zetros",
+    "imageUrl": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop",
+    "highlights": [
+      "Permanenter 6x6-Allradantrieb",
+      "Drei Differentialsperren",
+      "Untersetzungsgetriebe",
+      "Stahlfederung mit hoher Tragfähigkeit",
+      "Klimaanlage -30 bis +50°C",
+      "Berganfahrhilfe",
+      "Seilwindenaufnahme"
+    ],
+    "priceEur": 285000,
+    "specs": {
+      "motor": "OM 460 Euro III",
+      "leistung_ps": "428",
+      "antriebsformel": "6x6 permanent",
+      "getriebe": "Mercedes G 330-12 (12-Gang)",
+      "gesamtgewicht_t": "33",
+      "zuggesamtgewicht_t": "120",
+      "bodenfreiheit_mm": "400",
+      "wattiefe_mm": "1000"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Mercedes-Benz Actros SLT 4163 8x6",
+    "shortDescription": "Die Schwerlastzugmaschine für außergewöhnliche Transportaufgaben – bis 250 Tonnen Gesamtzuggewicht.",
+    "description": "Der Mercedes-Benz Actros SLT 4163 8x6 ist die ultimative Schwerlastzugmaschine. Mit 625 PS, 3.000 Nm und bis zu 250 t Zuggesamtgewicht bewegt er außergewöhnliche Lasten. Die Turbo-Retarder-Kupplung ermöglicht präzises Manövrieren.\n\nDas 16-Gang SLT-Getriebe mit Kriechgang und die lenkbare Hinterachse sorgen für Wendigkeit. Das GigaSpace-Fahrerhaus mit Experience Room bietet Wohnkomfort. Individuell gefertigt von Custom Tailored Trucks.",
+    "longDescription": "Der Mercedes-Benz Actros SLT 4163 8x6 ist für die Königsdisziplin des Straßentransports konzipiert: den Schwerlasttransport. Mit einem zulässigen Gesamtzuggewicht von bis zu 250 Tonnen bewegt er Lasten, die für andere Fahrzeuge unmöglich sind – von Transformatoren über Windkraftanlagen bis hin zu kompletten Industrieanlagen.\n\nDer mächtige OM 473 Motor mit 625 PS und 3.000 Nm Drehmoment bildet das Kraftzentrum. Die Turbo-Retarder-Kupplung ermöglicht präzises Manövrieren mit schwerem Tiefbettanhänger. Das SLT-Getriebe mit 16 Gängen und Kriechgangstufe bietet für jede Situation die passende Übersetzung.\n\nDas GigaSpace-Fahrerhaus mit Actros Experience Room und zwei Schlafplätzen macht den SLT zum rollenden Zuhause für tagelange Transporte. Der Actros SLT 4163 wird von Custom Tailored Trucks (CTT) in Molsheim individuell gefertigt.",
+    "category": "Schwerlasttransport",
+    "series": "Actros SLT",
+    "imageUrl": "https://images.unsplash.com/photo-1562674916-9d6f4a58e01f?w=800&h=600&fit=crop",
+    "highlights": [
+      "Turbo-Retarder-Kupplung",
+      "SLT-Getriebe mit 16 Gängen",
+      "Hinterachslift und -lenkung",
+      "Telligent Niveauregelung",
+      "Schwerlast-Sattelkupplung",
+      "Zusatztanks 1.100 Liter",
+      "Actros Experience Room"
+    ],
+    "priceEur": 395000,
+    "specs": {
+      "motor": "OM 473 Euro VI-E",
+      "leistung_ps": "625",
+      "drehmoment_nm": "3000",
+      "antriebsformel": "8x6",
+      "getriebe": "PowerShift 3 SLT (16-Gang)",
+      "zuggesamtgewicht_t": "250",
+      "fahrerhaustyp": "GigaSpace",
+      "tankvolumen_l": "1100"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Mercedes-Benz Arocs SLT 4158 8x8",
+    "shortDescription": "Die geländegängige Schwerlastzugmaschine – wenn extreme Lasten auch extreme Wege erfordern.",
+    "description": "Der Mercedes-Benz Arocs SLT 4158 8x8 kombiniert Schwerlasttauglichkeit mit extremer Geländefähigkeit. Mit 580 PS, permanentem 8x8-Antrieb und vier Differentialsperren bewältigt er bis zu 250 t Zuggewicht auch abseits befestigter Straßen.\n\nDas Grounder-Fahrwerk mit erhöhter Bodenfreiheit und der optionale HAD-Antrieb meistern extremstes Gelände. Für Schwertransporte dorthin, wo andere nicht hinkommen.",
+    "longDescription": "Der Mercedes-Benz Arocs SLT 4158 8x8 vereint die Schwerlastfähigkeit der SLT-Baureihe mit der kompromisslosen Geländetauglichkeit des Arocs. Wenn schwere Lasten nicht nur transportiert, sondern auch abseits befestigter Straßen bewegt werden müssen, ist der Arocs SLT die erste Wahl.\n\nDer OM 473 Motor mit 580 PS liefert die Kraft für Schwerlast und Gelände gleichermaßen. Der permanente 8x8-Allradantrieb mit vier schaltbaren Differentialsperren garantiert Traktion unter allen Bedingungen. Der optionale Hydraulic Auxiliary Drive (HAD) verstärkt die Antriebskraft bei extremen Steigungen.\n\nDas Grounder-Fahrwerk mit Stahlfederung ist auf maximale Belastbarkeit im Gelände ausgelegt. Die Seilwindenaufnahme ermöglicht die Montage einer Bergewinde. Mit 250 Tonnen Zuggesamtgewicht und der Geländefähigkeit eines echten Offroaders schließt der Arocs SLT eine wichtige Lücke.",
+    "category": "Schwerlasttransport/Offroad",
+    "series": "Arocs SLT",
+    "imageUrl": "https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?w=800&h=600&fit=crop",
+    "highlights": [
+      "Permanenter 8x8-Allradantrieb",
+      "Vier Differentialsperren",
+      "Stahlfederung Grounder",
+      "Turbo-Retarder-Kupplung",
+      "Hydraulischer Antrieb (HAD)",
+      "Seilwindenaufnahme",
+      "Schwerlast-Anhängerkupplung"
+    ],
+    "priceEur": 425000,
+    "specs": {
+      "motor": "OM 473 Euro VI-E",
+      "leistung_ps": "580",
+      "antriebsformel": "8x8",
+      "zuggesamtgewicht_t": "250",
+      "fahrerhaustyp": "BigSpace",
+      "bodenfreiheit_mm": "320"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Mercedes-Benz Actros L 2653 LS 6x2 Volumer",
+    "shortDescription": "Die Volumer-Variante für maximales Ladevolumen – 3 Meter lichte Höhe für optimale Raumausnutzung.",
+    "description": "Der Mercedes-Benz Actros L Volumer maximiert das Ladevolumen. Mit nur 950 mm Sattelhöhe ermöglicht er drei Meter lichte Ladehöhe – ideal für voluminöse, leichte Güter. Der 530 PS starke OM 473 Motor liefert ausreichend Leistungsreserven.\n\nDie 6x2-Konfiguration mit gelenkter Nachlaufachse spart Gewicht und verbessert die Wendigkeit. Die elektronische Niveauregulierung hält die Sattelhöhe konstant. Optimale Raumausnutzung für moderne Logistik.",
+    "longDescription": "Der Mercedes-Benz Actros L 2653 LS 6x2 Volumer ist speziell für Transportunternehmen entwickelt, bei denen das Ladevolumen wichtiger ist als das Gewicht. Mit einer abgesenkten Sattelhöhe von nur 950 Millimetern ermöglicht er eine lichte Ladehöhe von drei Metern – entscheidend für den Transport von voluminösen, aber leichten Gütern.\n\nDer OM 473 Motor mit 530 PS bietet auch in der Volumer-Konfiguration reichlich Leistungsreserven. Die 6x2-Achskonfiguration mit gelenkter Nachlaufachse reduziert das Leergewicht und verbessert die Wendigkeit. Die Luftfederung mit Absenkfunktion ermöglicht das Absenken an Laderampen.\n\nDie elektronische Niveauregulierung passt die Fahrzeughöhe automatisch an die Beladung an. Der Actros L Volumer ist die Wahl für Speditionen, die jedes verfügbare Kubikzentimeter Ladevolumen nutzen möchten.",
+    "category": "Fernverkehr/Volumen",
+    "series": "Actros L",
+    "imageUrl": "https://images.unsplash.com/photo-1605705658744-45d3a9c1f9e7?w=800&h=600&fit=crop",
+    "highlights": [
+      "Abgesenkte Sattelhöhe 950mm",
+      "3 Meter lichte Höhe möglich",
+      "StreamSpace Fahrerhaus",
+      "Luftfederung mit Absenkfunktion",
+      "Active Brake Assist 5",
+      "Predictive Powertrain Control",
+      "Elektronische Niveauregulierung"
+    ],
+    "priceEur": 185000,
+    "specs": {
+      "motor": "OM 473 Euro VI-E",
+      "leistung_ps": "530",
+      "antriebsformel": "6x2",
+      "gesamtgewicht_t": "44",
+      "fahrerhaustyp": "StreamSpace Volumer",
+      "sattelhoehe_mm": "950",
+      "lichte_hoehe_m": "3.0"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Mercedes-Benz Actros L 1843 LS Loader",
+    "shortDescription": "Die Leichtbau-Variante für maximale Nutzlast – bis zu 350 kg weniger Leergewicht.",
+    "description": "Der Mercedes-Benz Actros L Loader maximiert die Nutzlast durch konsequenten Leichtbau. Bis zu 350 kg weniger Leergewicht durch Aluminium-Räder, kompakteren Tank und optimierte Komponenten. Der 428 PS Motor bietet effiziente Leistung.\n\nJedes Fahrzeug erhält ein Gewichtszertifikat mit exaktem Leergewicht. Alle wichtigen Sicherheitssysteme sind an Bord. Ideal für Anwendungen, bei denen jedes Kilogramm Nutzlast zählt.",
+    "longDescription": "Der Mercedes-Benz Actros L 1843 LS Loader ist für Transportunternehmen konzipiert, bei denen jedes Kilogramm Nutzlast zählt. Durch konsequenten Leichtbau und den Verzicht auf nicht essenzielle Komponenten spart der Loader bis zu 350 Kilogramm Leergewicht – Gewicht, das direkt der Nutzlast zugutekommen.\n\nDer OM 471 Motor mit 428 PS bietet eine optimale Balance aus Leistung und Gewicht. Die Leichtbau-Maßnahmen umfassen Aluminium-Räder, einen kompakteren 600-Liter-Tank und den Entfall der Kühlerjalousie. Jedes Loader-Fahrzeug wird mit einem Gewichtszertifikat ausgeliefert.\n\nTrotz des Fokus auf Leichtbau erfüllt der Loader alle Sicherheitsstandards. Der Active Brake Assist 5 ist serienmäßig. Der clevere Weg zur maximalen Nutzlast.",
+    "category": "Fernverkehr/Leichtbau",
+    "series": "Actros L",
+    "imageUrl": "https://images.unsplash.com/photo-1616432043562-3671ea2e5242?w=800&h=600&fit=crop",
+    "highlights": [
+      "Leichtbau-Optimierungen",
+      "Aluminium-Räder",
+      "Entfall Kühlerjalousie",
+      "Kompakter Tank 600L",
+      "Active Brake Assist 5",
+      "Optimierte Ausstattung",
+      "Gewichtszertifikat"
+    ],
+    "priceEur": 152000,
+    "specs": {
+      "motor": "OM 471 Euro VI-E",
+      "leistung_ps": "428",
+      "antriebsformel": "4x2",
+      "gesamtgewicht_t": "40",
+      "fahrerhaustyp": "BigSpace Loader",
+      "tankvolumen_l": "600",
+      "leergewicht_reduzierung_kg": "350"
+    }
+  },
+  {
+    "id": 25,
+    "name": "Mercedes-Benz eArocs 400",
+    "shortDescription": "Elektrischer Baustellen-Einsatz – emissionsfrei und leise auf urbanen Baustellen.",
+    "description": "Der Mercedes-Benz eArocs 400 elektrifiziert die Baustelle. Mit 414 kWh LFP-Batteriekapazität und 400 kW Spitzenleistung meistert er urbane Baustellenlogistik emissionsfrei. Die Reichweite von 200 km deckt typische Tagestouren ab.\n\nDer elektrische Nebenantrieb versorgt Kipperaufbauten. CCS2-Schnellladen mit bis zu 400 kW ermöglicht kurze Ladezeiten. Für emissionssensible Bauprojekte ab 2026.",
+    "longDescription": "Der Mercedes-Benz eArocs 400 bringt den elektrischen Antrieb auf die Baustelle. Als elektrische Variante des bewährten Arocs ist er speziell für urbane Baustelleneinsätze konzipiert, bei denen Emissionsfreiheit und geringe Lärmbelästigung gefordert sind.\n\nZwei LFP-Batteriepakete mit einer Gesamtkapazität von 414 kWh versorgen die E-Motoren mit Energie. Die Spitzenleistung von 400 kW garantiert auch bei voller Beladung zügiges Vorankommen. Die Reichweite von rund 200 Kilometern ist für urbane Baustellenlogistik mehr als ausreichend.\n\nDer elektrische Nebenantrieb versorgt Kipperaufbauten und andere Aggregate mit Energie. Der eArocs 400 macht den emissionsfreien Baustellenbetrieb zur Realität.",
+    "category": "Baustellenverkehr/Elektro",
+    "series": "eArocs",
+    "imageUrl": "https://images.unsplash.com/photo-1630650231841-9dc7e3568bde?w=800&h=600&fit=crop",
+    "highlights": [
+      "Zwei LFP-Batteriepakete",
+      "800V Bordspannung",
+      "CCS2-Schnellladen",
+      "Nebenantrieb für Aufbauten",
+      "Active Brake Assist 6",
+      "Active Sideguard Assist 2",
+      "Niedrige Geräuschemission"
+    ],
+    "priceEur": 295000,
+    "specs": {
+      "antrieb": "Elektrisch (2 Elektromotoren)",
+      "dauerleistung_kw": "300",
+      "spitzenleistung_kw": "400",
+      "batteriekapazitaet_kwh": "414",
+      "batterietyp": "LFP",
+      "reichweite_km": "200",
+      "antriebsformel": "6x2",
+      "gesamtgewicht_t": "27"
+    }
+  },
+  {
+    "id": 26,
+    "name": "Mercedes-Benz Actros L 1858 LS Hydraulic Trailer",
+    "shortDescription": "Die optimierte Sattelzugmaschine mit hydraulischem Anhängersystem für effizientes Rangieren.",
+    "description": "Der Mercedes-Benz Actros L 1858 LS mit hydraulischem Anhängersystem optimiert den Sattelzugbetrieb. Mit 578 PS und hydraulischer Fernbedienung für Auflieger-Funktionen spart er Zeit bei jedem Kupplungsvorgang.\n\nTrailer Stability Control und Active Brake Assist 6 schützen das Gespann. Der Active Drive Assist 3 ermöglicht teilautomatisiertes Fahren. Die professionelle Wahl für Sattelzugprofis.",
+    "longDescription": "Der Mercedes-Benz Actros L 1858 LS mit hydraulischem Anhängersystem ist für den professionellen Sattelzugbetrieb optimiert. Die integrierte Hydraulikversorgung ermöglicht die Steuerung von Auflieger-Funktionen wie Stützen, Achsen und Ladungssicherung direkt vom Fahrerhaus aus.\n\nDer OM 471 Motor mit 578 PS liegt im oberen Leistungsbereich und bietet reichlich Kraftreserven für schwere Transporte. Die hydraulische Fernbedienung ermöglicht das Absenken der Stützfüße und die Steuerung liftbarer Achsen ohne Aussteigen.\n\nDie automatische Sattelkupplungserkennung überprüft die korrekte Verriegelung des Aufliegers. Der Trailer Stability Control erkennt instabile Fahrzustände. Mit der Predictive Powertrain Control nutzt der Actros L GPS-Daten für vorausschauendes Fahren.",
+    "category": "Fernverkehr/Sattelzug",
+    "series": "Actros L",
+    "imageUrl": "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=800&h=600&fit=crop",
+    "highlights": [
+      "Hydraulisches Anhängersystem",
+      "Fernbedienung für Auflieger",
+      "Automatische Sattelkupplungserkennung",
+      "Active Brake Assist 6",
+      "Active Drive Assist 3",
+      "Trailer Stability Control",
+      "Predictive Powertrain Control"
+    ],
+    "priceEur": 198500,
+    "specs": {
+      "motor": "OM 471 Euro VI-E",
+      "leistung_ps": "578",
+      "drehmoment_nm": "2800",
+      "antriebsformel": "4x2",
+      "gesamtgewicht_t": "40",
+      "fahrerhaustyp": "GigaSpace",
+      "tankvolumen_l": "800"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Mercedes-Benz Atego 823 K",
+    "shortDescription": "Der kompakte Kipper für den Bauhof – wendig, robust und vielseitig einsetzbar.",
+    "description": "Der Mercedes-Benz Atego 823 K ist der kompakte Kipper für Bauhöfe und kleine Baufirmen. Mit 231 PS, Dreiseitenkipper und 5 m³ Volumen ist er vielseitig einsetzbar. Der enge Wendekreis meistert verwinkelte Zufahrten.\n\nDie hydraulische Bordwand und die optionale Plane erweitern die Einsatzmöglichkeiten. Active Brake Assist 5 und Rückfahrkamera sorgen für Sicherheit. Wirtschaftlich und robust.",
+    "longDescription": "Der Mercedes-Benz Atego 823 K ist der ideale Partner für kommunale Bauhöfe, Garten- und Landschaftsbauer sowie kleine Bauunternehmen. Mit seinem kompakten Format und dem engen Wendekreis manövriert er auch durch enge Hofeinfahrten. Der Dreiseitenkipper-Aufbau ermöglicht das Entladen zu drei Seiten.\n\nDer OM 934 Motor mit 231 PS bietet für die typischen Einsätze reichlich Leistung. Der 5-Kubikmeter Kipperaufbau mit hydraulischer Bordwand ist auf häufiges Be- und Entladen ausgelegt. Die optionale Plane mit Spriegel schützt die Ladung.\n\nMit dem Active Brake Assist 5 verfügt auch dieses kompakte Nutzfahrzeug über modernste Sicherheitstechnik. Die Rückfahrkamera erleichtert das präzise Rangieren. Die wirtschaftliche Lösung für den täglichen Einsatz.",
+    "category": "Verteilerverkehr/Kipper",
+    "series": "Atego",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&h=600&fit=crop",
+    "highlights": [
+      "Dreiseitenkipper-Aufbau",
+      "Hydraulische Bordwand",
+      "Niedriger Einstieg",
+      "Kompakter Wendekreis",
+      "Active Brake Assist 5",
+      "Rückfahrkamera",
+      "Anhängerkupplung",
+      "Plane und Spriegel"
+    ],
+    "priceEur": 72000,
+    "specs": {
+      "motor": "OM 934 Euro VI-E",
+      "leistung_ps": "231",
+      "antriebsformel": "4x2",
+      "gesamtgewicht_t": "8.5",
+      "fahrerhaustyp": "S-Fahrerhaus kurz",
+      "kipper_volumen_m3": "5"
+    }
+  },
+  {
+    "id": 28,
+    "name": "Mercedes-Benz Unimog U 218",
+    "shortDescription": "Der kompakte Geräteträger – volle Unimog-Vielseitigkeit in stadtfreundlichen Abmessungen.",
+    "description": "Der Mercedes-Benz Unimog U 218 bringt Unimog-Vielseitigkeit in kompakte Abmessungen. Mit 2.900 mm Radstand meistert er auch engste Altstadtgassen. Der 177 PS Motor und Kriechgänge bis 0,05 km/h ermöglichen präzises Arbeiten.\n\nDrei Anbauräume, Zapfwellen vorne/hinten und Arbeitshydraulik bieten volle Geräteträger-Funktionalität. Der wendige Unimog für kommunale Aufgaben in beengten Bereichen.",
+    "longDescription": "Der Mercedes-Benz Unimog U 218 bringt die legendäre Vielseitigkeit des Unimog in ein kompaktes Format. Mit einem Radstand von nur 2.900 Millimetern passt er auch durch enge Straßen und Parkanlagen, in denen größere Geräteträger nicht mehr weiterkommen.\n\nDer OM 934 Motor mit 177 PS bietet ausreichend Leistung für alle typischen Geräteträger-Anwendungen. Das UG 80/8 Getriebe mit Kriechgängen bis 0,05 km/h ermöglicht präzises Arbeiten. Trotz seiner kompakten Abmessungen bietet der U 218 drei Anbauräume, Zapfwellen vorne und hinten und eine leistungsfähige Arbeitshydraulik.\n\nDer permanente Allradantrieb mit Differentialsperren garantiert Traktion auch auf rutschigem Untergrund. Der U 218 ist die clevere Wahl für volle Unimog-Vielseitigkeit in kompaktem Format.",
+    "category": "Geräteträger/Kompakt",
+    "series": "Unimog",
+    "imageUrl": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&h=600&fit=crop",
+    "highlights": [
+      "Kompakte Abmessungen",
+      "Permanenter Allradantrieb",
+      "Drei Anbauräume",
+      "Zapfwellen vorne/hinten",
+      "Arbeitshydraulik",
+      "Portalachsen",
+      "Wendiger Radstand"
+    ],
+    "priceEur": 155000,
+    "specs": {
+      "motor": "OM 934 Euro VI-E",
+      "leistung_ps": "177",
+      "antriebsformel": "4x4 permanent",
+      "getriebe": "UG 80/8 (8-Gang)",
+      "gesamtgewicht_t": "10",
+      "radstand_mm": "2900",
+      "kriechgang": "0.05 km/h"
+    }
+  },
+  {
+    "id": 29,
+    "name": "Mercedes-Benz Econic 1824 L Feuerwehr",
+    "shortDescription": "Das Low-Entry-Fahrzeug für die Feuerwehr – schneller Einstieg und beste Übersicht im Einsatz.",
+    "description": "Der Mercedes-Benz Econic 1824 L Feuerwehr verbindet das Low-Entry-Konzept mit Feuerwehr-Anforderungen. Der Ein- und Ausstieg in nur zwei Schritten spart kostbare Sekunden. Die Doppelkabine bietet Platz für sechs Einsatzkräfte.\n\nDas Allison Automatikgetriebe ermöglicht volle Konzentration auf die Einsatzfahrt. Die verstärkte Elektrik versorgt alle Sondersignalanlagen. Die moderne Basis für HLF, TLF und DLK.",
+    "longDescription": "Der Mercedes-Benz Econic 1824 L in Feuerwehr-Ausführung verbindet das bewährte Low-Entry-Konzept mit den spezifischen Anforderungen von Rettungseinsätzen. Das ultraschnelle Ein- und Aussteigen in nur zwei Schritten kann im Ernstfall kostbare Sekunden sparen.\n\nDer OM 936 Motor mit 238 PS ist zuverlässig und wartungsarm. Das Allison Automatikgetriebe ermöglicht die volle Konzentration auf die Einsatzfahrt. Die Doppelkabine bietet Platz für bis zu sechs Einsatzkräfte in voller Schutzausrüstung. Die beidseitigen Einstiegstüren ermöglichen schnelles Verlassen des Fahrzeugs.\n\nDer Econic Feuerwehr wird in enger Abstimmung mit führenden Feuerwehr-Aufbauherstellern wie Rosenbauer, Ziegler und Magirus entwickelt. Die moderne Basis für Feuerwehrfahrzeuge der neuen Generation.",
+    "category": "Feuerwehr",
+    "series": "Econic",
+    "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+    "highlights": [
+      "Feuerwehr-Vorbereitung",
+      "Sondersignal-Anlage",
+      "Doppelkabine 6 Sitzplätze",
+      "Low-Entry Konzept",
+      "Allison Automatik",
+      "Panorama-Windschutzscheibe",
+      "Verstärkte Elektrik",
+      "Active Sideguard Assist"
+    ],
+    "priceEur": 178000,
+    "specs": {
+      "motor": "OM 936 Euro VI-E",
+      "leistung_ps": "238",
+      "antriebsformel": "4x2",
+      "getriebe": "Allison Automatik (6-Gang)",
+      "gesamtgewicht_t": "18",
+      "einstiegshoehe_mm": "380"
+    }
+  },
+  {
+    "id": 30,
+    "name": "Mercedes-Benz Actros L 1851 LS LNG",
+    "shortDescription": "Der Fernverkehrs-Actros mit Flüssiggas-Antrieb – reduzierte Emissionen bei hoher Reichweite.",
+    "description": "Der Mercedes-Benz Actros L LNG reduziert CO2-Emissionen um bis zu 20 Prozent gegenüber Diesel. Der 302 PS Gasmotor läuft besonders ruhig und leise. Mit 600 Litern LNG-Tankvolumen erreicht er über 1.100 km Reichweite.\n\nBio-LNG ermöglicht nahezu klimaneutralen Betrieb. Das GigaSpace-Fahrerhaus bietet vollen Fernverkehrskomfort. Die Brückentechnologie für umweltbewusste Transportunternehmen.",
+    "longDescription": "Der Mercedes-Benz Actros L 1851 LS LNG bietet eine überzeugende Alternative zum Diesel-Fernverkehr. Mit Flüssigerdgas (LNG) als Kraftstoff reduziert er die CO2-Emissionen um bis zu 20 Prozent gegenüber dem Diesel-Pendant. Bei Nutzung von Bio-LNG kann die CO2-Bilanz nahezu klimaneutral ausfallen.\n\nDer M 936 G Motor mit 302 PS ist speziell für den Gas-Betrieb entwickelt. Er arbeitet nach dem Otto-Prinzip und zeichnet sich durch besonders ruhigen Lauf aus. Die beiden LNG-Kryotanks mit insgesamt 600 Litern Volumen ermöglichen eine beeindruckende Reichweite von über 1.100 Kilometern.\n\nDie Betankung erfolgt über einen speziellen Niedertemperatur-Anschluss und dauert etwa 10-15 Minuten. Das GigaSpace-Fahrerhaus bietet den gewohnten Actros-Komfort. Der Actros L LNG ist die Brückentechnologie auf dem Weg zur Elektrifizierung.",
+    "category": "Fernverkehr/Alternative Antriebe",
+    "series": "Actros L",
+    "imageUrl": "https://images.unsplash.com/photo-1532408840957-031d8034aeef?w=800&h=600&fit=crop",
+    "highlights": [
+      "LNG-Kryotanks",
+      "Hohe Reichweite 1.100 km",
+      "CO2-Reduktion bis 20%",
+      "Bio-LNG kompatibel",
+      "GigaSpace Fahrerhaus",
+      "Active Brake Assist 5",
+      "Predictive Powertrain Control",
+      "Niedertemperatur-Betankung"
+    ],
+    "priceEur": 195000,
+    "specs": {
+      "motor": "M 936 G LNG Euro VI",
+      "leistung_ps": "302",
+      "kraftstoff": "LNG (Liquefied Natural Gas)",
+      "tankvolumen_l": "600",
+      "reichweite_km": "1100",
+      "antriebsformel": "4x2",
+      "gesamtgewicht_t": "40",
+      "fahrerhaustyp": "GigaSpace"
+    }
+  }
+]
