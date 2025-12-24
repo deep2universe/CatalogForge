@@ -223,34 +223,34 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 11.8 Git commit
     - `feat: implement Gemini client and vision analyzer`
 
-- [ ] 12. LLM Logging System
-  - [ ] 12.1 LlmLogEntry Record implementieren
+- [x] 12. LLM Logging System
+  - [x] 12.1 LlmLogEntry Record implementieren
     - Alle Felder gemäß Design
     - Direction enum (REQUEST, RESPONSE)
     - Status enum (SUCCESS, ERROR)
     - _Requirements: 10.1, 10.2_
-  - [ ] 12.2 LlmLogWriter implementieren
+  - [x] 12.2 LlmLogWriter implementieren
     - Tägliche JSONL-Dateien (logs/llm/{date}_llm.jsonl)
     - Eine JSON-Zeile pro Entry
     - Append-Modus
     - Neue Datei bei Datumswechsel
     - _Requirements: 10.4, 10.5, 10.6, 10.7_
-  - [ ] 12.3 Property-Test für Log File Format
+  - [x] 12.3 Property-Test für Log File Format
     - **Property 15: Log File Format**
     - **Validates: Requirements 10.4, 10.5, 10.6, 10.7**
-  - [ ] 12.4 LlmInteractionLogger implementieren
+  - [x] 12.4 LlmInteractionLogger implementieren
     - logRequest() vor LLM-Call
     - logResponse() nach LLM-Call
     - logError() bei Fehlern
     - RequestId-Korrelation
     - _Requirements: 10.1, 10.2, 10.3, 10.8_
-  - [ ] 12.5 Property-Test für LLM Log Correlation
+  - [x] 12.5 Property-Test für LLM Log Correlation
     - **Property 14: LLM Log Correlation**
     - **Validates: Requirements 10.1, 10.2, 10.3**
-  - [ ] 12.6 Git commit
+  - [x] 12.6 Git commit
     - `feat: implement LLM logging system with JSONL writer`
 
-- [ ] 13. Checkpoint - Gemini und Logging
+- [x] 13. Checkpoint - Gemini und Logging
   - Ensure all tests pass.
 
 - [ ] 14. Agent Framework - Core

@@ -81,4 +81,22 @@ public record GeminiResponse(
                 ? usageMetadata.totalTokenCount() 
                 : 0;
     }
+
+    /**
+     * Gets the input/prompt token count.
+     */
+    public int getInputTokens() {
+        return usageMetadata != null && usageMetadata.promptTokenCount() != null
+                ? usageMetadata.promptTokenCount()
+                : 0;
+    }
+
+    /**
+     * Gets the output/candidates token count.
+     */
+    public int getOutputTokens() {
+        return usageMetadata != null && usageMetadata.candidatesTokenCount() != null
+                ? usageMetadata.candidatesTokenCount()
+                : 0;
+    }
 }
