@@ -295,21 +295,21 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 15.5 Git commit
     - `feat: add IterativePipeline and ParallelPipeline`
 
-- [ ] 16. AgentOrchestrator
-  - [ ] 16.1 AgentOrchestrator implementieren
+- [x] 16. AgentOrchestrator
+  - [x] 16.1 AgentOrchestrator implementieren
     - execute(context) Methode
     - selectStrategy() basierend auf Options
     - Unique pipelineId generieren
     - _Requirements: 7.1, 7.2, 7.3, 7.4, 7.5_
-  - [ ] 16.2 PipelineStrategy Implementierungen
+  - [x] 16.2 PipelineStrategy Implementierungen
     - SimpleLayoutStrategy → LinearPipeline
     - ComplexLayoutStrategy → IterativePipeline
     - MultiVariantStrategy → ParallelPipeline
     - _Requirements: 7.1, 7.2, 7.3_
-  - [ ] 16.3 Git commit
+  - [x] 16.3 Git commit
     - `feat: implement AgentOrchestrator with pipeline strategies`
 
-- [ ] 17. Checkpoint - Agent Framework
+- [x] 17. Checkpoint - Agent Framework
   - Ensure all tests pass.
 
 - [ ] 18. Layout Service und Controller
