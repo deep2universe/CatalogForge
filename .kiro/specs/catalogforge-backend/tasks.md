@@ -253,25 +253,25 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
 - [x] 13. Checkpoint - Gemini und Logging
   - Ensure all tests pass.
 
-- [ ] 14. Agent Framework - Core
-  - [ ] 14.1 AgentContext Record implementieren
+- [x] 14. Agent Framework - Core
+  - [x] 14.1 AgentContext Record implementieren
     - Immutable mit allen Feldern gemäß Design
     - Builder oder with-Methoden für Updates
     - _Requirements: 7.4, 7.5_
-  - [ ] 14.2 AgentStep Interface und Basis-Steps
+  - [x] 14.2 AgentStep Interface und Basis-Steps
     - AgentStep Interface mit execute(context)
     - PromptAssemblyStep
     - LayoutGenerationStep
     - ValidationStep
     - _Requirements: 7.6_
-  - [ ] 14.3 Pipeline Interface und LinearPipeline
+  - [x] 14.3 Pipeline Interface und LinearPipeline
     - Pipeline Interface mit run(context)
     - LinearPipeline: PromptAssembly → LayoutGeneration
     - _Requirements: 7.1, 7.6_
-  - [ ] 14.4 Property-Test für Pipeline Selection
+  - [x] 14.4 Property-Test für Pipeline Selection
     - **Property 6: Pipeline Selection Logic**
     - **Validates: Requirements 2.5, 2.6, 7.1, 7.2, 7.3**
-  - [ ] 14.5 Git commit
+  - [x] 14.5 Git commit
     - `feat: implement Agent framework core with LinearPipeline`
 
 - [ ] 15. Agent Framework - Advanced Pipelines
