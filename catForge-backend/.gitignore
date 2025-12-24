@@ -27,4 +27,10 @@ logs/
 .env
 .env.local
 
+# Dev Container
+.gradle-cache/
+
+# Node
+scripts/node_modules/
+
 .DS_Store
