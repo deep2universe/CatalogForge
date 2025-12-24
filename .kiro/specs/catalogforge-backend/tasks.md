@@ -1,0 +1,459 @@
+# Implementation Plan: CatalogForge Backend
+
+## Overview
+
+Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API mit Gemini-Integration. Die Implementierung erfolgt inkrementell, beginnend mit der Grundstruktur und den Datenmodellen, gefolgt von den Kernkomponenten (Skills, Agent Framework, Gemini Client), und abschließend den REST-Controllern und dem Logging-System.
+
+## Conventions
+
+### Language
+- **Code**: English (class names, method names, variables, constants)
+- **Comments**: English
+- **Commit Messages**: English
+- **Documentation**: German (requirements, design) / English (code docs, JavaDoc)
+
+### Git Workflow
+- Commit after each completed feature/checkpoint
+- Commit message format: `<type>: <short description>`
+- Types: `feat`, `test`, `fix`, `refactor`, `docs`, `chore`
+- Keep messages concise but descriptive (max 72 chars)
+- Examples:
+  - `feat: add Product domain model and DTOs`
+  - `feat: implement ProductService with filtering and search`
+  - `test: add property tests for HTML sanitization`
+  - `chore: configure Spring Boot project structure`
+
+## Tasks
+
+- [ ] 1. Projekt-Setup und Grundstruktur
+  - [ ] 1.1 Spring Boot Projekt initialisieren (Java 21)
+    - build.gradle.kts (Gradle Kotlin DSL für Build-Konfiguration)
+    - Java 21 als Programmiersprache
+    - Dependencies: Spring Boot 3.4, WebFlux, Jackson, jqwik
+    - application.yml mit Basis-Konfiguration
+    - Verzeichnisstruktur gemäß Spezifikation anlegen
+    - _Requirements: 13.1, 13.2, 13.3_
+  - [ ] 1.2 Basis-Konfigurationsklassen erstellen
+    - GeminiConfig, WebConfig, SkillsConfig, LoggingConfig
+    - Properties-Klassen für typsichere Konfiguration
+    - _Requirements: 13.1, 13.2, 13.3_
+  - [ ] 1.3 Git commit
+    - `chore: initialize Spring Boot project with base configuration`
+
+- [ ] 2. Data Models und DTOs
+  - [ ] 2.1 Core Domain Models implementieren
+    - Product, TechnicalData Records
+    - Layout, LayoutVariant, LayoutMetadata Records
+    - PageFormat Record
+    - _Requirements: 1.3, 9.1_
+  - [ ] 2.2 Image Analysis Models implementieren
+    - ColorPalette, MoodAnalysis, LayoutHints Records
+    - ImageAnalysisResult Record
+    - _Requirements: 3.2, 3.4, 3.5, 3.6_
+  - [ ] 2.3 Request/Response DTOs implementieren
+    - TextToLayoutRequest, ImageToLayoutRequest
+    - LayoutOptions, ImageLayoutOptions
+    - LayoutResponse, ImageUploadResponse, ErrorResponse
+    - _Requirements: 2.1, 3.1, 4.5, 14.6_
+  - [ ] 2.4 Git commit
+    - `feat: add domain models and DTOs`
+
+- [ ] 3. Exception Handling
+  - [ ] 3.1 Exception-Hierarchie implementieren
+    - CatalogForgeException (abstract base)
+    - LayoutGenerationException, PdfGenerationException
+    - SkillLoadException, ImageAnalysisException
+    - ImageUrlNotReachableException, ImageUploadException
+    - ResourceNotFoundException
+    - _Requirements: 14.1, 14.2, 14.3, 14.4_
+  - [ ] 3.2 GlobalExceptionHandler implementieren
+    - Handler für Validation, NotFound, TooLarge, GeminiError, Generic
+    - ErrorResponse-Mapping mit timestamp, status, error, message, path
+    - Server-seitiges Logging aller Exceptions
+    - _Requirements: 14.1, 14.2, 14.3, 14.4, 14.5, 14.6_
+  - [ ] 3.3 Property-Test für Error Response Structure
+    - **Property 19: Error Response Structure**
+    - **Validates: Requirements 14.6**
+  - [ ] 3.4 Git commit
+    - `feat: add exception hierarchy and global error handling`
+
+- [ ] 4. Utility-Klassen
+  - [ ] 4.1 HtmlSanitizer implementieren
+    - Script-Tags entfernen
+    - Event-Handler-Attribute entfernen
+    - Strukturelle Elemente und CSS-Klassen erhalten
+    - _Requirements: 12.1, 12.2, 12.3_
+  - [ ] 4.2 Property-Test für HTML Sanitization
+    - **Property 16: HTML Sanitization**
+    - **Validates: Requirements 12.1, 12.2, 12.3**
+  - [ ] 4.3 CssValidator implementieren
+    - Syntax-Validierung (balanced brackets)
+    - Print-Units akzeptieren (mm, cm, pt)
+    - _Requirements: 12.4, 12.5_
+  - [ ] 4.4 Property-Test für CSS Validation
+    - **Property 17: CSS Validation**
+    - **Validates: Requirements 12.4, 12.5**
+  - [ ] 4.5 ColorUtils implementieren
+    - Hex-Code-Validierung (#RGB, #RRGGBB)
+    - WCAG-Kontrast-Berechnung
+    - _Requirements: 12.6, 12.7_
+  - [ ] 4.6 Property-Test für Color Validation
+    - **Property 18: Color Validation and Contrast**
+    - **Validates: Requirements 12.6, 12.7**
+  - [ ] 4.7 JsonUtils und FileUtils implementieren
+    - JSON-Serialisierung/Deserialisierung Helpers
+    - File-Reading Utilities
+  - [ ] 4.8 Git commit
+    - `feat: add utility classes with property tests`
+
+- [ ] 5. Checkpoint - Basis-Infrastruktur
+  - Ensure all tests pass, ask the user if questions arise.
+
+- [ ] 6. Product Service
+  - [ ] 6.1 ProductService implementieren
+    - products.json beim Start laden
+    - In-Memory-Cache
+    - Filter nach category, series
+    - Case-insensitive Volltextsuche
+    - getAllCategories, getAllSeries (unique, sorted)
+    - _Requirements: 1.1, 1.2, 1.5, 1.6, 1.7_
+  - [ ] 6.2 Property-Test für Product Data Integrity
+    - **Property 1: Product Data Integrity**
+    - **Validates: Requirements 1.1, 1.3**
+  - [ ] 6.3 Property-Test für Product Filtering
+    - **Property 2: Product Filtering Correctness**
+    - **Validates: Requirements 1.2**
+  - [ ] 6.4 Property-Test für Search Relevance
+    - **Property 3: Search Result Relevance**
+    - **Validates: Requirements 1.5**
+  - [ ] 6.5 Property-Test für Categories/Series Uniqueness
+    - **Property 4: Categories and Series Uniqueness**
+    - **Validates: Requirements 1.6, 1.7**
+  - [ ] 6.6 Git commit
+    - `feat: implement ProductService with filtering and search`
+
+- [ ] 7. ProductController
+  - [ ] 7.1 ProductController implementieren
+    - GET /api/v1/products (paginiert, filterbar)
+    - GET /api/v1/products/{id}
+    - GET /api/v1/products/categories
+    - GET /api/v1/products/series
+    - GET /api/v1/products/search?q={query}
+    - _Requirements: 1.2, 1.3, 1.4, 1.5, 1.6, 1.7_
+  - [ ] 7.2 Integration-Test für ProductController
+    - Echte products.json
+    - Pagination, Filter, Search testen
+    - _Requirements: 1.2, 1.3, 1.4, 1.5_
+  - [ ] 7.3 Git commit
+    - `feat: add ProductController REST endpoints`
+
+- [ ] 8. Skills System
+  - [ ] 8.1 Skill Record und SkillLoader implementieren
+    - Rekursives Scannen von resources/skills/
+    - Name aus Dateiname extrahieren
+    - Category aus Verzeichnispfad
+    - Metadata-Header parsen (dependencies, priority)
+    - _Requirements: 5.1, 5.2, 5.3, 5.4_
+  - [ ] 8.2 SkillAssembler implementieren
+    - MASTER_SKILL immer zuerst
+    - Dependencies rekursiv auflösen
+    - Nach Priority sortieren
+    - Contents zusammenführen
+    - Style/Format-Skills basierend auf Options
+    - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7_
+  - [ ] 8.3 Property-Test für Skill Assembly Ordering
+    - **Property 7: Skill Assembly Ordering**
+    - **Validates: Requirements 6.1, 6.2, 6.3, 6.4**
+  - [ ] 8.4 Property-Test für Style/Format Skill Inclusion
+    - **Property 8: Style and Format Skill Inclusion**
+    - **Validates: Requirements 2.3, 2.4, 6.5, 6.6**
+  - [ ] 8.5 SkillsService implementieren
+    - Delegiert an SkillLoader und SkillAssembler
+    - Skill-Caching
+    - _Requirements: 5.5, 5.6, 5.8_
+  - [ ] 8.6 Git commit
+    - `feat: implement Skills system with loader and assembler`
+
+- [ ] 9. SkillsController
+  - [ ] 9.1 SkillsController implementieren
+    - GET /api/v1/skills
+    - GET /api/v1/skills/{category}
+    - GET /api/v1/skills/prompts/examples
+    - _Requirements: 5.5, 5.6, 5.7, 5.8_
+  - [ ] 9.2 Integration-Test für SkillsController
+    - Echte Skills laden
+    - Kategorien testen
+    - _Requirements: 5.5, 5.6, 5.7_
+  - [ ] 9.3 Git commit
+    - `feat: add SkillsController REST endpoints`
+
+- [ ] 10. Checkpoint - Product und Skills
+  - Ensure all tests pass, ask the user if questions arise.
+
+- [ ] 11. Gemini Integration
+  - [ ] 11.1 GeminiClient implementieren
+    - Spring WebClient für HTTP POST
+    - x-goog-api-key Header
+    - Timeout-Handling (60s default)
+    - Response-Mapping zu GeminiResponse
+    - _Requirements: 8.1, 8.5, 8.6, 8.7, 8.8_
+  - [ ] 11.2 GeminiRequest und GeminiResponse Records
+    - Builder-Pattern für GeminiRequest
+    - Model, systemInstruction, userPrompt, imageUrl, responseSchema
+    - _Requirements: 8.5_
+  - [ ] 11.3 GeminiModelSelector implementieren
+    - gemini-2.5-flash für Standard-Layouts
+    - gemini-2.5-pro für komplexe Layouts
+    - gemini-2.5-pro-vision für Bildanalyse
+    - _Requirements: 8.2, 8.3, 8.4_
+  - [ ] 11.4 Property-Test für Gemini Request Structure
+    - **Property 11: Gemini Request Structure**
+    - **Validates: Requirements 8.1, 8.5**
+  - [ ] 11.5 Property-Test für Gemini Model Selection
+    - **Property 12: Gemini Model Selection**
+    - **Validates: Requirements 8.2, 8.3, 8.4**
+  - [ ] 11.6 GeminiVisionAnalyzer implementieren
+    - ColorPalette-Extraktion
+    - MoodAnalysis
+    - LayoutHints
+    - _Requirements: 3.2, 3.4, 3.5, 3.6_
+  - [ ] 11.7 Property-Test für Image Analysis Extraction
+    - **Property 9: Image Analysis Extraction**
+    - **Validates: Requirements 3.2, 3.4, 3.5, 3.6**
+  - [ ] 11.8 Git commit
+    - `feat: implement Gemini client and vision analyzer`
+
+- [ ] 12. LLM Logging System
+  - [ ] 12.1 LlmLogEntry Record implementieren
+    - Alle Felder gemäß Design
+    - Direction enum (REQUEST, RESPONSE)
+    - Status enum (SUCCESS, ERROR)
+    - _Requirements: 10.1, 10.2_
+  - [ ] 12.2 LlmLogWriter implementieren
+    - Tägliche JSONL-Dateien (logs/llm/{date}_llm.jsonl)
+    - Eine JSON-Zeile pro Entry
+    - Append-Modus
+    - Neue Datei bei Datumswechsel
+    - _Requirements: 10.4, 10.5, 10.6, 10.7_
+  - [ ] 12.3 Property-Test für Log File Format
+    - **Property 15: Log File Format**
+    - **Validates: Requirements 10.4, 10.5, 10.6, 10.7**
+  - [ ] 12.4 LlmInteractionLogger implementieren
+    - logRequest() vor LLM-Call
+    - logResponse() nach LLM-Call
+    - logError() bei Fehlern
+    - RequestId-Korrelation
+    - _Requirements: 10.1, 10.2, 10.3, 10.8_
+  - [ ] 12.5 Property-Test für LLM Log Correlation
+    - **Property 14: LLM Log Correlation**
+    - **Validates: Requirements 10.1, 10.2, 10.3**
+  - [ ] 12.6 Git commit
+    - `feat: implement LLM logging system with JSONL writer`
+
+- [ ] 13. Checkpoint - Gemini und Logging
+  - Ensure all tests pass, ask the user if questions arise.
+
+- [ ] 14. Agent Framework - Core
+  - [ ] 14.1 AgentContext Record implementieren
+    - Immutable mit allen Feldern gemäß Design
+    - Builder oder with-Methoden für Updates
+    - _Requirements: 7.4, 7.5_
+  - [ ] 14.2 AgentStep Interface und Basis-Steps
+    - AgentStep Interface mit execute(context)
+    - PromptAssemblyStep
+    - LayoutGenerationStep
+    - ValidationStep
+    - _Requirements: 7.6_
+  - [ ] 14.3 Pipeline Interface und LinearPipeline
+    - Pipeline Interface mit run(context)
+    - LinearPipeline: PromptAssembly → LayoutGeneration
+    - _Requirements: 7.1, 7.6_
+  - [ ] 14.4 Property-Test für Pipeline Selection
+    - **Property 6: Pipeline Selection Logic**
+    - **Validates: Requirements 2.5, 2.6, 7.1, 7.2, 7.3**
+  - [ ] 14.5 Git commit
+    - `feat: implement Agent framework core with LinearPipeline`
+
+- [ ] 15. Agent Framework - Advanced Pipelines
+  - [ ] 15.1 IterativePipeline implementieren
+    - Validation → Correction Loop
+    - maxRetries (default 3)
+    - FallbackStep bei Überschreitung
+    - _Requirements: 7.2, 7.7, 7.8_
+  - [ ] 15.2 ParallelPipeline implementieren
+    - N parallele LayoutGenerationSteps
+    - Aggregation der Ergebnisse
+    - _Requirements: 7.3, 7.9_
+  - [ ] 15.3 ImageAnalysisStep implementieren
+    - Integration mit GeminiVisionAnalyzer
+    - Placeholder-Modus bei unreachable URL
+    - _Requirements: 3.1, 3.3, 7.4_
+  - [ ] 15.4 CorrectionStep und FallbackStep implementieren
+    - Korrektur-Prompt bei Validierungsfehlern
+    - Fallback-Layout bei wiederholtem Fehlschlag
+    - _Requirements: 7.7, 7.8_
+  - [ ] 15.5 Git commit
+    - `feat: add IterativePipeline and ParallelPipeline`
+
+- [ ] 16. AgentOrchestrator
+  - [ ] 16.1 AgentOrchestrator implementieren
+    - execute(context) Methode
+    - selectStrategy() basierend auf Options
+    - Unique pipelineId generieren
+    - _Requirements: 7.1, 7.2, 7.3, 7.4, 7.5_
+  - [ ] 16.2 PipelineStrategy Implementierungen
+    - SimpleLayoutStrategy → LinearPipeline
+    - ComplexLayoutStrategy → IterativePipeline
+    - MultiVariantStrategy → ParallelPipeline
+    - _Requirements: 7.1, 7.2, 7.3_
+  - [ ] 16.3 Git commit
+    - `feat: implement AgentOrchestrator with pipeline strategies`
+
+- [ ] 17. Checkpoint - Agent Framework
+  - Ensure all tests pass, ask the user if questions arise.
+
+- [ ] 18. Layout Service und Controller
+  - [ ] 18.1 LayoutGenerationService implementieren
+    - generateFromText() und generateFromImage()
+    - Delegiert an AgentOrchestrator
+    - Layout-Lifecycle (CRUD) in Memory-Store
+    - UUID-Generierung für Layouts
+    - _Requirements: 2.1, 3.1, 9.1, 9.2, 9.4, 9.5, 9.6_
+  - [ ] 18.2 Property-Test für Layout Response Completeness
+    - **Property 5: Layout Response Completeness**
+    - **Validates: Requirements 2.1, 2.7**
+  - [ ] 18.3 Property-Test für Layout Lifecycle Round-Trip
+    - **Property 13: Layout Lifecycle Round-Trip**
+    - **Validates: Requirements 9.1, 9.2, 9.4, 9.5**
+  - [ ] 18.4 LayoutController implementieren
+    - POST /api/v1/layouts/generate/text
+    - POST /api/v1/layouts/generate/image
+    - GET /api/v1/layouts/{id}
+    - PUT /api/v1/layouts/{id}
+    - DELETE /api/v1/layouts/{id}
+    - GET /api/v1/layouts/{id}/variants
+    - _Requirements: 2.1, 2.2, 3.1, 9.2, 9.3, 9.4, 9.5, 9.6_
+  - [ ] 18.5 Integration-Test für LayoutController
+    - Text-to-Layout mit gemocktem GeminiClient
+    - Image-to-Layout mit gemocktem GeminiClient
+    - Layout CRUD Lifecycle
+    - _Requirements: 2.1, 3.1, 9.2, 9.4, 9.5_
+  - [ ] 18.6 Git commit
+    - `feat: implement LayoutService and LayoutController`
+
+- [ ] 19. Image Upload Service
+  - [ ] 19.1 ImageService implementieren
+    - upload() mit Validierung (JPEG, PNG, WebP, max 10MB)
+    - Temporäre Speicherung mit UUID
+    - URL-Generierung (24h gültig)
+    - getImage() für Abruf
+    - cleanup() Scheduled Job
+    - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5, 4.7_
+  - [ ] 19.2 Property-Test für Image Upload Round-Trip
+    - **Property 10: Image Upload Round-Trip**
+    - **Validates: Requirements 4.1, 4.2, 4.5, 4.6**
+  - [ ] 19.3 ImageController implementieren
+    - POST /api/v1/images/upload
+    - GET /api/v1/images/{imageId} (für interne URL)
+    - _Requirements: 4.1, 4.5, 4.6_
+  - [ ] 19.4 Git commit
+    - `feat: implement ImageService with upload and cleanup`
+
+- [ ] 20. Checkpoint - Layout und Image Services
+  - Ensure all tests pass, ask the user if questions arise.
+
+- [ ] 21. PDF Generation
+  - [ ] 21.1 PuppeteerBridge implementieren
+    - Kommunikation via stdin/stdout JSON
+    - PrintPreset-Unterstützung
+    - _Requirements: 11.1, 11.2, 11.3_
+  - [ ] 21.2 PrintPreset und PdfOptions Records
+    - screen, print-standard, print-professional, print-premium
+    - DPI, Bleed, Schnittmarken Konfiguration
+    - _Requirements: 11.2_
+  - [ ] 21.3 PdfGenerationService implementieren
+    - generate() mit layoutId und preset
+    - PDF-Speicherung und ID-Generierung
+    - _Requirements: 11.1, 11.4_
+  - [ ] 21.4 PdfController implementieren
+    - POST /api/v1/pdf/generate
+    - GET /api/v1/pdf/{id}/download
+    - _Requirements: 11.1, 11.4, 11.5, 11.6_
+  - [ ] 21.5 Git commit
+    - `feat: implement PDF generation with PuppeteerBridge`
+
+- [ ] 22. Puppeteer Node.js Script
+  - [ ] 22.1 pdf-generator.js implementieren
+    - stdin JSON lesen
+    - Puppeteer/Headless Chrome PDF-Generierung
+    - stdout JSON + PDF-Pfad zurückgeben
+    - _Requirements: 11.3_
+  - [ ] 22.2 print-presets.js implementieren
+    - Preset-Konfigurationen
+    - _Requirements: 11.2_
+  - [ ] 22.3 Git commit
+    - `feat: add Puppeteer PDF generator script`
+
+- [ ] 23. Skills Content erstellen
+  - [ ] 23.1 MASTER_SKILL.md erstellen
+    - Basis-Anweisungen für alle Generierungen
+    - _Requirements: 6.1_
+  - [ ] 23.2 Core Skills erstellen
+    - LAYOUT_PRINCIPLES.md, TYPOGRAPHY.md, COLOR_THEORY.md, GRID_SYSTEMS.md, SPACING.md
+    - _Requirements: 5.1_
+  - [ ] 23.3 Page-Type Skills erstellen
+    - PRODUCT_PAGE.md, OVERVIEW_PAGE.md, COVER_PAGE.md, FLYER_PAGE.md, etc.
+    - _Requirements: 5.1_
+  - [ ] 23.4 Style Skills erstellen
+    - STYLE_MODERN.md, STYLE_TECHNICAL.md, STYLE_PREMIUM.md, STYLE_ECO.md, STYLE_DYNAMIC.md
+    - _Requirements: 5.1, 6.5_
+  - [ ] 23.5 Format Skills erstellen
+    - FORMAT_A4.md, FORMAT_A5.md, FORMAT_DL.md, FORMAT_A6.md, FORMAT_SQUARE.md
+    - _Requirements: 5.1, 6.6_
+  - [ ] 23.6 Image-Analysis Skills erstellen
+    - COLOR_EXTRACTION.md, MOOD_ANALYSIS.md, LAYOUT_INSPIRATION.md, PLACEHOLDER_RULES.md
+    - _Requirements: 5.1, 6.7_
+  - [ ] 23.7 Git commit
+    - `feat: add skill markdown files for prompt engineering`
+
+- [ ] 24. CSS Templates erstellen
+  - [ ] 24.1 Base CSS erstellen
+    - reset.css, variables.css, typography.css, utilities.css
+  - [ ] 24.2 Component CSS erstellen
+    - product-card.css, spec-table.css, feature-list.css, hero-image.css, etc.
+  - [ ] 24.3 Layout CSS erstellen
+    - grid-12col.css, grid-modular.css, layout-product-hero.css, etc.
+  - [ ] 24.4 Print CSS erstellen
+    - print-base.css, print-bleed.css, print-cmyk-hints.css, print-crop-marks.css
+  - [ ] 24.5 Git commit
+    - `feat: add CSS templates for layout generation`
+
+- [ ] 25. Sample Data und Prompts
+  - [ ] 25.1 products.json erstellen
+    - Beispiel-Produktdaten (Mercedes-Benz Trucks)
+    - _Requirements: 1.1_
+  - [ ] 25.2 example-prompts.json erstellen
+    - 10 Beispiel-Prompts für verschiedene Use Cases
+    - _Requirements: 5.8_
+  - [ ] 25.3 Gemini Response Fixtures erstellen
+    - layout-simple.json, layout-with-specs.json, layout-eco-style.json
+    - image-analysis-premium.json, image-analysis-dynamic.json
+    - error-response.json
+  - [ ] 25.4 Git commit
+    - `feat: add sample data and test fixtures`
+
+- [ ] 26. Final Checkpoint
+  - Ensure all tests pass, ask the user if questions arise.
+  - Verify 70% overall test coverage
+  - Run full integration test suite
+  - [ ] 26.1 Git commit
+    - `chore: finalize implementation with full test coverage`
+
+## Notes
+
+- Jeder Task referenziert spezifische Requirements für Traceability
+- Property-Tests validieren universelle Korrektheitseigenschaften
+- Checkpoints dienen der inkrementellen Validierung
+- jqwik wird als Property-Based Testing Framework verwendet
+- Git commits erfolgen nach jedem abgeschlossenen Feature
+- Code und Kommentare sind in Englisch zu schreiben
