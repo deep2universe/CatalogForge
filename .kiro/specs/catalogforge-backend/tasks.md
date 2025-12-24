@@ -25,19 +25,19 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
 
 ## Tasks
 
-- [ ] 1. Projekt-Setup und Grundstruktur
-  - [ ] 1.1 Spring Boot Projekt initialisieren (Java 21)
+- [x] 1. Projekt-Setup und Grundstruktur
+  - [x] 1.1 Spring Boot Projekt initialisieren (Java 21)
     - build.gradle.kts (Gradle Kotlin DSL für Build-Konfiguration)
     - Java 21 als Programmiersprache
     - Dependencies: Spring Boot 3.4, WebFlux, Jackson, jqwik
     - application.yml mit Basis-Konfiguration
     - Verzeichnisstruktur gemäß Spezifikation anlegen
     - _Requirements: 13.1, 13.2, 13.3_
-  - [ ] 1.2 Basis-Konfigurationsklassen erstellen
+  - [x] 1.2 Basis-Konfigurationsklassen erstellen
     - GeminiConfig, WebConfig, SkillsConfig, LoggingConfig
     - Properties-Klassen für typsichere Konfiguration
     - _Requirements: 13.1, 13.2, 13.3_
-  - [ ] 1.3 Git commit
+  - [x] 1.3 Git commit
     - `chore: initialize Spring Boot project with base configuration`
 
 - [ ] 2. Data Models und DTOs

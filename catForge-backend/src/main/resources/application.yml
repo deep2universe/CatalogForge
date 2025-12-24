@@ -1,0 +1,65 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: catalog-forge-backend
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    deserialization:
+      fail-on-unknown-properties: false
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+catalogforge:
+  data:
+    products-path: classpath:data/products.json
+  
+  skills:
+    base-path: classpath:skills/
+    cache-enabled: true
+  
+  gemini:
+    api-key: ${GEMINI_API_KEY:}
+    base-url: https://generativelanguage.googleapis.com/v1beta
+    model-default: gemini-2.5-flash
+    model-vision: gemini-2.5-pro-vision
+    model-complex: gemini-2.5-pro
+    timeout-seconds: 60
+    max-retries: 3
+  
+  puppeteer:
+    node-path: /usr/bin/node
+    script-path: ./puppeteer/pdf-generator.js
+    temp-dir: /tmp/catalogforge/pdf
+    default-dpi: 300
+    image-timeout-seconds: 10
+  
+  layout:
+    variant-count-default: 2
+    max-variant-count: 5
+    fallback-enabled: true
+  
+  images:
+    temp-dir: /tmp/catalogforge/images
+    url-validation-timeout-ms: 5000
+    expiration-hours: 24
+    placeholder-enabled: true
+  
+  logging:
+    llm:
+      enabled: true
+      directory: ./logs/llm
+      file-pattern: "{date}_llm.jsonl"
+
+logging:
+  level:
+    com.catalogforge: DEBUG
+    org.springframework.web: INFO
+  file:
+    name: ./logs/application/catalogforge.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

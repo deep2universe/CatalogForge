@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: catalog-forge-backend-test
+
+catalogforge:
+  data:
+    products-path: classpath:data/products.json
+  
+  skills:
+    base-path: classpath:skills/
+    cache-enabled: false
+  
+  gemini:
+    api-key: test-api-key
+    base-url: https://generativelanguage.googleapis.com/v1beta
+    model-default: gemini-2.5-flash
+    model-vision: gemini-2.5-pro-vision
+    model-complex: gemini-2.5-pro
+    timeout-seconds: 10
+    max-retries: 1
+  
+  puppeteer:
+    node-path: /usr/bin/node
+    script-path: ./puppeteer/pdf-generator.js
+    temp-dir: /tmp/catalogforge-test/pdf
+    default-dpi: 150
+    image-timeout-seconds: 5
+  
+  layout:
+    variant-count-default: 1
+    max-variant-count: 3
+    fallback-enabled: true
+  
+  images:
+    temp-dir: /tmp/catalogforge-test/images
+    url-validation-timeout-ms: 1000
+    expiration-hours: 1
+    placeholder-enabled: true
+  
+  logging:
+    llm:
+      enabled: false
+      directory: ./logs/llm-test
+      file-pattern: "{date}_llm.jsonl"
+
+logging:
+  level:
+    com.catalogforge: DEBUG
