@@ -2,8 +2,6 @@
 # CatalogForge Backend API Test Script
 # Testet alle Endpunkte gegen einen laufenden Server
 
-set -e
-
 BASE_URL="${BASE_URL:-http://localhost:8080}"
 API="$BASE_URL/api/v1"
 
@@ -36,12 +34,12 @@ print_test() {
 
 print_success() {
     echo -e "${GREEN}  ✓ $1${NC}"
-    ((PASSED++))
+    PASSED=$((PASSED + 1))
 }
 
 print_error() {
     echo -e "${RED}  ✗ $1${NC}"
-    ((FAILED++))
+    FAILED=$((FAILED + 1))
 }
 
 print_json() {
