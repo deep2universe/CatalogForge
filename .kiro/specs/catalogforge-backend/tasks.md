@@ -187,40 +187,40 @@ Dieser Plan implementiert das CatalogForge Backend als Spring Boot 3.4 REST API 
   - [x] 9.3 Git commit
     - `feat: add SkillsController REST endpoints`
 
-- [ ] 10. Checkpoint - Product und Skills
+- [x] 10. Checkpoint - Product und Skills
   - Ensure all tests pass.
 
-- [ ] 11. Gemini Integration
-  - [ ] 11.1 GeminiClient implementieren
+- [x] 11. Gemini Integration
+  - [x] 11.1 GeminiClient implementieren
     - Spring WebClient für HTTP POST
     - x-goog-api-key Header
     - Timeout-Handling (60s default)
     - Response-Mapping zu GeminiResponse
     - _Requirements: 8.1, 8.5, 8.6, 8.7, 8.8_
-  - [ ] 11.2 GeminiRequest und GeminiResponse Records
+  - [x] 11.2 GeminiRequest und GeminiResponse Records
     - Builder-Pattern für GeminiRequest
     - Model, systemInstruction, userPrompt, imageUrl, responseSchema
     - _Requirements: 8.5_
-  - [ ] 11.3 GeminiModelSelector implementieren
+  - [x] 11.3 GeminiModelSelector implementieren
     - gemini-2.5-flash für Standard-Layouts
     - gemini-2.5-pro für komplexe Layouts
     - gemini-2.5-pro-vision für Bildanalyse
     - _Requirements: 8.2, 8.3, 8.4_
-  - [ ] 11.4 Property-Test für Gemini Request Structure
+  - [x] 11.4 Property-Test für Gemini Request Structure
     - **Property 11: Gemini Request Structure**
     - **Validates: Requirements 8.1, 8.5**
-  - [ ] 11.5 Property-Test für Gemini Model Selection
+  - [x] 11.5 Property-Test für Gemini Model Selection
     - **Property 12: Gemini Model Selection**
     - **Validates: Requirements 8.2, 8.3, 8.4**
-  - [ ] 11.6 GeminiVisionAnalyzer implementieren
+  - [x] 11.6 GeminiVisionAnalyzer implementieren
     - ColorPalette-Extraktion
     - MoodAnalysis
     - LayoutHints
     - _Requirements: 3.2, 3.4, 3.5, 3.6_
-  - [ ] 11.7 Property-Test für Image Analysis Extraction
+  - [x] 11.7 Property-Test für Image Analysis Extraction
     - **Property 9: Image Analysis Extraction**
     - **Validates: Requirements 3.2, 3.4, 3.5, 3.6**
-  - [ ] 11.8 Git commit
+  - [x] 11.8 Git commit
     - `feat: implement Gemini client and vision analyzer`
 
 - [ ] 12. LLM Logging System
