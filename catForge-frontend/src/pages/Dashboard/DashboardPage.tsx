@@ -4,7 +4,7 @@ import { PageContainer } from '@/components/layout';
 import { StatCard, PieChart, BarChart } from '@/components/charts';
 import { ProductGrid, ProductSearch, ProductFilter } from '@/components/features/products';
 import { Card, CardHeader, CardContent, Spinner, Modal } from '@/components/ui';
-import { useProducts, useCategories, useSeries } from '@/hooks';
+import { useProducts, useCategories, useSeries, useDebounce } from '@/hooks';
 import {
   filterProducts,
   countByCategory,
@@ -19,6 +19,9 @@ export function DashboardPage() {
   const [selectedSeries, setSelectedSeries] = useState('');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
+  // Debounce search input for better performance
+  const debouncedSearch = useDebounce(search, 300);
+
   const { data: products, isLoading: productsLoading } = useProducts();
   const { data: categories } = useCategories();
   const { data: series } = useSeries();
@@ -28,9 +31,9 @@ export function DashboardPage() {
     return filterProducts(products, {
       category: selectedCategory || undefined,
       series: selectedSeries || undefined,
-      search: search || undefined,
+      search: debouncedSearch || undefined,
     });
-  }, [products, selectedCategory, selectedSeries, search]);
+  }, [products, selectedCategory, selectedSeries, debouncedSearch]);
 
   const categoryData = useMemo(() => {
     if (!products) return [];
