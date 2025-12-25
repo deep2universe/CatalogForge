@@ -1,5 +1,5 @@
 import type { LayoutOptions as LayoutOptionsType, PageFormat, LayoutStyle } from '@/api';
-import { Card, Slider, Toggle } from '@/components/ui';
+import { Slider, Toggle } from '@/components/ui';
 import { cn } from '@/utils/cn';
 import { pageFormatDimensions, pageFormats } from '@/utils';
 
@@ -24,7 +24,6 @@ export function LayoutOptions({ options, onChange }: LayoutOptionsProps) {
         <h3 className="text-sm font-medium text-neutral-800 mb-4">Seitenformat</h3>
         <div className="flex flex-wrap gap-3">
           {pageFormats.map((format) => {
-            const dims = pageFormatDimensions[format];
             const isSelected = options.pageFormat === format;
             return (
               <button

@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { cn } from '@/utils/cn';
-import { getPromptCharacterCount, MAX_PROMPT_LENGTH } from '@/utils';
+import { getPromptCharacterCount } from '@/utils';
 
 interface PromptInputProps {
   value: string;

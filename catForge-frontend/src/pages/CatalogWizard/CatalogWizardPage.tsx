@@ -26,7 +26,6 @@ export function CatalogWizardPage() {
   const navigate = useNavigate();
   const {
     currentStep,
-    setStep,
     nextStep,
     prevStep,
     selectedProducts,

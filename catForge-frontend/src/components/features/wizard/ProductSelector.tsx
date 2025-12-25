@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import { X, Plus } from 'lucide-react';
 import type { Product } from '@/api';
-import { Card, Badge, Button, Spinner } from '@/components/ui';
+import { Card, Button, Spinner } from '@/components/ui';
 import { ProductSearch, ProductFilter } from '@/components/features/products';
 import { useProducts, useCategories, useSeries } from '@/hooks';
 import { filterProducts, formatPrice } from '@/utils';
