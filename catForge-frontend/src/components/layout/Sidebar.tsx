@@ -21,11 +21,14 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         <div
           className="fixed inset-0 bg-black/50 z-40 md:hidden"
           onClick={onClose}
+          aria-hidden="true"
         />
       )}
 
       {/* Sidebar */}
       <aside
+        role="navigation"
+        aria-label="Hauptnavigation"
         className={cn(
           'fixed top-0 left-0 z-50 h-full w-64 bg-sidebar border-r border-neutral-200',
           'transform transition-transform duration-200 ease-in-out',
@@ -42,8 +45,8 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           </div>
 
           {/* Navigation */}
-          <nav className="flex-1 px-4 py-4">
-            <ul className="space-y-1">
+          <nav className="flex-1 px-4 py-4" aria-label="Seitennavigation">
+            <ul className="space-y-1" role="list">
               {navigationItems.map((item) => (
                 <li key={item.path}>
                   <NavLink
