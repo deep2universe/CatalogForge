@@ -8,17 +8,17 @@ public class GeminiModelSelector {
     /**
      * Model for standard layout generation tasks.
      */
-    public static final String MODEL_FLASH = "gemini-2.0-flash";
+    public static final String MODEL_FLASH = "gemini-3-flash-preview";
 
     /**
      * Model for complex layouts requiring more reasoning.
      */
-    public static final String MODEL_PRO = "gemini-2.5-pro-preview-06-05";
+    public static final String MODEL_PRO = "gemini-3-flash-preview";
 
     /**
      * Model for image analysis tasks.
      */
-    public static final String MODEL_VISION = "gemini-2.0-flash";
+    public static final String MODEL_VISION = "gemini-3-flash-preview";
 
     /**
      * Selects the appropriate model for layout generation.

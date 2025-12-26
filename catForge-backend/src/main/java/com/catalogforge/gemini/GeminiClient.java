@@ -32,6 +32,10 @@ public class GeminiClient {
                 .baseUrl(properties.baseUrl())
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .build();
+        
+        log.info("GeminiClient initialized: baseUrl={}, apiKeyConfigured={}", 
+                properties.baseUrl(), 
+                properties.apiKey() != null && !properties.apiKey().isBlank());
     }
 
     /**
@@ -91,7 +95,7 @@ public class GeminiClient {
     }
 
     private String buildEndpoint(String model) {
-        return String.format("/v1beta/models/%s:generateContent", model);
+        return String.format("/models/%s:generateContent", model);
     }
 
     /**

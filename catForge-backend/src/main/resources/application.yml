@@ -25,9 +25,9 @@ catalogforge:
   gemini:
     api-key: ${GEMINI_API_KEY:}
     base-url: https://generativelanguage.googleapis.com/v1beta
-    model-default: gemini-2.5-flash
-    model-vision: gemini-2.5-pro-vision
-    model-complex: gemini-2.5-pro
+    model-default: gemini-3-flash-preview
+    model-vision: gemini-3-flash-preview
+    model-complex: gemini-3-flash-preview
     timeout-seconds: 60
     max-retries: 3
   
