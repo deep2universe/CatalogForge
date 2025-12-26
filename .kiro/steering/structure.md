@@ -4,6 +4,57 @@ inclusion: always
 
 # Project Structure
 
+## Frontend (`catForge-frontend/`)
+
+```
+src/
+├── api/                # API client layer
+│   ├── client.ts       # Base fetch client with error handling
+│   ├── types.ts        # TypeScript interfaces for API responses
+│   ├── layouts.ts      # Layout generation endpoints
+│   ├── products.ts     # Product catalog endpoints
+│   ├── skills.ts       # Skills system endpoints
+│   ├── images.ts       # Image upload endpoints
+│   └── pdf.ts          # PDF export endpoints
+├── components/
+│   ├── charts/         # Recharts-based visualizations (BarChart, PieChart, StatCard)
+│   ├── features/       # Feature-specific components
+│   │   ├── preview/    # Layout preview (LayoutPreview, VariantSelector)
+│   │   ├── products/   # Product display components
+│   │   ├── prompts/    # Prompt explorer components
+│   │   ├── skills/     # Skills explorer components
+│   │   └── wizard/     # Catalog wizard steps (ProductSelector, LayoutOptions, ImageUpload)
+│   ├── layout/         # App shell (AppLayout, Sidebar, Header, PageContainer)
+│   └── ui/             # Reusable UI primitives (Button, Card, Modal, Input, etc.)
+├── hooks/              # Custom React hooks
+│   ├── useLayouts.ts   # Layout generation with React Query
+│   ├── useProducts.ts  # Product fetching
+│   ├── useSkills.ts    # Skills fetching
+│   ├── usePdf.ts       # PDF export
+│   └── useImageUpload.ts # Image upload handling
+├── pages/              # Route pages
+│   ├── Dashboard/      # Overview with statistics
+│   ├── CatalogWizard/  # Multi-step layout generation wizard
+│   ├── CatalogPreview/ # Layout preview and PDF export
+│   ├── SkillExplorer/  # Browse and view skills
+│   └── PromptExplorer/ # Prompt history and analysis
+├── store/              # Zustand stores
+│   └── wizardStore.ts  # Wizard state management
+├── utils/              # Utility functions
+│   ├── cn.ts           # Tailwind class merging (clsx + tailwind-merge)
+│   ├── formatters.ts   # Date/number formatting
+│   ├── validators.ts   # Form validation
+│   ├── filters.ts      # Product filtering logic
+│   ├── aggregations.ts # Statistics aggregation
+│   └── pageFormats.ts  # Print format utilities
+├── styles/
+│   └── globals.css     # Tailwind base styles
+├── test/
+│   └── setup.ts        # Vitest setup with Testing Library
+├── App.tsx             # Root component with routing
+└── main.tsx            # Entry point
+```
+
 ## Backend (`catForge-backend/`)
 
 ```
@@ -126,3 +177,51 @@ class ProductLoadingTests { ... }
 - Use `@Valid` for request validation
 - Return `ResponseEntity` with appropriate status codes
 - Use `LayoutResponse.from(layout)` pattern for DTO conversion
+
+## Frontend Code Conventions
+
+### Component Structure
+Organize components by feature with co-located tests:
+```
+components/features/wizard/
+├── ProductSelector.tsx
+├── LayoutOptions.tsx
+├── ImageUpload.tsx
+└── wizard.test.ts
+```
+
+### TypeScript Patterns
+Use strict typing with interfaces for API responses:
+```typescript
+interface LayoutResponse {
+  id: string;
+  status: 'pending' | 'completed' | 'failed';
+  variants: LayoutVariant[];
+}
+```
+
+### State Management
+- **Server state**: React Query (`@tanstack/react-query`) for API data
+- **Client state**: Zustand for wizard/form state
+- **Local state**: `useState` for component-specific UI state
+
+### Custom Hooks
+Wrap React Query in custom hooks for reusability:
+```typescript
+export function useProducts() {
+  return useQuery({
+    queryKey: ['products'],
+    queryFn: () => api.products.getAll(),
+  });
+}
+```
+
+### Styling
+- Tailwind CSS for all styling
+- `cn()` utility for conditional classes: `cn('base-class', condition && 'conditional-class')`
+- No inline styles or CSS modules
+
+### Testing
+- Vitest + Testing Library for component tests
+- fast-check for property-based testing of utilities
+- Co-locate tests with components (`Component.test.tsx`)
