@@ -601,38 +601,66 @@ flowchart TB
 ### Wizard Flow
 
 ```mermaid
-stateDiagram-v2
-    [*] --> Step1_Products
+flowchart LR
+    subgraph Step1[1. Produkte]
+        S1A[Suche & Filter]
+        S1B[Multi-Select]
+    end
     
-    Step1_Products: 1. Produkte auswählen
-    Step1_Products: • Suche & Filter
-    Step1_Products: • Multi-Select
+    subgraph Step2[2. Optionen]
+        S2A[Format wählen]
+        S2B[Stil & Varianten]
+    end
     
-    Step2_Options: 2. Layout-Optionen
-    Step2_Options: • Format (A4, A5, DL...)
-    Step2_Options: • Stil (Modern, Technical...)
-    Step2_Options: • Varianten (1-5)
+    subgraph Step3[3. Prompt]
+        S3A[Text eingeben]
+        S3B[Referenzbild optional]
+    end
     
-    Step3_Prompt: 3. Prompt eingeben
-    Step3_Prompt: • Text-Beschreibung
-    Step3_Prompt: • Optional: Referenzbild
-    Step3_Prompt: • Chat-Interface
+    subgraph Step4[4. Ergebnis]
+        S4A[Layout Preview]
+        S4B[PDF Export]
+    end
     
-    Step4_Result: 4. Ergebnis
-    Step4_Result: • Layout-Vorschau
-    Step4_Result: • Varianten-Tabs
-    Step4_Result: • Feedback-Loop
-    Step4_Result: • PDF Export
+    Step1 -->|Weiter| Step2
+    Step2 -->|Weiter| Step3
+    Step3 -->|Generieren| Step4
     
-    Step1_Products --> Step2_Options: Weiter
-    Step2_Options --> Step3_Prompt: Weiter
-    Step3_Prompt --> Step4_Result: Generieren
-    Step4_Result --> Step3_Prompt: Neu generieren
-    
-    Step2_Options --> Step1_Products: Zurück
-    Step3_Prompt --> Step2_Options: Zurück
-    Step4_Result --> [*]: PDF Export
+    Step2 -.->|Zurück| Step1
+    Step3 -.->|Zurück| Step2
+    Step4 -.->|Neu generieren| Step3
 ```
+
+**Wizard UI Layout:**
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  Katalog erstellen                                                          │
+│  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ │
+│  [1. Produkte] → [2. Optionen] → [3. Prompt] → [4. Ergebnis]                │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │                                                                     │   │
+│  │                     STEP CONTENT AREA                               │   │
+│  │                                                                     │   │
+│  │  Step 1: Produktauswahl mit Suche, Filter, Multi-Select            │   │
+│  │  Step 2: Format (A4/A5/DL), Stil, Varianten-Slider                 │   │
+│  │  Step 3: Prompt-Textarea, Bild-Upload, Chat-Interface              │   │
+│  │  Step 4: Layout-Preview (iframe), Varianten-Tabs, PDF-Export       │   │
+│  │                                                                     │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│                                           [← Zurück]  [Weiter →]            │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+| Schritt | Funktion | Beschreibung |
+|---------|----------|--------------|
+| 1. Produkte | Auswahl | Suche, Filter nach Kategorie/Serie, Multi-Select |
+| 2. Optionen | Konfiguration | Format (A4, A5, DL...), Stil, Varianten (1-5) |
+| 3. Prompt | Eingabe | Text-Beschreibung, optionales Referenzbild, Chat |
+| 4. Ergebnis | Vorschau | Layout-Preview, Varianten-Tabs, PDF Export |
 
 ---
 
