@@ -37,8 +37,8 @@ class LlmLoggingTest {
                 @ForAll("validRequestId") String requestId,
                 @ForAll("modelName") String model
         ) {
-            LlmLogEntry request = LlmLogEntry.request(requestId, model, "/v1/generate", "Test prompt");
-            LlmLogEntry response = LlmLogEntry.successResponse(requestId, model, 100, 50, 1000, "Response");
+            LlmLogEntry request = LlmLogEntry.request(requestId, model, "/v1/generate", "Test prompt", "Full test prompt content");
+            LlmLogEntry response = LlmLogEntry.successResponse(requestId, model, 100, 50, 1000, "Response", "Full response content");
             
             assertThat(request.requestId()).isEqualTo(response.requestId());
             assertThat(request.direction()).isEqualTo(LlmLogEntry.Direction.REQUEST);
@@ -52,7 +52,7 @@ class LlmLoggingTest {
                 @ForAll("modelName") String model,
                 @ForAll @StringLength(min = 1, max = 200) String errorMessage
         ) {
-            LlmLogEntry request = LlmLogEntry.request(requestId, model, "/v1/generate", "Test");
+            LlmLogEntry request = LlmLogEntry.request(requestId, model, "/v1/generate", "Test", "Full test prompt");
             LlmLogEntry error = LlmLogEntry.errorResponse(requestId, model, 500, errorMessage);
             
             assertThat(request.requestId()).isEqualTo(error.requestId());
@@ -104,7 +104,7 @@ class LlmLoggingTest {
                 @ForAll @IntRange(min = 1, max = 5000) int outputTokens
         ) {
             LlmLogEntry entry = LlmLogEntry.successResponse(
-                    requestId, model, inputTokens, outputTokens, 1000, "Test response"
+                    requestId, model, inputTokens, outputTokens, 1000, "Test response", "Full test response content"
             );
             
             String json = JsonUtils.toJson(entry);
@@ -125,7 +125,7 @@ class LlmLoggingTest {
             LlmLogWriter writer = new LlmLogWriter(tempDir.toString());
             
             String requestId = UUID.randomUUID().toString();
-            LlmLogEntry entry = LlmLogEntry.request(requestId, "gemini-2.0-flash", "/v1/generate", "Test");
+            LlmLogEntry entry = LlmLogEntry.request(requestId, "gemini-2.0-flash", "/v1/generate", "Test", "Full test prompt");
             
             writer.write(entry);
             writer.shutdown();
@@ -152,7 +152,7 @@ class LlmLoggingTest {
             // Write multiple entries
             for (int i = 0; i < 5; i++) {
                 String requestId = UUID.randomUUID().toString();
-                LlmLogEntry entry = LlmLogEntry.request(requestId, "gemini-2.0-flash", "/v1/generate", "Test " + i);
+                LlmLogEntry entry = LlmLogEntry.request(requestId, "gemini-2.0-flash", "/v1/generate", "Test " + i, "Full test prompt " + i);
                 writer.write(entry);
             }
             writer.shutdown();
@@ -190,23 +190,26 @@ class LlmLoggingTest {
         @Test
         @DisplayName("Request entry should have correct direction")
         void requestEntryShouldHaveCorrectDirection() {
-            LlmLogEntry entry = LlmLogEntry.request("req-1", "gemini-2.0-flash", "/v1/generate", "Hello");
+            LlmLogEntry entry = LlmLogEntry.request("req-1", "gemini-2.0-flash", "/v1/generate", "Hello", "Full hello prompt");
             
             assertThat(entry.direction()).isEqualTo(LlmLogEntry.Direction.REQUEST);
             assertThat(entry.status()).isNull();
             assertThat(entry.promptSummary()).isEqualTo("Hello");
+            assertThat(entry.promptFull()).isEqualTo("Full hello prompt");
         }
 
         @Test
         @DisplayName("Success response should have token counts")
         void successResponseShouldHaveTokenCounts() {
-            LlmLogEntry entry = LlmLogEntry.successResponse("req-1", "gemini-2.0-flash", 100, 50, 1500, "Response text");
+            LlmLogEntry entry = LlmLogEntry.successResponse("req-1", "gemini-2.0-flash", 100, 50, 1500, "Response text", "Full response text content");
             
             assertThat(entry.direction()).isEqualTo(LlmLogEntry.Direction.RESPONSE);
             assertThat(entry.status()).isEqualTo(LlmLogEntry.Status.SUCCESS);
             assertThat(entry.inputTokens()).isEqualTo(100);
             assertThat(entry.outputTokens()).isEqualTo(50);
             assertThat(entry.durationMs()).isEqualTo(1500);
+            assertThat(entry.responseSummary()).isEqualTo("Response text");
+            assertThat(entry.responseFull()).isEqualTo("Full response text content");
         }
 
         @Test
@@ -222,7 +225,7 @@ class LlmLoggingTest {
         @DisplayName("Timestamp should be set automatically")
         void timestampShouldBeSetAutomatically() {
             Instant before = Instant.now();
-            LlmLogEntry entry = LlmLogEntry.request("req-1", "gemini-2.0-flash", "/v1/generate", "Test");
+            LlmLogEntry entry = LlmLogEntry.request("req-1", "gemini-2.0-flash", "/v1/generate", "Test", "Full test prompt");
             Instant after = Instant.now();
             
             assertThat(entry.timestamp()).isAfterOrEqualTo(before);
@@ -232,7 +235,7 @@ class LlmLoggingTest {
         @Test
         @DisplayName("withMetadata should create new entry with metadata")
         void withMetadataShouldCreateNewEntryWithMetadata() {
-            LlmLogEntry original = LlmLogEntry.request("req-1", "gemini-2.0-flash", "/v1/generate", "Test");
+            LlmLogEntry original = LlmLogEntry.request("req-1", "gemini-2.0-flash", "/v1/generate", "Test", "Full test prompt");
             LlmLogEntry withMeta = original.withMetadata(Map.of("pipelineId", "pipe-123", "step", "layout"));
             
             assertThat(withMeta.requestId()).isEqualTo(original.requestId());

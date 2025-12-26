@@ -39,13 +39,13 @@ public class LlmInteractionLogger {
      * @param requestId Unique identifier for correlation
      * @param model The model being called
      * @param endpoint The API endpoint
-     * @param prompt The prompt being sent (will be summarized)
+     * @param prompt The prompt being sent (stored in full and summarized)
      */
     public void logRequest(String requestId, String model, String endpoint, String prompt) {
         requestStartTimes.put(requestId, System.currentTimeMillis());
         
         String promptSummary = summarize(prompt);
-        LlmLogEntry entry = LlmLogEntry.request(requestId, model, endpoint, promptSummary);
+        LlmLogEntry entry = LlmLogEntry.request(requestId, model, endpoint, promptSummary, prompt);
         
         logWriter.write(entry);
         log.debug("LLM Request [{}]: model={}, prompt={}", requestId, model, promptSummary);
@@ -56,17 +56,18 @@ public class LlmInteractionLogger {
      * 
      * @param requestId The request ID for correlation
      * @param model The model that responded
-     * @param response The Gemini response
+     * @param response The Gemini response (stored in full and summarized)
      */
     public void logResponse(String requestId, String model, GeminiResponse response) {
         long durationMs = calculateDuration(requestId);
         
-        String responseSummary = summarize(response.getText());
+        String responseText = response.getText();
+        String responseSummary = summarize(responseText);
         int inputTokens = response.getInputTokens();
         int outputTokens = response.getOutputTokens();
         
         LlmLogEntry entry = LlmLogEntry.successResponse(
-                requestId, model, inputTokens, outputTokens, durationMs, responseSummary
+                requestId, model, inputTokens, outputTokens, durationMs, responseSummary, responseText
         );
         
         logWriter.write(entry);
@@ -83,7 +84,7 @@ public class LlmInteractionLogger {
         
         String responseSummary = summarize(responseText);
         LlmLogEntry entry = LlmLogEntry.successResponse(
-                requestId, model, inputTokens, outputTokens, durationMs, responseSummary
+                requestId, model, inputTokens, outputTokens, durationMs, responseSummary, responseText
         );
         
         logWriter.write(entry);

@@ -6,6 +6,7 @@ import java.util.Map;
 /**
  * Log entry for LLM interactions.
  * Each entry represents either a request to or response from the LLM.
+ * Contains both summaries (for quick overview) and full content (for debugging).
  */
 public record LlmLogEntry(
     String requestId,
@@ -18,7 +19,9 @@ public record LlmLogEntry(
     Integer outputTokens,
     Long durationMs,
     String promptSummary,
+    String promptFull,
     String responseSummary,
+    String responseFull,
     String errorMessage,
     Map<String, Object> metadata
 ) {
@@ -32,9 +35,10 @@ public record LlmLogEntry(
     }
     
     /**
-     * Creates a request log entry.
+     * Creates a request log entry with full prompt content.
      */
-    public static LlmLogEntry request(String requestId, String model, String endpoint, String promptSummary) {
+    public static LlmLogEntry request(String requestId, String model, String endpoint, 
+                                       String promptSummary, String promptFull) {
         return new LlmLogEntry(
                 requestId,
                 Instant.now(),
@@ -46,6 +50,8 @@ public record LlmLogEntry(
                 null,
                 null,
                 promptSummary,
+                promptFull,
+                null,
                 null,
                 null,
                 null
@@ -53,7 +59,7 @@ public record LlmLogEntry(
     }
     
     /**
-     * Creates a success response log entry.
+     * Creates a success response log entry with full response content.
      */
     public static LlmLogEntry successResponse(
             String requestId, 
@@ -61,7 +67,8 @@ public record LlmLogEntry(
             int inputTokens, 
             int outputTokens,
             long durationMs,
-            String responseSummary
+            String responseSummary,
+            String responseFull
     ) {
         return new LlmLogEntry(
                 requestId,
@@ -74,7 +81,9 @@ public record LlmLogEntry(
                 outputTokens,
                 durationMs,
                 null,
+                null,
                 responseSummary,
+                responseFull,
                 null,
                 null
         );
@@ -101,6 +110,8 @@ public record LlmLogEntry(
                 durationMs,
                 null,
                 null,
+                null,
+                null,
                 errorMessage,
                 null
         );
@@ -122,6 +133,8 @@ public record LlmLogEntry(
                 durationMs,
                 null,
                 null,
+                null,
+                null,
                 "Request timed out",
                 null
         );
@@ -133,8 +146,8 @@ public record LlmLogEntry(
     public LlmLogEntry withMetadata(Map<String, Object> additionalMetadata) {
         return new LlmLogEntry(
                 requestId, timestamp, direction, model, endpoint, status,
-                inputTokens, outputTokens, durationMs, promptSummary,
-                responseSummary, errorMessage, additionalMetadata
+                inputTokens, outputTokens, durationMs, promptSummary, promptFull,
+                responseSummary, responseFull, errorMessage, additionalMetadata
         );
     }
 }
