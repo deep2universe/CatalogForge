@@ -28,9 +28,6 @@ dependencies {
     implementation("com.fasterxml.jackson.core:jackson-databind")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
     
-    // .env file support
-    implementation("me.paulschwarz:spring-dotenv:4.0.0")
-    
     // Configuration
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
     
