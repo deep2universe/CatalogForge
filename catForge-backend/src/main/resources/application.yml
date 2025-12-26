@@ -33,8 +33,9 @@ catalogforge:
     timeout-seconds: 60
     max-retries: 3
   
-  puppeteer:
-    node-path: node
+  pdf:
+    enabled: true
+    node-command: node
     script-path: ./scripts/pdf-generator.js
     temp-dir: /tmp/catalogforge/pdf
     default-dpi: 300

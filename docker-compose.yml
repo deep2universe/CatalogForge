@@ -1,0 +1,77 @@
+# CatalogForge Docker Compose
+# Starts both frontend and backend services
+# 
+# Supported platforms:
+# - Windows 11 (Intel/AMD and ARM)
+# - macOS (Intel and Apple Silicon)
+# - Linux (x86_64 and ARM64)
+#
+# Docker automatically selects the correct architecture for Chromium.
+
+services:
+  # ==========================================================================
+  # Backend: Spring Boot + Node.js + Chromium for PDF generation
+  # ==========================================================================
+  backend:
+    build:
+      context: ./catForge-backend
+      dockerfile: Dockerfile
+    container_name: catalogforge-backend
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - SPRING_PROFILES_ACTIVE=docker
+    ports:
+      - "8080:8080"
+    volumes:
+      - backend-logs:/app/logs
+      - pdf-temp:/tmp/catalogforge/pdf
+    # Increase shared memory for Chromium
+    shm_size: '2gb'
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/v1/products/categories"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    restart: unless-stopped
+    networks:
+      - catalogforge-network
+
+  # ==========================================================================
+  # Frontend: nginx serving React SPA with API proxy
+  # ==========================================================================
+  frontend:
+    build:
+      context: ./catForge-frontend
+      dockerfile: Dockerfile
+    container_name: catalogforge-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped
+    networks:
+      - catalogforge-network
+
+# ==========================================================================
+# Networks
+# ==========================================================================
+networks:
+  catalogforge-network:
+    driver: bridge
+
+# ==========================================================================
+# Volumes
+# ==========================================================================
+volumes:
+  backend-logs:
+    driver: local
+  pdf-temp:
+    driver: local

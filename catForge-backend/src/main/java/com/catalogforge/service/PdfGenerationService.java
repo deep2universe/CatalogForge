@@ -132,29 +132,14 @@ public class PdfGenerationService {
                 .orElseThrow(() -> new ResourceNotFoundException("Variant", variantId));
     }
 
+    /**
+     * Returns the HTML body content for PDF generation.
+     * Note: The full HTML document wrapping is handled by pdf-generator.js
+     * to avoid double-wrapping issues.
+     */
     private String buildFullHtml(LayoutVariant variant, Layout layout) {
-        String format = layout.pageFormat() != null ? layout.pageFormat().name() : "A4";
-        
-        return String.format("""
-                <!DOCTYPE html>
-                <html lang="de">
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>CatalogForge Layout</title>
-                    <style>
-                        @page {
-                            size: %s;
-                            margin: 0;
-                        }
-                        %s
-                    </style>
-                </head>
-                <body>
-                    %s
-                </body>
-                </html>
-                """, format, variant.css(), variant.html());
+        // Return only the body content - pdf-generator.js handles the full document structure
+        return variant.html();
     }
 
     /**

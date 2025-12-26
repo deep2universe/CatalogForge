@@ -1,13 +1,14 @@
 {
   "name": "catalogforge-pdf-generator",
   "version": "1.0.0",
-  "description": "PDF generator for CatalogForge using Puppeteer",
+  "description": "PDF generator for CatalogForge using Playwright",
   "main": "pdf-generator.js",
   "scripts": {
-    "generate": "node pdf-generator.js"
+    "generate": "node pdf-generator.js",
+    "install-browsers": "npx playwright install chromium"
   },
   "dependencies": {
-    "puppeteer": "^21.0.0"
+    "playwright": "1.49.1"
   },
   "engines": {
     "node": ">=18.0.0"

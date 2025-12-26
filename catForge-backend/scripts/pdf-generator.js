@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
 /**
- * PDF Generator using Puppeteer.
+ * PDF Generator using Playwright.
  * Reads JSON input from stdin, generates PDF, outputs JSON result to stdout.
  * 
  * Input JSON:
  * {
- *   "html": "<html>...</html>",
+ *   "html": "<div>...</div>",
  *   "css": "body { ... }",
  *   "preset": "screen|print-standard|print-professional|print-premium",
  *   "pageFormat": "A4|A5|DL|...",
@@ -23,7 +23,7 @@
  * }
  */
 
-const puppeteer = require('puppeteer');
+const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
@@ -142,7 +142,7 @@ function buildHtmlDocument(input) {
 }
 
 /**
- * Main PDF generation function.
+ * Main PDF generation function using Playwright.
  */
 async function generatePdf(input) {
     const preset = getPreset(input.preset);
@@ -155,28 +155,35 @@ async function generatePdf(input) {
     }
     const outputPath = path.join(outputDir, `pdf-${Date.now()}-${Math.random().toString(36).substr(2, 9)}.pdf`);
     
-    // Launch browser
-    const browser = await puppeteer.launch({
-        headless: 'new',
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    // Launch browser with Playwright
+    const browser = await chromium.launch({
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-gpu'
+        ]
     });
     
     try {
-        const page = await browser.newPage();
+        const context = await browser.newContext();
+        const page = await context.newPage();
         
-        // Set viewport for high DPI
+        // Set viewport
         const dpi = input.dpi || preset.dpi || 72;
         const scale = dpi / 72;
         
-        await page.setViewport({
-            width: Math.round(pageSize.width * 3.78 * scale), // mm to px at 96dpi * scale
-            height: Math.round(pageSize.height * 3.78 * scale),
-            deviceScaleFactor: scale
+        await page.setViewportSize({
+            width: Math.round(pageSize.width * 3.78 * scale),
+            height: Math.round(pageSize.height * 3.78 * scale)
         });
         
         // Load HTML content
         const htmlContent = buildHtmlDocument(input);
-        await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
+        await page.setContent(htmlContent, { waitUntil: 'load' });
+        
+        // Small delay to ensure styles are applied
+        await page.waitForTimeout(100);
         
         // Generate PDF
         await page.pdf({
@@ -186,7 +193,7 @@ async function generatePdf(input) {
             printBackground: preset.printBackground,
             preferCSSPageSize: preset.preferCSSPageSize,
             landscape: input.landscape || false,
-            margin: { top: 0, right: 0, bottom: 0, left: 0 }
+            margin: { top: '0', right: '0', bottom: '0', left: '0' }
         });
         
         return {

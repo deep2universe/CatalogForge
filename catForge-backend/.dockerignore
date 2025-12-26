@@ -1,0 +1,27 @@
+# Build outputs
+build/
+.gradle/
+out/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test outputs
+.jqwik-database
+
+# Node modules in scripts (will be installed in container)
+scripts/node_modules/

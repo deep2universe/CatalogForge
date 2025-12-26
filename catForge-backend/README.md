@@ -43,7 +43,7 @@ Spring Boot 3.4 REST API für die KI-gestützte Generierung professioneller Prod
 
 ### Lokal
 - Java 21
-- Node.js 20+ (für PDF-Generierung)
+- Node.js 18+ (für PDF-Generierung via Puppeteer)
 - Google Gemini API Key
 
 ### Dev Container (empfohlen)
@@ -57,11 +57,16 @@ Spring Boot 3.4 REST API für die KI-gestützte Generierung professioneller Prod
 1. Repository öffnen in VS Code
 2. `Cmd/Ctrl + Shift + P` → "Dev Containers: Reopen in Container"
 3. Warten bis der Container gebaut ist
-4. Gemini API Key setzen:
+4. PDF-Generator Dependencies installieren:
    ```bash
-   export GEMINI_API_KEY=your-api-key
+   cd scripts && npm install && cd ..
    ```
-5. Anwendung starten:
+5. Gemini API Key setzen in `.env`:
+   ```bash
+   cp .env.example .env
+   # .env editieren und GEMINI_API_KEY setzen
+   ```
+6. Anwendung starten:
    ```bash
    ./gradlew bootRun
    ```
@@ -73,21 +78,30 @@ Spring Boot 3.4 REST API für die KI-gestützte Generierung professioneller Prod
    sdk install java 21-tem
    ```
 
-2. **Node.js Dependencies installieren**:
+2. **Node.js 18+ installieren** (für PDF-Generierung):
+   ```bash
+   # macOS mit Homebrew
+   brew install node
+   
+   # oder via nvm
+   nvm install 18
+   ```
+
+3. **PDF-Generator Dependencies installieren** (Puppeteer + Chromium):
    ```bash
    cd scripts
    npm install
    cd ..
    ```
+   > ⚠️ **Wichtig**: Dieser Schritt lädt Chromium herunter (~200MB) und ist erforderlich für den PDF-Export.
 
-3. **Umgebungsvariablen setzen**:
+4. **Umgebungsvariablen setzen**:
    ```bash
    cp .env.example .env
    # .env editieren und GEMINI_API_KEY setzen
-   source .env
    ```
 
-4. **Anwendung starten**:
+5. **Anwendung starten**:
    ```bash
    ./gradlew bootRun
    ```

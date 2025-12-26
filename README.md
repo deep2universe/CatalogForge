@@ -235,8 +235,8 @@ sequenceDiagram
 
 ### Voraussetzungen
 
-- Java 21+
-- Node.js 18+ (für Frontend + Puppeteer)
+- Docker & Docker Compose (empfohlen)
+- ODER: Java 21+ und Node.js 18+
 - Google Gemini API Key
 
 ### 1. Repository klonen
@@ -246,7 +246,39 @@ git clone <repository-url>
 cd catalogforge
 ```
 
-### 2. Backend starten
+### Option A: Docker (Empfohlen) 🐳
+
+Der einfachste Weg, CatalogForge zu starten:
+
+```bash
+# Gemini API Key setzen
+export GEMINI_API_KEY=your-api-key-here
+
+# Container bauen und starten
+docker compose up --build
+
+# Oder im Hintergrund
+docker compose up --build -d
+```
+
+Die Anwendung ist dann erreichbar unter:
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:8080
+
+```bash
+# Container stoppen
+docker compose down
+
+# Logs anzeigen
+docker compose logs -f
+
+# Nur Backend-Logs
+docker compose logs -f backend
+```
+
+### Option B: Lokale Entwicklung
+
+#### 2. Backend starten
 
 ```bash
 cd catForge-backend
@@ -255,13 +287,16 @@ cd catForge-backend
 cp .env.example .env
 # GEMINI_API_KEY in .env eintragen
 
+# PDF-Generator Dependencies installieren
+cd scripts && npm install && cd ..
+
 # Starten
 ./gradlew bootRun
 ```
 
 Backend läuft auf `http://localhost:8080`
 
-### 3. Frontend starten
+#### 3. Frontend starten
 
 ```bash
 cd catForge-frontend
@@ -837,9 +872,70 @@ npm run test:coverage
 
 ### Bekannte Issues
 
-1. **PDF Export**: Generiert aktuell leere PDFs - Puppeteer-Integration muss debuggt werden
-2. **Produktbilder**: Verwenden Unsplash-Placeholder, einige URLs nicht mehr gültig
-3. **DevContainer**: Konfiguration für Backend vorhanden, Frontend-Integration fehlt noch
+1. **Produktbilder**: Verwenden Unsplash-Placeholder, einige URLs nicht mehr gültig
+2. **DevContainer**: Konfiguration für Backend vorhanden, Frontend-Integration fehlt noch
+
+---
+
+## Docker Details
+
+### Container-Architektur
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    docker-compose.yml                        │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│  ┌─────────────────────┐      ┌─────────────────────┐      │
+│  │     frontend        │      │      backend        │      │
+│  │  (nginx + React)    │─────▶│  (Java + Node.js)   │      │
+│  │                     │ /api │                     │      │
+│  │  Port: 3000 → 80    │      │  Port: 8080         │      │
+│  └─────────────────────┘      └──────────┬──────────┘      │
+│                                          │                  │
+│                               ┌──────────▼──────────┐      │
+│                               │     Chromium        │      │
+│                               │  (PDF Generation)   │      │
+│                               └─────────────────────┘      │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Environment Variables
+
+| Variable | Beschreibung | Pflicht |
+|----------|--------------|---------|
+| `GEMINI_API_KEY` | Google Gemini API Key | Ja |
+
+### Volumes
+
+| Volume | Pfad im Container | Beschreibung |
+|--------|-------------------|--------------|
+| `backend-logs` | `/app/logs` | Application & LLM Logs |
+| `pdf-temp` | `/tmp/catalogforge/pdf` | Temporäre PDF-Dateien |
+
+### Nützliche Docker-Befehle
+
+```bash
+# Container neu bauen (nach Code-Änderungen)
+docker compose build
+
+# Nur Backend neu bauen
+docker compose build backend
+
+# In Container einloggen (Debugging)
+docker compose exec backend bash
+docker compose exec frontend sh
+
+# Logs mit Timestamps
+docker compose logs -f --timestamps
+
+# Container-Status
+docker compose ps
+
+# Alles aufräumen (inkl. Volumes)
+docker compose down -v
+```
 
 ---
 
