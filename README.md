@@ -866,6 +866,4 @@ Die Screenshots zeigen:
 
 ---
 
-## Lizenz
 
-Proprietär - Daimler Truck AG
