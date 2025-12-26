@@ -1,55 +1,128 @@
+---
+inclusion: always
+---
+
 # Project Structure
 
+## Backend (`catForge-backend/`)
+
 ```
-catForge-backend/
-├── src/main/java/com/catalogforge/
-│   ├── agent/              # Agent framework (pipelines, steps, strategies)
-│   │   ├── steps/          # Pipeline steps (ImageAnalysis, LayoutGeneration, etc.)
-│   │   └── strategies/     # Pipeline strategies (Simple, Complex, MultiVariant)
-│   ├── config/             # Spring configuration classes
-│   │   └── properties/     # @ConfigurationProperties classes
-│   ├── controller/         # REST controllers (Products, Layouts, Skills, PDF, Images)
-│   ├── exception/          # Custom exceptions + GlobalExceptionHandler
-│   ├── gemini/             # Gemini API client, request/response, vision analyzer
-│   ├── logging/            # LLM interaction logging (JSONL format)
-│   ├── model/              # Domain models (Product, Layout, Skill, etc.)
-│   │   ├── request/        # Request DTOs
-│   │   └── response/       # Response DTOs
-│   ├── pdf/                # PDF generation (PuppeteerBridge, PrintPreset)
-│   ├── service/            # Business logic services
-│   ├── skill/              # Skills system (loader, assembler)
-│   └── util/               # Utilities (CSS validation, HTML sanitization, etc.)
-│
-├── src/main/resources/
-│   ├── css/                # CSS templates for layouts
-│   │   ├── components/     # Reusable component styles
-│   │   └── print/          # Print-specific CSS (bleed, crop marks)
-│   ├── data/               # Product data (products.json)
-│   ├── prompts/            # Example prompts
-│   └── skills/             # Skill markdown files
-│       ├── core/           # Layout principles, typography, color, grid, spacing
-│       ├── formats/        # Page formats (A4, A5, DL, A6, Square)
-│       └── styles/         # Visual styles (Modern, Technical, Premium, Eco, Dynamic)
-│
-├── src/test/
-│   ├── java/               # Test classes (mirrors main structure)
-│   └── resources/
-│       └── fixtures/       # Test fixtures (Gemini response mocks)
-│
-├── scripts/                # Node.js scripts for PDF generation
-│   └── pdf-generator.js    # Puppeteer-based PDF generator
-│
-└── logs/                   # Runtime logs (gitignored)
-    ├── application/        # Application logs
-    └── llm/                # LLM interaction logs (JSONL)
+src/main/java/com/catalogforge/
+├── agent/              # Agent framework for layout generation pipelines
+│   ├── steps/          # Pipeline steps: ImageAnalysis, LayoutGeneration, Validation
+│   └── strategies/     # Pipeline strategies: Simple, Complex, MultiVariant
+├── config/             # Spring @Configuration classes
+│   └── properties/     # @ConfigurationProperties (Gemini, Layout, Puppeteer, etc.)
+├── controller/         # REST controllers (@RestController, /api/v1/*)
+├── exception/          # Custom exceptions + GlobalExceptionHandler
+├── gemini/             # Gemini API integration (client, request/response, vision)
+├── logging/            # LLM interaction logging (JSONL format)
+├── model/              # Domain models as Java records
+│   ├── request/        # Request DTOs
+│   └── response/       # Response DTOs
+├── pdf/                # PDF generation via Puppeteer bridge
+├── service/            # Business logic services
+├── skill/              # Skills system (markdown-based prompt engineering)
+└── util/               # Utilities: CssValidator, HtmlSanitizer, ColorUtils
+
+src/main/resources/
+├── css/                # CSS templates (components/, print/)
+├── data/products.json  # Product catalog data
+├── prompts/            # Example prompts
+└── skills/             # Skill markdown files
+    ├── core/           # MASTER_SKILL, TYPOGRAPHY, COLOR_THEORY, GRID_SYSTEMS
+    ├── formats/        # FORMAT_A4, FORMAT_A5, FORMAT_DL, FORMAT_A6, FORMAT_SQUARE
+    └── styles/         # STYLE_MODERN, STYLE_TECHNICAL, STYLE_PREMIUM, etc.
+
+src/test/
+├── java/               # Test classes (mirrors main structure)
+└── resources/fixtures/ # Test fixtures (Gemini response mocks)
+
+scripts/                # Node.js scripts (pdf-generator.js)
 ```
 
 ## Code Conventions
 
-- **Records** for immutable data (DTOs, domain models, AgentContext)
-- **Constructor injection** for dependencies (no @Autowired on fields)
-- **Immutable context pattern** in agent framework (withX() methods return new instances)
-- **Factory methods** for context creation (AgentContext.forTextGeneration(), etc.)
-- **SLF4J logging** with appropriate levels (DEBUG for details, INFO for operations)
-- **Javadoc** on public methods
-- **Property-based tests** with jqwik for validation logic
+### Records for Immutable Data
+Use Java records for DTOs, domain models, and context objects:
+```java
+public record Layout(String id, String status, List<LayoutVariant> variants) {
+    public Layout { variants = variants != null ? List.copyOf(variants) : List.of(); }
+}
+```
+
+### Immutable Context Pattern
+Use `withX()` methods that return new instances for state changes:
+```java
+public AgentContext withGeneratedLayout(Layout layout) {
+    return new AgentContext(/* copy all fields, replace layout */);
+}
+```
+
+### Factory Methods
+Use static factory methods for context creation:
+```java
+AgentContext.forTextGeneration(products, options, prompt)
+AgentContext.forImageGeneration(products, options, prompt, imageBase64, mimeType)
+```
+
+### Constructor Injection
+Always use constructor injection (no `@Autowired` on fields):
+```java
+public LayoutController(LayoutGenerationService layoutService) {
+    this.layoutService = layoutService;
+}
+```
+
+### Logging
+Use SLF4J with appropriate levels:
+- `log.info()` for operations (API calls, generation requests)
+- `log.debug()` for details (lookups, internal state)
+
+### Javadoc
+Document public methods with Javadoc including endpoint paths for controllers:
+```java
+/**
+ * Generates a layout from text prompt.
+ * POST /api/v1/layouts/generate/text
+ */
+```
+
+## Testing Conventions
+
+### Test Tags
+Use JUnit 5 tags for test categorization:
+- `@Tag("unit")` - Unit tests
+- `@Tag("integration")` - Integration tests  
+- `@Tag("property")` - Property-based tests (jqwik)
+
+### Property-Based Tests
+Use jqwik for validation logic with documented properties:
+```java
+@Property(tries = 100)
+@Label("Property 18: Color Validation - valid 6-digit hex codes")
+void valid6DigitHexCodesAccepted(@ForAll @CharRange(from = '0', to = '9') char c1, ...) {
+    assertThat(ColorUtils.isValidHexColor(color)).isTrue();
+}
+```
+
+### Assertions
+Use AssertJ for fluent assertions:
+```java
+assertThat(products).extracting(Product::id).doesNotContainNull().doesNotHaveDuplicates();
+```
+
+### Test Structure
+Use nested classes with `@DisplayName` for organization:
+```java
+@Nested
+@DisplayName("Product Loading Tests")
+class ProductLoadingTests { ... }
+```
+
+## API Conventions
+
+- Base path: `/api/v1/`
+- Use `@Valid` for request validation
+- Return `ResponseEntity` with appropriate status codes
+- Use `LayoutResponse.from(layout)` pattern for DTO conversion
