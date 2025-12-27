@@ -4,6 +4,17 @@
 
 ---
 
+## Entwicklungsprozess
+
+Der gesamte Entwicklungsprozess ist in der [Entwicklungsdokumentation](./dev_doc/README.md) detailliert beschrieben. Dort findest du:
+
+- Den 10-Phasen-Workflow von der Datenmodellierung bis zur Migration
+- Links zu allen Claude-Chat-Sessions mit den Original-Prompts
+- Erklärungen zu den verwendeten Prompt-Engineering-Patterns (Briefing, Context Engineering)
+- Alle generierten Spezifikationen und Migration Guides
+
+---
+
 # CatalogForge
 
 > KI-gestützte Katalog- und Flyer-Generierung: Von Text-Prompts und Referenzbildern zu druckfertigen HTML/CSS-Layouts und PDFs.
