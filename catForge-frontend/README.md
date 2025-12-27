@@ -1,3 +1,9 @@
+> ⚠️ **Hinweis: 100% KI-generiertes Projekt**
+>
+> Dieses Projekt wurde vollständig mit KI erstellt und dient als Test der **KIRO IDE** und deren **Spec-Driven Development** Ansatz. Die Spezifikationen wurden in mehreren Claude-Chat-Sessions erarbeitet (Context Engineering), anschließend wurde die Task-Liste aus dieser Spec mit Kiro generiert. Die Implementierung erfolgte mit **Opus 4.5**.
+
+---
+
 # CatalogForge Frontend
 
 React-basierte Single-Page-Application für die KI-gestützte Katalog- und Flyer-Generierung. Transformiert Text-Prompts und Referenzbilder in professionelle, druckfertige HTML/CSS-Layouts.
