@@ -259,8 +259,8 @@ sequenceDiagram
 ### 1. Repository klonen
 
 ```bash
-git clone <repository-url>
-cd catalogforge
+git clone https://github.com/deep2universe/CatalogForge.git
+cd CatalogForge
 ```
 
 ### Option A: Docker (Empfohlen) 🐳
