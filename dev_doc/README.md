@@ -81,6 +81,24 @@ flowchart LR
     style IMPL fill:#ffe4e6,stroke:#e11d48
 ```
 
+### Backend SDD Artefakte
+
+| Artefakt | Beschreibung | Pfad |
+|----------|--------------|------|
+| **Input-Spezifikation** | Vollständige Backend-Spec | [CATALOGFORGE_IMPLEMENTATION_SPEC.md](../CATALOGFORGE_IMPLEMENTATION_SPEC.md) |
+| **Requirements** | Was soll gebaut werden? | [requirements.md](../.kiro/specs/catalogforge-backend/requirements.md) |
+| **Design** | Wie soll es gebaut werden? | [design.md](../.kiro/specs/catalogforge-backend/design.md) |
+| **Tasks** | Einzelne Arbeitsschritte | [tasks.md](../.kiro/specs/catalogforge-backend/tasks.md) |
+
+### Frontend SDD Artefakte
+
+| Artefakt | Beschreibung | Pfad |
+|----------|--------------|------|
+| **Input-Spezifikation** | Frontend-Spec aus API-Analyse | [frontend-spezifikation.md](./frontend-spezifikation.md) |
+| **Requirements** | Was soll gebaut werden? | [requirements.md](../.kiro/specs/catalogforge-frontend/requirements.md) |
+| **Design** | Wie soll es gebaut werden? | [design.md](../.kiro/specs/catalogforge-frontend/design.md) |
+| **Tasks** | Einzelne Arbeitsschritte | [tasks.md](../.kiro/specs/catalogforge-frontend/tasks.md) |
+
 ## Prompt-Engineering Patterns
 
 ```mermaid
@@ -155,6 +173,14 @@ Mein initialer Chat, um die Dummy-Daten zu generieren:
 - **JSON-Schema**: https://claude.ai/public/artifacts/c4bfb432-eb17-45cd-929b-337b26b0938d
 - **JSON-Schema-Dokumentation**: https://claude.ai/public/artifacts/957556f4-1233-4428-9350-cee6ab2a5f61
 
+**Generierte Artefakte im Repository:**
+
+| Artefakt | Beschreibung | Pfad |
+|----------|--------------|------|
+| **Dummy-Daten** | Katalog-Daten für Daimler Truck | [dummy-katalog-data.json](../catForge-backend/dummy-katalog-data.json) |
+| **JSON-Schema** | Schema-Definition für Katalog-Daten | [daimler_truck_katalog_schema.json](../catForge-backend/daimler_truck_katalog_schema.json) |
+| **Schema-Dokumentation** | Dokumentation des JSON-Schemas | [daimler_truck_katalog_schema_dokumentation.md](../catForge-backend/daimler_truck_katalog_schema_dokumentation.md) |
+
 Ich habe keine validen Image-URLs drin und habe auch nicht die erstellten Skripte laufen lassen, um es zu beheben. Das Problem wird erstmal mit Image-Platzhaltern gelöst. In dieser Session hatte ich Probleme mit dem Output-Limit. Geht besser, aber der Output ist hinreichend gut.
 
 ---
@@ -197,11 +223,11 @@ Ich habe für diese Spec Mermaid-Diagramme generieren lassen.
 
 ### Session 5: Backend-Implementierung mit Kiro SDD
 
-Die vollständige Backend-Spezifikation wird in Kiro IDE geladen. Der Spec-Driven Development Prozess generiert:
+Die vollständige Backend-Spezifikation ([CATALOGFORGE_IMPLEMENTATION_SPEC.md](../CATALOGFORGE_IMPLEMENTATION_SPEC.md)) wird in Kiro IDE geladen. Der Spec-Driven Development Prozess generiert:
 
-1. **Requirements** – Was soll gebaut werden?
-2. **Design** – Wie soll es gebaut werden?
-3. **Tasks** – Einzelne Arbeitsschritte
+1. **[Requirements](../.kiro/specs/catalogforge-backend/requirements.md)** – Was soll gebaut werden?
+2. **[Design](../.kiro/specs/catalogforge-backend/design.md)** – Wie soll es gebaut werden?
+3. **[Tasks](../.kiro/specs/catalogforge-backend/tasks.md)** – Einzelne Arbeitsschritte
 
 Die Implementierung erfolgt dann mit **Opus 4.5**.
 
@@ -227,11 +253,11 @@ Aus der API-Analyse des Backends wird eine vollständige Frontend-Spezifikation 
 
 ### Session 8: Frontend-Implementierung mit Kiro SDD
 
-Die Frontend-Spezifikation wird in Kiro IDE geladen. Der Spec-Driven Development Prozess generiert:
+Die Frontend-Spezifikation ([frontend-spezifikation.md](./frontend-spezifikation.md)) wird in Kiro IDE geladen. Der Spec-Driven Development Prozess generiert:
 
-1. **Requirements** – Was soll gebaut werden?
-2. **Design** – Wie soll es gebaut werden?
-3. **Tasks** – Einzelne Arbeitsschritte
+1. **[Requirements](../.kiro/specs/catalogforge-frontend/requirements.md)** – Was soll gebaut werden?
+2. **[Design](../.kiro/specs/catalogforge-frontend/design.md)** – Wie soll es gebaut werden?
+3. **[Tasks](../.kiro/specs/catalogforge-frontend/tasks.md)** – Einzelne Arbeitsschritte
 
 Die Implementierung erfolgt dann mit **Opus 4.5**.
 
