@@ -316,6 +316,10 @@ Die Frontend-Spezifikation ([frontend-spezifikation.md](./frontend-spezifikation
 2. **[Design](../.kiro/specs/catalogforge-frontend/design.md)** – Wie soll es gebaut werden?
 3. **[Tasks](../.kiro/specs/catalogforge-frontend/tasks.md)** – Einzelne Arbeitsschritte
 
+**Verbesserung bei den Tasks:** In dieser Session habe ich die Git-Commits besser definiert. Jede Commit-Nachricht ist mit der Tasknummer versehen (z.B. `[Task 3.1] Add ProductSelector component`).
+
+**Hinweis:** Trotz expliziter Aufführung in der Task-Liste hat das LLM das Commiten 2x nicht automatisch ausgeführt. Nach einem kurzen Hinweis wurde es sofort erledigt – also: Tasks kontrollieren und bei Bedarf nachsteuern.
+
 Die Implementierung erfolgt dann mit **Opus 4.5**.
 
 ---
