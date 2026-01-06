@@ -157,6 +157,63 @@ flowchart TB
 
 ---
 
+## Session-Management & Context Engineering
+
+> **Eine Session = Eine Aufgabe**
+
+Hab keine Scheu davor, neue Sessions zu erstellen. Das ist kein Zeichen von Ineffizienz – es ist **essentiell** für gutes Context Engineering. Als Developer liegt es in deiner Verantwortung, das Session-Management aktiv zu betreiben.
+
+### Das Context Window als Array
+
+Stell dir eine LLM-Session wie ein Array mit fester Größe vor. Einige Elemente sind fix, andere kontrollierst du:
+
+```mermaid
+block-beta
+    columns 2
+    
+    CW["Context<br/>Window<br/>~200k<br/>Tokens"]:1
+    
+    block:ARRAY:1
+        columns 1
+        F1["System-Prompt"]
+        F2["Tool-Definitionen"]
+        F3["MCP-Configs"]
+        V1["Deine Nachrichten"]
+        V2["LLM-Antworten"]
+        V3["Geladene Dateien"]
+        space
+        BORDER["━━━ Dumm-Zone Grenze ━━━"]
+        space
+        DUMB["Degradierte Performance"]
+    end
+    
+    style CW fill:#dbeafe,stroke:#2563eb
+    style F1 fill:#fee2e2,stroke:#dc2626
+    style F2 fill:#fee2e2,stroke:#dc2626
+    style F3 fill:#fee2e2,stroke:#dc2626
+    style V1 fill:#dcfce7,stroke:#16a34a
+    style V2 fill:#dcfce7,stroke:#16a34a
+    style V3 fill:#dcfce7,stroke:#16a34a
+    style BORDER fill:none,stroke:none
+    style DUMB fill:#fef3c7,stroke:#d97706
+```
+
+**Legende:**
+- 🔴 **Fixe Elemente** – System-Prompt, Tools, MCP (nicht änderbar, verbrauchen immer Tokens)
+- 🟢 **Variable Elemente** – Deine Nachrichten, Antworten, Dateien (deine Kontrolle)
+- 🟡 **Dumm-Zone** – Ab ca. 60-70% Füllstand des Context Windows degradiert die LLM-Qualität spürbar
+
+### Best Practices
+
+| ✅ Do | ❌ Don't |
+|-------|----------|
+| Eine Session pro klar definierter Aufgabe | Alles in einer endlosen Session |
+| Relevante Infos gezielt laden | Ganze Codebases in den Context kippen |
+| Briefing-Pattern für Context-Aufbau | Ohne Kontext direkt losarbeiten |
+| Session beenden wenn Aufgabe erledigt | Session "für später" offen lassen |
+
+---
+
 ## Einblick in die Prompting-Sessions
 
 Mein Ziel ist es, Schritt für Schritt eine Spezifikation zu erstellen, die ich lesen kann und bei der ich denke: „Okay, das könnte mit den Informationen funktionieren und etwas Sinnvolles dabei rauskommen."
