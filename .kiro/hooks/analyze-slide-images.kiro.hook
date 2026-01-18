@@ -1,0 +1,20 @@
+{
+  "enabled": true,
+  "name": "Analyze Slide Images",
+  "description": "Wenn ein neues Bild in dev_doc/slides hinzugefügt wird, füge es zur README.md hinzu mit Bildlink und Trenner.",
+  "version": "1",
+  "when": {
+    "type": "fileCreated",
+    "patterns": [
+      "dev_doc/slides/*.png",
+      "dev_doc/slides/*.jpg",
+      "dev_doc/slides/*.jpeg",
+      "dev_doc/slides/*.gif",
+      "dev_doc/slides/*.webp"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Ein neues Bild wurde in dev_doc/slides hinzugefügt. Bitte:\n\n1. Aktualisiere die Datei dev_doc/slides/readme.md:\n   - Falls die Datei nicht existiert, erstelle sie mit einem Header \"# Slides\"\n   - Füge das neue Bild AM ANFANG der Liste hinzu (nach dem Header)\n   - Format für jeden Eintrag:\n     ```\n     ## [Bildname]\n     ![Bildname](Bildname)\n     \n     ---\n     ```\n2. Behalte alle bestehenden Einträge in der README bei\n3. Keine Bildanalyse oder Beschreibung nötig - nur den Bildlink einfügen"
+  }
+}
