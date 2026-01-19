@@ -1,5 +1,10 @@
 # Slides
 
+## 106
+![106](image%20copy%20106.png)
+
+---
+
 ## 105
 ![105](image%20copy%20105.png)
 
