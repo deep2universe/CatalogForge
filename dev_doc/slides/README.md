@@ -3,6 +3,8 @@
 ## 106
 ![106](image%20copy%20106.png)
 
+Text aus dem Lied: [YouTube](https://youtu.be/syW8U0vQbII?si=Pw8I8RysvqnxgESn)
+
 ---
 
 ## 105
