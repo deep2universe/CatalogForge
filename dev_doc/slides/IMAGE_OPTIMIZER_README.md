@@ -43,6 +43,19 @@ uv run optimize_images.py --force
 uv run optimize_images.py --hide-skipped
 ```
 
+## VS Code Integration
+
+### Option 1: Task ausführen (empfohlen)
+1. `Cmd+Shift+P` → "Tasks: Run Task"
+2. Wähle "🖼️ Bilder optimieren (Slides)" oder "(Dry-Run)"
+
+Oder: `Cmd+Shift+B` für Build-Tasks
+
+### Option 2: Terminal
+```bash
+uv run dev_doc/slides/optimize_images.py -d dev_doc/slides
+```
+
 ## Warum 1568px?
 
 Claude Opus 4 skaliert Bilder intern auf max 1568px. Durch Vorskalierung:

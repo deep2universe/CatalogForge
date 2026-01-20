@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🖼️ Bilder optimieren (Slides)",
+      "type": "shell",
+      "command": "uv run dev_doc/slides/optimize_images.py -d dev_doc/slides",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "group": "build"
+    },
+    {
+      "label": "🖼️ Bilder optimieren (Dry-Run)",
+      "type": "shell",
+      "command": "uv run dev_doc/slides/optimize_images.py -d dev_doc/slides --dry-run",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    }
+  ]
+}
