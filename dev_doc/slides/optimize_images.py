@@ -9,20 +9,23 @@ Bildoptimierung für Claude Opus 4
 Optimiert PNG-Bilder auf die empfohlene Größe für Claude Opus 4 (max 1568px).
 Anthropic skaliert Bilder intern auf diese Größe - durch Vorskalierung sparen wir Tokens.
 
-Ausführung: uv run optimize_images.py [--dry-run] [--backup] [--max-size 1568]
+Ausführung: uv run optimize_images.py [--dry-run] [--backup] [--workers 8]
 """
 
 import argparse
+import os
 import shutil
-from pathlib import Path
+import time
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from dataclasses import dataclass
+from pathlib import Path
 
 from PIL import Image
-from rich.console import Console
-from rich.table import Table
-from rich.panel import Panel
-from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn
 from rich import box
+from rich.console import Console
+from rich.panel import Panel
+from rich.progress import BarColumn, Progress, SpinnerColumn, TextColumn, TimeElapsedColumn
+from rich.table import Table
 
 
 @dataclass
@@ -78,13 +81,15 @@ def calculate_new_dimensions(width: int, height: int, max_size: int) -> tuple[in
     return new_width, new_height
 
 
-def optimize_image(
-    path: Path,
-    max_size: int = 1568,
-    dry_run: bool = False,
-    backup: bool = False
-) -> ImageStats:
-    """Optimiert ein einzelnes Bild für Opus 4."""
+def optimize_image(args: tuple) -> ImageStats:
+    """
+    Optimiert ein einzelnes Bild für Opus 4.
+    
+    Args als Tuple für Multiprocessing-Kompatibilität:
+    (path, max_size, dry_run, backup)
+    """
+    path, max_size, dry_run, backup = args
+    
     stats = ImageStats(
         path=path,
         original_size=path.stat().st_size
@@ -99,7 +104,7 @@ def optimize_image(
             if dry_run:
                 # Schätze neue Größe basierend auf Dimensionsreduktion
                 ratio = (new_dims[0] * new_dims[1]) / (img.width * img.height)
-                stats.new_size = int(stats.original_size * ratio * 0.9)  # 10% Kompressionsbonus
+                stats.new_size = int(stats.original_size * ratio * 0.9)
                 return stats
             
             # Backup erstellen falls gewünscht
@@ -120,6 +125,70 @@ def optimize_image(
         stats.error = str(e)
     
     return stats
+
+
+def process_images_parallel(
+    png_files: list[Path],
+    max_size: int,
+    dry_run: bool,
+    backup: bool,
+    workers: int,
+    console: Console
+) -> tuple[list[ImageStats], float]:
+    """
+    Verarbeitet Bilder parallel mit ProcessPoolExecutor.
+    
+    Returns:
+        Tuple aus (Ergebnisliste, Dauer in Sekunden)
+    """
+    args_list = [(f, max_size, dry_run, backup) for f in png_files]
+    results: list[ImageStats] = []
+    
+    start_time = time.perf_counter()
+    
+    with Progress(
+        SpinnerColumn(),
+        TextColumn("[progress.description]{task.description}"),
+        BarColumn(),
+        TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
+        TextColumn("•"),
+        TimeElapsedColumn(),
+        console=console
+    ) as progress:
+        task = progress.add_task(
+            f"Optimiere mit {workers} Worker(n)...", 
+            total=len(png_files)
+        )
+        
+        with ProcessPoolExecutor(max_workers=workers) as executor:
+            # Submit alle Tasks
+            futures = {
+                executor.submit(optimize_image, args): args[0] 
+                for args in args_list
+            }
+            
+            # Sammle Ergebnisse sobald sie fertig sind
+            for future in as_completed(futures):
+                try:
+                    result = future.result()
+                    results.append(result)
+                except Exception as e:
+                    # Falls ein Worker komplett fehlschlägt
+                    path = futures[future]
+                    results.append(ImageStats(
+                        path=path,
+                        original_size=path.stat().st_size if path.exists() else 0,
+                        error=str(e)
+                    ))
+                
+                progress.advance(task)
+    
+    duration = time.perf_counter() - start_time
+    
+    # Sortiere nach Dateiname für konsistente Ausgabe
+    results.sort(key=lambda x: x.path.name)
+    
+    return results, duration
 
 
 def create_results_table(results: list[ImageStats]) -> Table:
@@ -168,7 +237,12 @@ def create_results_table(results: list[ImageStats]) -> Table:
     return table
 
 
-def create_summary_panel(results: list[ImageStats], dry_run: bool) -> Panel:
+def create_summary_panel(
+    results: list[ImageStats], 
+    dry_run: bool, 
+    duration: float,
+    workers: int
+) -> Panel:
     """Erstellt ein Zusammenfassungs-Panel."""
     successful = [r for r in results if r.error is None]
     failed = [r for r in results if r.error is not None]
@@ -179,6 +253,9 @@ def create_summary_panel(results: list[ImageStats], dry_run: bool) -> Panel:
     savings_percent = (total_savings / total_original * 100) if total_original > 0 else 0
     
     mode = "[yellow]DRY-RUN (keine Änderungen)[/yellow]" if dry_run else "[green]Optimierung abgeschlossen[/green]"
+    
+    # Berechne Durchsatz
+    images_per_sec = len(successful) / duration if duration > 0 else 0
     
     summary = f"""
 {mode}
@@ -192,6 +269,11 @@ def create_summary_panel(results: list[ImageStats], dry_run: bool) -> Panel:
    Nachher gesamt: {format_size(total_new)}
    [bold green]Ersparnis: {format_size(total_savings)} ({savings_percent:.1f}%)[/bold green]
 
+⚡ [bold]Performance:[/bold]
+   Worker: {workers}
+   Dauer: {duration:.2f}s
+   Durchsatz: {images_per_sec:.1f} Bilder/s
+
 🎯 [bold]Opus 4 Optimierung:[/bold]
    Max. Bildgröße: 1568px (empfohlen für Claude)
    Weniger Tokens = schnellere Verarbeitung
@@ -202,7 +284,7 @@ def create_summary_panel(results: list[ImageStats], dry_run: bool) -> Panel:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Optimiert PNG-Bilder für Claude Opus 4"
+        description="Optimiert PNG-Bilder für Claude Opus 4 (parallel)"
     )
     parser.add_argument(
         "--directory", "-d",
@@ -226,6 +308,12 @@ def main():
         action="store_true",
         help="Erstellt Backup der Originaldateien (.png.bak)"
     )
+    parser.add_argument(
+        "--workers", "-w",
+        type=int,
+        default=min(os.cpu_count() or 4, 8),
+        help=f"Anzahl paralleler Worker (default: {min(os.cpu_count() or 4, 8)})"
+    )
     
     args = parser.parse_args()
     console = Console()
@@ -242,39 +330,27 @@ def main():
         console.print(f"[yellow]Keine PNG-Dateien in '{args.directory}' gefunden[/yellow]")
         return 0
     
-    console.print(f"\n[bold]Gefunden: {len(png_files)} PNG-Dateien[/bold]\n")
+    console.print(f"\n[bold]Gefunden: {len(png_files)} PNG-Dateien[/bold]")
+    console.print(f"[dim]Parallele Verarbeitung mit {args.workers} Worker(n)[/dim]\n")
     
     if args.dry_run:
         console.print("[yellow]🔍 DRY-RUN Modus - keine Dateien werden verändert[/yellow]\n")
     
-    # Bilder verarbeiten mit Fortschrittsanzeige
-    results: list[ImageStats] = []
-    
-    with Progress(
-        SpinnerColumn(),
-        TextColumn("[progress.description]{task.description}"),
-        BarColumn(),
-        TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
+    # Bilder parallel verarbeiten
+    results, duration = process_images_parallel(
+        png_files,
+        max_size=args.max_size,
+        dry_run=args.dry_run,
+        backup=args.backup,
+        workers=args.workers,
         console=console
-    ) as progress:
-        task = progress.add_task("Optimiere Bilder...", total=len(png_files))
-        
-        for png_file in png_files:
-            progress.update(task, description=f"Verarbeite {png_file.name}...")
-            stats = optimize_image(
-                png_file,
-                max_size=args.max_size,
-                dry_run=args.dry_run,
-                backup=args.backup
-            )
-            results.append(stats)
-            progress.advance(task)
+    )
     
     # Ergebnisse anzeigen
     console.print()
     console.print(create_results_table(results))
     console.print()
-    console.print(create_summary_panel(results, args.dry_run))
+    console.print(create_summary_panel(results, args.dry_run, duration, args.workers))
     
     return 0
 
